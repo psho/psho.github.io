@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://psho.github.io/</loc>
-  <lastmod>2018-07-25T21:52:00Z</lastmod>
+  <lastmod>2018-07-28T11:59:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/2018/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2018-07-28T11:59:00Z</lastmod>
+  <lastmod>2018-07-28T15:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-1.html</loc>
-  <lastmod>2018-07-28T11:59:00Z</lastmod>
+  <lastmod>2018-07-28T15:25:00Z</lastmod>
  </url>
  <url>
-  <loc>https://psho.github.io/blog/python-control-flow/</loc>
-  <lastmod>2018-07-24T22:17:00Z</lastmod>
+  <loc>https://psho.github.io/blog/python/pandas-dataframes/</loc>
+  <lastmod>2018-07-28T15:25:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-control-flow/</loc>
@@ -74,10 +74,6 @@
   <lastmod>2018-07-27T22:19:00Z</lastmod>
  </url>
  <url>
-  <loc>https://psho.github.io/blog/python/python-test/</loc>
-  <lastmod>2018-07-26T22:39:00Z</lastmod>
- </url>
- <url>
   <loc>https://psho.github.io/blog/python/python-user-input/</loc>
   <lastmod>2018-07-27T22:19:00Z</lastmod>
  </url>
@@ -90,35 +86,11 @@
   <lastmod>2018-07-23T23:01:00Z</lastmod>
  </url>
  <url>
-  <loc>https://psho.github.io/hello/</loc>
-  <lastmod>2018-07-23T23:26:00Z</lastmod>
- </url>
- <url>
   <loc>https://psho.github.io/index.src.html</loc>
-  <lastmod>2018-07-27T22:31:00Z</lastmod>
+  <lastmod>2018-07-28T18:16:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/listings/</loc>
   <lastmod>2018-07-23T23:01:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/new-page/</loc>
-  <lastmod>2018-07-23T23:26:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/pages/hello/</loc>
-  <lastmod>2018-07-23T23:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/pages/new-page/</loc>
-  <lastmod>2018-07-23T23:03:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/posts/hello-2/</loc>
-  <lastmod>2018-07-23T23:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/posts/new-post/</loc>
-  <lastmod>2018-07-23T23:03:00Z</lastmod>
  </url>
 </urlset>
