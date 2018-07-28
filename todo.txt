@@ -1,17 +1,18 @@
-Add pandas notebooks
+=== Python ===
+checking data types
 
+
+=== pandas ===
 
 pandas: Columns
-Add
-Modify
-Drop
+Add/Drop
 Missing
+Strings
+Numbers
+Dates
+
 
 pandas: Analysis
-Inspect
+Inspect - list of column names
 Summarise
 
-
-
-
-list of column names
