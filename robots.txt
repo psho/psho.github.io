@@ -1,0 +1,4 @@
+Sitemap: https://psho.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: psho.github.io

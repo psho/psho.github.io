@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Personal Blog and Reference">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>psho</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://psho.github.io/blog/">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://psho.github.io/">
+
+                <span id="blog-title">psho</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li class="active">
+<a href=".">Blog <span class="sr-only">(active)</span></a>
+                </li>
+<li>
+<a href="../categories/">Tags</a>
+                </li>
+<li>
+<a href="../archive.html">Archive</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+    
+
+
+    
+<div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-dictionaries/" class="u-url">Python: Dictionaries</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-dictionaries/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create">Create<a class="anchor-link" href="python/python-dictionaries/#Create">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Init empty dictionary</span>
+<span class="n">empty_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Init dictionary with key:value pairs</span>
+<span class="n">a_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Alice'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span> <span class="s1">'Chris'</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span> <span class="s1">'Dave'</span><span class="p">:</span><span class="s1">'N/A'</span><span class="p">}</span>
+
+<span class="c1"># Init dictionary using dict()</span>
+<span class="n">a_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">Alice</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">Bob</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">Chris</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">Dave</span><span class="o">=</span><span class="s1">'N/A'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inspect">Inspect<a class="anchor-link" href="python/python-dictionaries/#Inspect">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of key-value pairs in dictionary</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a_dict</span><span class="p">)</span>
+
+<span class="c1"># Check if key is in dictionary</span>
+<span class="s1">'a'</span> <span class="ow">in</span> <span class="n">a_dict</span>
+<span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">a_dict</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">])</span>  <span class="c1"># check if any items in dictionary</span>
+<span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">a_dict</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">])</span>  <span class="c1"># check if all items in dictionary</span>
+
+<span class="c1"># Check if value is in dictionary</span>
+<span class="s1">'a'</span> <span class="ow">in</span> <span class="n">a_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="c1"># List of keys</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="c1"># List of values</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="c1"># List of key-value pairs (as tuples)</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Access">Access<a class="anchor-link" href="python/python-dictionaries/#Access">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Lookup single value by key</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">'Bob'</span><span class="p">]</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'Frank'</span><span class="p">)</span>               <span class="c1"># returns None</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'Frank'</span><span class="p">,</span> <span class="s1">'Not Found'</span><span class="p">)</span>  <span class="c1"># returns 'Not Found'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Add-items-to-the-dictionary">Add items to the dictionary<a class="anchor-link" href="python/python-dictionaries/#Add-items-to-the-dictionary">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add new item</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">'Ed'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">49</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Edit-items-in-the-dictionary">Edit items in the dictionary<a class="anchor-link" href="python/python-dictionaries/#Edit-items-in-the-dictionary">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Edit existing item</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">'Dave'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="c1"># Assignment creates reference, not a copy!</span>
+<span class="n">a_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="n">b_dict</span> <span class="o">=</span> <span class="n">a_dict</span>
+<span class="n">a_dict</span><span class="p">[</span><span class="s1">'a'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>  <span class="c1"># both values for 'a' and 'b' will be 99</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Remove-items-from-the-dictionary">Remove items from the dictionary<a class="anchor-link" href="python/python-dictionaries/#Remove-items-from-the-dictionary">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Delete item</span>
+<span class="k">del</span> <span class="n">a_dict</span><span class="p">[</span><span class="s1">'Alice'</span><span class="p">]</span>
+
+<span class="c1"># Remove all items leaving empty dictionary</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="c1"># Delete dictionary</span>
+<span class="k">del</span> <span class="n">a_dict</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sort">Sort<a class="anchor-link" href="python/python-dictionaries/#Sort">¶</a>
+</h3>
+<p>Dictionaries have no order, can either:</p>
+<ul>
+<li>Create a sorted representation as a list</li>
+<li>Use OrderedDict</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="c1"># Sorted by value, represent as a list of tuples</span>
+<span class="n">a_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'a'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+<span class="n">a_dict_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a_dict</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Store as OrderedDict</span>
+<span class="n">a_dict_ordered</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">(</span><span class="n">a_dict_sorted</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combine">Combine<a class="anchor-link" href="python/python-dictionaries/#Combine">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add a dictionaries key-value pairs to another with dupes removed</span>
+<span class="n">a_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dict2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-error-handling/" class="u-url">Python: Error Handling</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-error-handling/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Error-Handling">Error Handling<a class="anchor-link" href="python/python-error-handling/#Error-Handling">¶</a>
+</h3>
+<ul>
+<li>List of error types: <a href="https://docs.python.org/3/library/exceptions.html">https://docs.python.org/3/library/exceptions.html</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">numerator</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Enter numerator: '</span><span class="p">))</span>
+    <span class="n">denominator</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Enter denominator: '</span><span class="p">))</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">numerator</span><span class="o">/</span><span class="n">denominator</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'No value entered'</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Divide by zero'</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Other error: '</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Enter numerator: 1
+Enter denominator: 0
+Divide by zero
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-files/" class="u-url">Python: Files</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-files/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading">Reading<a class="anchor-link" href="python/python-files/#Reading">¶</a>
+</h3>
+<ul>
+<li>'r' reading</li>
+<li>'r+' reading and writing</li>
+<li>'rb' read binary file</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reading line by line</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="n">line1</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>  <span class="c1"># read a line, append \n, move pointer to next line</span>
+<span class="n">line2</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">line3</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Reading lines with for loop</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Reading files with set buffer size</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># 20 bytes at a time</span>
+    
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Writing">Writing<a class="anchor-link" href="python/python-files/#Writing">¶</a>
+</h3>
+<ul>
+<li>'w' writing, creates/overwrites</li>
+<li>'a' appending, creates/appends</li>
+<li>'wb' write binary file</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Writing line by line</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Line 1</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Line 2</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Deleting">Deleting<a class="anchor-link" href="python/python-files/#Deleting">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">remove</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Renaming">Renaming<a class="anchor-link" href="python/python-files/#Renaming">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rename</span><span class="p">(</span><span class="s1">'old.txt'</span><span class="p">,</span> <span class="s1">'new.txt'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OS-Commands">OS Commands<a class="anchor-link" href="python/python-files/#OS-Commands">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Check if file already exists</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File exists!'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File does not exist!'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-functions/" class="u-url">Python: Functions</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-functions/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Functions">Functions<a class="anchor-link" href="python/python-functions/#Functions">¶</a>
+</h3>
+<ul>
+<li>Variables defined within function are not available outside function</li>
+<li>Variables within function overrides global variables of same name</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">multiplyByTwo</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">val</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">multiplyByTwo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Main-Function">Main Function<a class="anchor-link" href="python/python-functions/#Main-Function">¶</a>
+</h3>
+<ul>
+<li>If running script as main:<ul>
+<li>__name__ will be set to __main__</li>
+<li>Following code will execute</li>
+</ul>
+</li>
+<li>If importing as module:<ul>
+<li>__name__ will be something else</li>
+<li>Following code will not execute</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Basic</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># code</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># With arguments - argv[0] refers to python script, argv[1] is first argument etc.</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">argv</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-lists/" class="u-url">Python: Lists</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-lists/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create">Create<a class="anchor-link" href="python/python-lists/#Create">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Init empty list</span>
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Init list with values</span>
+<span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="s1">'dog'</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inspect">Inspect<a class="anchor-link" href="python/python-lists/#Inspect">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of items in list</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+
+<span class="c1"># Check if item is in list</span>
+<span class="s1">'a'</span> <span class="ow">in</span> <span class="n">a_list</span>
+<span class="nb">any</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">a_list</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">])</span>  <span class="c1"># check if any items in list</span>
+<span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">a_list</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">])</span>  <span class="c1"># check if all items in list</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Access">Access<a class="anchor-link" href="python/python-lists/#Access">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Access single item</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># first item</span>
+<span class="n">a_list</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>     <span class="c1"># second last item</span>
+
+<span class="c1"># Access slice of items</span>
+<span class="n">a_list</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>     <span class="c1"># first 3 items</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>     <span class="c1"># 5th item until last</span>
+<span class="n">a_list</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>    <span class="c1"># last 3 items</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>    <span class="c1"># items at index 2 to 5 (6-1)</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># index steps of 2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Adding-to-the-list">Adding to the list<a class="anchor-link" href="python/python-lists/#Adding-to-the-list">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add item to end of list</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
+
+<span class="c1"># Insert item to a specified index position</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Edit-items-in-the-list">Edit items in the list<a class="anchor-link" href="python/python-lists/#Edit-items-in-the-list">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Overwrite existing item</span>
+<span class="n">a_list</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c1"># Assignment creates reference, not a copy!</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">99</span>  <span class="c1"># both a[0] and b[0] will be 99</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Remove-items-from-the-list">Remove items from the list<a class="anchor-link" href="python/python-lists/#Remove-items-from-the-list">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove item from list by index</span>
+<span class="k">del</span> <span class="n">a_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    <span class="c1"># delete first item</span>
+<span class="k">del</span> <span class="n">a_list</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># delete items at index 3 to 5</span>
+
+<span class="c1"># Remove item from list by value</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>
+
+<span class="c1"># Retrieve item from list and remove it</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>   <span class="c1"># last item</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># item at index 2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sort">Sort<a class="anchor-link" href="python/python-lists/#Sort">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sort list in-place</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>              <span class="c1"># default ascending</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># descending</span>
+
+<span class="c1"># Sort into new list and retain original unsorted list</span>
+<span class="n">new_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">orig_list</span><span class="p">)</span>
+
+<span class="c1"># Reverse order</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combine">Combine<a class="anchor-link" href="python/python-lists/#Combine">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenate</span>
+<span class="n">a_list</span> <span class="o">+</span> <span class="n">b_list</span>
+<span class="n">a_list</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">b_list</span><span class="p">)</span>  <span class="c1"># alternative method, will update a_list</span>
+
+<span class="c1"># Duplicate and append</span>
+<span class="n">a_list</span> <span class="o">*</span> <span class="mi">3</span>  <span class="c1"># i.e. a_list + a_list + a_list</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-modules/" class="u-url">Python: Modules</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-modules/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modules">Modules<a class="anchor-link" href="python/python-modules/#Modules">¶</a>
+</h3>
+<ul>
+<li>To create own module, save code with .py extension</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import module, reference using module name</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Import module, reference using another name</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Import only parts of module</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span>
+
+<span class="c1"># Append module location path if it doesn't exist</span>
+<span class="k">if</span> <span class="s1">'/module_directory'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'/module_directory'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-os-interaction/" class="u-url">Python: OS Interaction</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-os-interaction/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OS-Interaction">OS Interaction<a class="anchor-link" href="python/python-os-interaction/#OS-Interaction">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Run command line programs</span>
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">command</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'which'</span><span class="p">,</span> <span class="s1">'python'</span><span class="p">]</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Could not run command'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>b'/home/pat/miniconda3/bin/python\n'
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Delete file</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-print/" class="u-url">Python: Print</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-print/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Print">Print<a class="anchor-link" href="python/python-print/#Print">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">)</span>  <span class="c1"># adds space by default</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>  <span class="c1"># no space between</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'''Line 1</span>
+<span class="s1">Line 2</span>
+<span class="s1">Line 3'''</span><span class="p">)</span>  <span class="c1"># triple quotes to use multiple lines</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\n \t'</span><span class="p">)</span>  <span class="c1"># raw string, doesn't interpret escape characters</span>
+
+<span class="c1"># Formatting with %</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">%s</span><span class="s1">, Integer is </span><span class="si">%5d</span><span class="s1">, Float is </span><span class="si">%4.2f</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
+
+<span class="c1"># Formatting with format() - {index:format}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">{0:s}</span><span class="s1">, Integer is </span><span class="si">{1:5d}</span><span class="s1">, Float is </span><span class="si">{2:4.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+Helloworld!
+Line 1
+Line 2
+Line 3
+\n \t
+String is Test, Integer is   123, Float is 3.14
+String is Test, Integer is   123, Float is 3.14
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-strings/" class="u-url">Python: Strings</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-strings/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create">Create<a class="anchor-link" href="python/python-strings/#Create">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">'abc'</span>
+<span class="n">b_string</span> <span class="o">=</span> <span class="s1">'xyz'</span>
+
+<span class="c1"># Convert to string</span>
+<span class="n">c_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">2.1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inspect">Inspect<a class="anchor-link" href="python/python-strings/#Inspect">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of characters in string</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+
+<span class="c1"># Check if all characters...</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>  <span class="c1"># are alphabetic</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>  <span class="c1"># are digits</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>  <span class="c1"># are alphanumeric</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>  <span class="c1"># are lowercase, ignores digits/punctuation</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>  <span class="c1"># are uppercase, ignores digits/punctuation</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>  <span class="c1"># are whitespaces, includes \n and \t</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>  <span class="c1"># are titlecased, i.e. first letter of each word is cap</span>
+
+<span class="c1"># Unique strings only</span>
+<span class="n">string_list</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Find-substrings">Find substrings<a class="anchor-link" href="python/python-strings/#Find-substrings">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of substring occurrences</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+
+<span class="c1"># Position of substring</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>  <span class="c1"># returns ValueError if not found</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>   <span class="c1"># same, but returns -1 if not found</span>
+
+<span class="c1"># Check if starts/ends with substring</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">))</span>  <span class="c1"># can specify tuple of possible matches</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+
+<span class="c1"># Replace substrings</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">)</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># replace first 3 occurrences only</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Cleaning">Cleaning<a class="anchor-link" href="python/python-strings/#Cleaning">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert all characters to upper/lowercase</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Remove leading and trailing characters</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>       <span class="c1"># whitespace</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'ab '</span><span class="p">)</span>  <span class="c1"># remove leading/trailing 'a', 'b', ' '</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combining">Combining<a class="anchor-link" href="python/python-strings/#Combining">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenate</span>
+<span class="n">a_string</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="n">b_string</span>
+
+<span class="c1"># Join up a list/tuple/string with specified separator in between</span>
+<span class="n">sep</span> <span class="o">=</span> <span class="s1">'-'</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'aaa'</span><span class="p">,</span> <span class="s1">'bbb'</span><span class="p">,</span> <span class="s1">'ccc'</span><span class="p">]</span>
+<span class="n">a_string</span> <span class="o">=</span> <span class="s1">'Hello World!'</span>
+<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>    <span class="c1"># 'aaa-bbb-ccc'</span>
+<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>  <span class="c1"># 'H-e-l-l-o- -W-o-r-l-d-!'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splitting">Splitting<a class="anchor-link" href="python/python-strings/#Splitting">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split up string into a list of substrings</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>        <span class="c1"># use space as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>     <span class="c1"># use comma as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># use space as separator, only first 2 splits</span>
+
+<span class="c1"># Split up string by lines</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>               <span class="c1"># use line breaks as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># keep line break characters</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="python/python-user-input/" class="u-url">Python: User Input</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-user-input/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="User-Input">User Input<a class="anchor-link" href="python/python-user-input/#User-Input">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">input_val</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please input value: "</span><span class="p">)</span>  <span class="c1"># stored as string</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Entered value is:'</span><span class="p">,</span> <span class="n">input_val</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Please input value: Test
+Entered value is: Test
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="next">
+                <a href="index-1.html" rel="next">Older posts</a>
+            </li>
+        </ul></nav><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2018         <a href="mailto:patrick.s.ho@gmail.com">Patrick Ho</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
