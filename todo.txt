@@ -1,0 +1,17 @@
+Add pandas notebooks
+
+
+pandas: Columns
+Add
+Modify
+Drop
+Missing
+
+pandas: Analysis
+Inspect
+Summarise
+
+
+
+
+list of column names
