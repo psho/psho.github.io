@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +27,7 @@
         Python
     
     
+        Core
         
             Data Types
             Lists
@@ -33,48 +35,44 @@
             Strings
             Print
             Control Flow
-            Func">
+   ">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2018-07-28T19:16:54+01:00">
+<meta property="article:published_time" content="2018-07-28T19:28:28+01:00">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
 <!-- Menubar -->
 
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top mb-4"><div class="container">
 <!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://psho.github.io/">
+        <a class="navbar-brand" href="https://psho.github.io/">
 
-                <span id="blog-title">psho</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" role="navigation" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="blog/">Blog</a>
+            <span id="blog-title">psho</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item">
+<a href="blog/" class="nav-link">Blog</a>
                 </li>
-<li>
-<a href="categories/">Tags</a>
+<li class="nav-item">
+<a href="categories/" class="nav-link">Tags</a>
                 </li>
-<li>
-<a href="archive.html">Archive</a>
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archive</a>
 
                 
             </li>
 </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="index.src.html" id="sourcelink">Source</a>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="index.src.html" id="sourcelink" class="nav-link">Source</a>
     </li>
+
 
                 
             </ul>
@@ -85,9 +83,8 @@
 </nav><!-- End of Menubar --><div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
 <article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Reference</a></h1>
 
         
@@ -101,6 +98,7 @@
         <h1 class="panel-title">Python</h1>
     </div>
     <div class="panel-body">
+        <h4>Core</h4>
         <ul>
 <li><a href="blog/python/python-data-types/">Data Types</a></li>
             <li><a href="blog/python/python-lists/">Lists</a></li>
@@ -114,7 +112,10 @@
             <li><a href="blog/python/python-files/">Files</a></li>
             <li><a href="blog/python/python-os-interaction/">OS Interaction</a></li>
             <li><a href="blog/python/python-user-input/">User Input</a></li>
-            <li><a href="blog/python/pandas-dataframes/">Dataframes</a></li>
+        </ul>
+<h4>pandas</h4>
+        <ul>
+<li><a href="blog/python/pandas-dataframes/">Dataframes</a></li>
         </ul>
 </div>
 </div>
@@ -181,11 +182,7 @@
     </div>
     
 
-</article>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
+</article><!--End of body content--><footer id="footer">
             Contents © 2018         <a href="mailto:patrick.s.ho@gmail.com">Patrick Ho</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </footer>
@@ -193,9 +190,15 @@
 </div>
 
 
-            <script src="assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+        <script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
     moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates -->
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
 </body>
 </html>
