@@ -2,16 +2,6 @@
 checking data types
 
 
-=== pandas ===
-
-pandas: Columns
-Add/Drop
-Missing
-Strings
-Numbers
-Dates
-
-
 pandas: Analysis
 Inspect - list of column names
 Summarise
