@@ -62,7 +62,963 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/pandas-dataframes/" class="u-url">pandas: Dataframes</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/pandas-columns/" class="u-url">pandas: Columns</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/pandas-columns/" rel="bookmark"><time class="published dt-published" datetime="2018-07-29T19:10:49+01:00" title="2018-07-29 19:10">2018-07-29 19:10</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>'0.23.1'</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Add/Drop">Add/Drop<a class="anchor-link" href="python/pandas-columns/#Add/Drop">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add column to dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'col'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">])</span>
+
+<span class="c1"># Drop columns by index</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Drop columns by name</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Missing-Values">Missing Values<a class="anchor-link" href="python/pandas-columns/#Missing-Values">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'col1'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">],</span>
+                   <span class="s1">'col2'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Which values are missing?</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>True</td>
+      <td>False</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many missing values in each column?</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>col1    1
+col2    1
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How many missing values in total?</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Select rows with missing values</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody><tr>
+<th>1</th>
+      <td>NaN</td>
+      <td>2.0</td>
+    </tr></tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exclude row if value is missing</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>c</td>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Fill-In-Missing">Fill In Missing<a class="anchor-link" href="python/pandas-columns/#Fill-In-Missing">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fill with blank</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td></td>
+      <td>2.0</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>c</td>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backward fill - last non-N/A value upward</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'bfill'</span><span class="p">)</span>  
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[19]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>c</td>
+      <td>2.0</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>c</td>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forward fill - first non-N/A value downward</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'col1'</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'ffill'</span><span class="p">)</span>  
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>col1</th>
+      <th>col2</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>a</td>
+      <td>1.0</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>a</td>
+      <td>2.0</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>c</td>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>d</td>
+      <td>4.0</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Numeric-Data">Numeric Data<a class="anchor-link" href="python/pandas-columns/#Numeric-Data">¶</a>
+</h3>
+<p>Columns are Series, can apply math on them</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'baz'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+                   <span class="s1">'zoo'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'baz'</span><span class="p">]</span> <span class="o">+</span> <span class="mi">10</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    11
+1    13
+2    15
+3    17
+Name: baz, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">'zoo'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[63]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    False
+1    False
+2     True
+3     True
+Name: zoo, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="String-Data">String Data<a class="anchor-link" href="python/pandas-columns/#String-Data">¶</a>
+</h3>
+<p>Apply string functions to a Series using 'str' namespace</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'foo'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'one'</span><span class="p">,</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">],</span>
+                   <span class="s1">'bar'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">]})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Flag elements which start with a particular substring</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'foo'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'on'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     True
+1     True
+2    False
+3    False
+Name: foo, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find elements that match regex, return NaN for non-matches</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'foo'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">'(w)'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[66]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>0</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>NaN</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>w</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>w</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace values based on a condition</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'foo'</span><span class="p">]</span><span class="o">==</span><span class="s1">'one'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'C'</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[67]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>foo</th>
+      <th>bar</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>0</th>
+      <td>one</td>
+      <td>C</td>
+    </tr>
+<tr>
+<th>1</th>
+      <td>one</td>
+      <td>C</td>
+    </tr>
+<tr>
+<th>2</th>
+      <td>two</td>
+      <td>A</td>
+    </tr>
+<tr>
+<th>3</th>
+      <td>two</td>
+      <td>B</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Date/Time-Data">Date/Time Data<a class="anchor-link" href="python/pandas-columns/#Date/Time-Data">¶</a>
+</h3>
+<p>Apply date/time functions to a Series using 'dt' namespace</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get month numbers</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'datevar'</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/pandas-dataframes/" class="u-url">pandas: Dataframes</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
@@ -2365,211 +3321,6 @@ String is Test, Integer is   123, Float is 3.14
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-    </div>
-  </div>
-
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-strings/" class="u-url">Python: Strings</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Patrick Ho
-            </span></p>
-            <p class="dateline"><a href="python/python-strings/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
-        </div>
-    </header><div class="e-content entry-content">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Create">Create<a class="anchor-link" href="python/python-strings/#Create">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">'abc'</span>
-<span class="n">b_string</span> <span class="o">=</span> <span class="s1">'xyz'</span>
-
-<span class="c1"># Convert to string</span>
-<span class="n">c_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">2.1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Inspect">Inspect<a class="anchor-link" href="python/python-strings/#Inspect">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of characters in string</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
-
-<span class="c1"># Check if all characters...</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>  <span class="c1"># are alphabetic</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>  <span class="c1"># are digits</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>  <span class="c1"># are alphanumeric</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>  <span class="c1"># are lowercase, ignores digits/punctuation</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>  <span class="c1"># are uppercase, ignores digits/punctuation</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>  <span class="c1"># are whitespaces, includes \n and \t</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>  <span class="c1"># are titlecased, i.e. first letter of each word is cap</span>
-
-<span class="c1"># Unique strings only</span>
-<span class="n">string_list</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Find-substrings">Find substrings<a class="anchor-link" href="python/python-strings/#Find-substrings">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of substring occurrences</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
-
-<span class="c1"># Position of substring</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>  <span class="c1"># returns ValueError if not found</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>   <span class="c1"># same, but returns -1 if not found</span>
-
-<span class="c1"># Check if starts/ends with substring</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">))</span>  <span class="c1"># can specify tuple of possible matches</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
-
-<span class="c1"># Replace substrings</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">)</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># replace first 3 occurrences only</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Cleaning">Cleaning<a class="anchor-link" href="python/python-strings/#Cleaning">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert all characters to upper/lowercase</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-<span class="c1"># Remove leading and trailing characters</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>       <span class="c1"># whitespace</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'ab '</span><span class="p">)</span>  <span class="c1"># remove leading/trailing 'a', 'b', ' '</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Combining">Combining<a class="anchor-link" href="python/python-strings/#Combining">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenate</span>
-<span class="n">a_string</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="n">b_string</span>
-
-<span class="c1"># Join up a list/tuple/string with specified separator in between</span>
-<span class="n">sep</span> <span class="o">=</span> <span class="s1">'-'</span>
-<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'aaa'</span><span class="p">,</span> <span class="s1">'bbb'</span><span class="p">,</span> <span class="s1">'ccc'</span><span class="p">]</span>
-<span class="n">a_string</span> <span class="o">=</span> <span class="s1">'Hello World!'</span>
-<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>    <span class="c1"># 'aaa-bbb-ccc'</span>
-<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>  <span class="c1"># 'H-e-l-l-o- -W-o-r-l-d-!'</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Splitting">Splitting<a class="anchor-link" href="python/python-strings/#Splitting">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split up string into a list of substrings</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>        <span class="c1"># use space as separator</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>     <span class="c1"># use comma as separator</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># use space as separator, only first 2 splits</span>
-
-<span class="c1"># Split up string by lines</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>               <span class="c1"># use line breaks as separator</span>
-<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># keep line break characters</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 

@@ -62,7 +62,212 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-user-input/" class="u-url">Python: User Input</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-strings/" class="u-url">Python: Strings</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-strings/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create">Create<a class="anchor-link" href="python/python-strings/#Create">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">'abc'</span>
+<span class="n">b_string</span> <span class="o">=</span> <span class="s1">'xyz'</span>
+
+<span class="c1"># Convert to string</span>
+<span class="n">c_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">2.1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Inspect">Inspect<a class="anchor-link" href="python/python-strings/#Inspect">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of characters in string</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+
+<span class="c1"># Check if all characters...</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>  <span class="c1"># are alphabetic</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>  <span class="c1"># are digits</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span>  <span class="c1"># are alphanumeric</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span>  <span class="c1"># are lowercase, ignores digits/punctuation</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>  <span class="c1"># are uppercase, ignores digits/punctuation</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span>  <span class="c1"># are whitespaces, includes \n and \t</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">istitle</span><span class="p">()</span>  <span class="c1"># are titlecased, i.e. first letter of each word is cap</span>
+
+<span class="c1"># Unique strings only</span>
+<span class="n">string_list</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Find-substrings">Find substrings<a class="anchor-link" href="python/python-strings/#Find-substrings">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of substring occurrences</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+
+<span class="c1"># Position of substring</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>  <span class="c1"># returns ValueError if not found</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>   <span class="c1"># same, but returns -1 if not found</span>
+
+<span class="c1"># Check if starts/ends with substring</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">startswith</span><span class="p">((</span><span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">))</span>  <span class="c1"># can specify tuple of possible matches</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'sub'</span><span class="p">)</span>
+
+<span class="c1"># Replace substrings</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">)</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'old'</span><span class="p">,</span> <span class="s1">'new'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># replace first 3 occurrences only</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Cleaning">Cleaning<a class="anchor-link" href="python/python-strings/#Cleaning">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert all characters to upper/lowercase</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># Remove leading and trailing characters</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>       <span class="c1"># whitespace</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'ab '</span><span class="p">)</span>  <span class="c1"># remove leading/trailing 'a', 'b', ' '</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combining">Combining<a class="anchor-link" href="python/python-strings/#Combining">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Concatenate</span>
+<span class="n">a_string</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="n">b_string</span>
+
+<span class="c1"># Join up a list/tuple/string with specified separator in between</span>
+<span class="n">sep</span> <span class="o">=</span> <span class="s1">'-'</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'aaa'</span><span class="p">,</span> <span class="s1">'bbb'</span><span class="p">,</span> <span class="s1">'ccc'</span><span class="p">]</span>
+<span class="n">a_string</span> <span class="o">=</span> <span class="s1">'Hello World!'</span>
+<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>    <span class="c1"># 'aaa-bbb-ccc'</span>
+<span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>  <span class="c1"># 'H-e-l-l-o- -W-o-r-l-d-!'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Splitting">Splitting<a class="anchor-link" href="python/python-strings/#Splitting">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split up string into a list of substrings</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>        <span class="c1"># use space as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>     <span class="c1"># use comma as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># use space as separator, only first 2 splits</span>
+
+<span class="c1"># Split up string by lines</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>               <span class="c1"># use line breaks as separator</span>
+<span class="n">a_string</span><span class="o">.</span><span class="n">splitlines</span><span class="p">(</span><span class="n">keepends</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># keep line break characters</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-user-input/" class="u-url">Python: User Input</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
