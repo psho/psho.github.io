@@ -9,7 +9,7 @@
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/custom_ipynb.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
@@ -62,7 +62,224 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/pandas-columns/" class="u-url">pandas: Columns</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="git/git/" class="u-url">Git</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="git/git/" rel="bookmark"><time class="published dt-published" datetime="2018-07-30T00:48:44+01:00" title="2018-07-30 00:48">2018-07-30 00:48</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<h2>Git Setup</h2>
+<ol>
+<li>Install using apt-get<ul>
+<li><code>sudo apt-get update</code></li>
+<li><code>sudo apt-get install git</code></li>
+</ul>
+</li>
+<li>Verify successful installation – If successful, this will print out the git version number<ul>
+<li><code>git --version</code></li>
+</ul>
+</li>
+<li>Configure username and email – These details will be used to identify who ‘committed’ the changes.<ul>
+<li><code>git config --global user.name "&lt;your name&gt;"</code></li>
+<li><code>git config --global user.email "&lt;email address&gt;"</code></li>
+</ul>
+</li>
+<li>Configure default text editor – This is used to edit your commit messages<ul>
+<li><code>git config --global core.editor "&lt;text editor&gt;"</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Git Areas</h2>
+<p>Working --- Staging --- Local --- Remote</p>
+<ul>
+<li>
+<strong>Working Directory:</strong> The files you’re editing</li>
+<li>
+<strong>Staging Area:</strong> Where you assign which files you want to commit into the repository</li>
+<li>
+<strong>Local Repo:</strong> The repository on your own machine</li>
+<li>
+<strong>Remote Repo:</strong> The repository in the cloud or network (e.g. GitHub), often named as "origin"</li>
+</ul>
+<hr>
+<h2>Creating Repositories</h2>
+<h4><code>git init</code></h4>
+<p>Create a git repository in the current directory.</p>
+<p>TIP: You can check by seeing if there’s a hidden ".git" directory created.</p>
+<h4><code>git clone &lt;remove repo URL&gt;</code></h4>
+<p>Create a git repository in the current directory that is a copy of the remote repo with full history of changes.</p>
+<p>Use <code>--depth=1</code> if you only want to get the latest version without all the history.</p>
+<h4>GitHub: Fork</h4>
+<p>Creates a copy of a GitHub repo and registers it under your username.</p>
+<p>If you then clone this new repo locally, the original repo is referred to as <em>upstream</em>.<br>
+Local --- Remote (origin) --- Remote (upstream)</p>
+<hr>
+<h2>Making Changes</h2>
+<h4><code>git add &lt;files&gt;</code></h4>
+<p>Add file(s) to staging area so they are ready to be committed.</p>
+<p>If you want to un-stage a file, use <code>git reset &lt;file&gt;</code>.</p>
+<p>TIP: Use a <em>.gitignore</em> file to ignore tracking specified files/folders.</p>
+<h4><code>git commit -m "&lt;message&gt;"</code></h4>
+<p>Commit staged changes into the local repo ("add a dot to the chain").</p>
+<p>Every commit should have a properly written message, there are two options:</p>
+<ul>
+<li>Use the <code>-m</code> flag to write the message on command line</li>
+<li>If you have <code>core.editor</code> defined, you can omit the <code>-m</code> flag and it will load up the text editor</li>
+</ul>
+<h4><code>git status</code></h4>
+<p>Lists files in staging area that will be committed, AND<br>
+Lists changed files in working directory have not been staged</p>
+<p>TIP: Always use this before committing to check you are committing exactly what you intended</p>
+<h4><code>git diff</code></h4>
+<p>Compare differences between working directory and staging area:<br>
+Working &lt;-diff-&gt; Staging --- Local --- Remote</p>
+<p>If file is in staging area, there will be no diff as work and staging are the same.</p>
+<h4><code>git diff --staged</code></h4>
+<p>Compare differences between staging area and repository:<br>
+Working --- Staging &lt;-diff-&gt; Local --- Remote</p>
+<p>View the actual code/text changes that you are about to commit.</p>
+<h4>Reading Diff Output</h4>
+<p><img alt="Reading Diff Output" src="../images/git-reading-diff.png"></p>
+<h4>HEAD</h4>
+<p>This is a reference to the last commit in the currently checked out branch (i.e. the tip).</p>
+<p>If you checkout a specific commit instead of a branch, you will be in a ‘detached HEAD’ state.
+Any new commits while in this state won’t be reachable by any branch – you won’t see the commit in your git log.</p>
+<p>TIP: If you need to make changes to old versions, create a branch: <code>git checkout -b &lt;branch&gt; &lt;commit&gt;</code></p>
+<p>TIP: If you need to find "unreachable" commits, you can use <code>git reflog</code></p>
+<h4>Remote Branch</h4>
+<p>Read-only bookmarks pointing to where the branch was in the remote repo the last time Git checked.</p>
+<ul>
+<li>They take the form: <code>&lt;remote&gt;/&lt;branch&gt;</code>
+</li>
+<li>They are automatically updated when your local repo is in contact with the remote repo.</li>
+</ul>
+<p>Use <code>git branch -r</code> to list out the remote branches that the local repo is currently aware of.</p>
+<p><img alt="Remote Branch" src="../images/git-remote-branch.png"></p>
+<hr>
+<h2>Inspecting Change History</h2>
+<h4><code>git log</code></h4>
+<p>Show the commit history.</p>
+<ul>
+<li>Use <code>--stat</code> to show additional information about the committed changes</li>
+<li>Use <code>--oneline</code> to condense each commit to a single line</li>
+</ul>
+<p>TIP: Good commit messages == Better looking and more useful commit history!</p>
+<h4><code>git log --graph --oneline &lt;branch1&gt; &lt;branch2&gt; &lt;etc&gt;</code></h4>
+<p>Show the history of commits reachable by the specified branches in a graphical format</p>
+<p><img alt="Branching Log" src="../images/git-branching-log.png"></p>
+<h4><code>git diff &lt;base commit ID&gt; &lt;compare commit ID&gt;</code></h4>
+<p>Compare differences between two commits (typically the base commit is older)
+- The two commits don’t have to be adjacent
+- You can use shortened commit IDs</p>
+<h4><code>git checkout &lt;commit ID&gt;</code></h4>
+<p>View files as at a particular point in history.</p>
+<p>This moves you "back in time", so you won’t see later commits in the log.
+To get back to the latest version of the branch:<br><code>git checkout &lt;branch, e.g. master&gt;</code></p>
+<hr>
+<h2>Syncing Repositories</h2>
+<h4><code>git remote</code></h4>
+<p>View remote repositories.<br>
+Use <code>-v</code> for verbose listing.</p>
+<h4><code>git remote add &lt;name of remote, e.g. origin&gt; &lt;address, e.g. GitHub repo&gt;</code></h4>
+<p>Create a remote connection.</p>
+<h4><code>git push &lt;remote&gt; &lt;branch&gt;</code></h4>
+<p>Push (upload) commits on the branch to the remote repository.</p>
+<h4><code>git pull &lt;remote&gt; &lt;branch&gt;</code></h4>
+<p>Pull (download) commits on the branch from the remote repository.</p>
+<p>Equivalent to a <code>git fetch</code> followed by a <code>git merge</code>.</p>
+<h4><code>git fetch &lt;remote&gt; &lt;branch&gt;</code></h4>
+<p>Download commits from the specified branch on the remote repo to your local repo.
+The resulting commits will appear on a remote branch.</p>
+<p>This allows you to see what’s been done on the remote repo without impacting your own work.
+If you’re happy to integrate these changes to your local repo, you would then merge it in yourself (<code>git pull</code> = <code>git fetch</code> + <code>git merge</code>).</p>
+<p>TIP: It’s generally safer to use <code>git fetch</code> rather than go straight to <code>git pull</code>, as it gives you the option to review the changes first</p>
+<hr>
+<h2>Branching</h2>
+<p>Think of branches as a <strong>pointer or a label</strong> to a specific commit, rather than a container of commits.
+As commits are created, they track along and point to the new commits.</p>
+<h4><code>git branch</code></h4>
+<p>List branches.</p>
+<p>The * indicates which branch is currently checked out, the one that will update with changes.</p>
+<h4><code>git checkout &lt;branch&gt;</code></h4>
+<p>Switch to the specified branch.</p>
+<h4><code>git branch &lt;new branch name&gt;</code></h4>
+<p>Create a new branch.</p>
+<p>Does not immediately checkout the new branch.
+Create and checkout in one command with:<br><code>git checkout -b &lt;new branch name&gt;</code></p>
+<h4><code>git merge &lt;branch&gt;</code></h4>
+<p>Merge specified branch into currently checked out branch.</p>
+<p>E.g. When merging <em>new-feature</em> branch into <em>master</em>:</p>
+<ul>
+<li>Only the <em>master</em> branch moves because that's checked out</li>
+<li>The <em>new-feature</em> branch stays where it is</li>
+</ul>
+<p><img alt="Fast-Forward Merge" src="../images/git-ff-merge.png"></p>
+<p><img alt="3-Way Merge" src="../images/git-3way-merge.png"></p>
+<h4>Resolving merge conflicts</h4>
+<p>Sometimes Git isn’t sure how to complete the merge, e.g. if there are changes to the same line of code.</p>
+<ol>
+<li>Use <code>git status</code> to identify which files need resolving.</li>
+<li>The attempted merge will be in your working directory. Fix up the file manually then <code>git add/commit</code> as usual.</li>
+</ol>
+<h4>Merging and Rebasing</h4>
+<p>While working on your branch, the <em>master</em> branch may move on from where you branched from.
+There are two options to bring your branch up to date:</p>
+<ul>
+<li>
+<code>git merge</code>: Merge master into your branch. Non-destructive.</li>
+<li>
+<code>git rebase</code>: Moves entire branch to tip of master and creates new commits. Cleaner history.</li>
+</ul>
+<p><img alt="Merge vs Rebase" src="../images/git-merge-rebase.png"></p>
+<hr>
+<h2>Good Practices</h2>
+<h4>Atomic Commits</h4>
+<p>After your initial commit of the project, you should only commit atomic changes going forward.</p>
+<p>Atomic changes are small and only encompass one irreducible task (e.g. feature, fix, or improvement).
+Just large enough to be a completed block of work so the code base is never broken.</p>
+<p>Benefits include:</p>
+<ul>
+<li>Easier code reviews, as all changes in the commit are for a single task</li>
+<li>Easier code merging</li>
+<li>Easier roll back, so if there’s a bug you can exclude one change at a time</li>
+</ul>
+<p>TIP: If you make multiple changes at once on different files, you can use the staging process to divide it into multiple commits</p>
+<h4>Commit Message Format</h4>
+<p><strong>Subject line – Required, first line of the message</strong></p>
+<ul>
+<li>Limit to 50 characters</li>
+<li>Use proper capitalisation</li>
+<li>Do not end with a period</li>
+<li>Use the imperative mood, like you’re giving a command (e.g. "Fix" rather than "Fixed")<ul>
+<li>Think of it like this: "Applying this commit will &lt;subject line&gt;"</li>
+</ul>
+</li>
+</ul>
+<p><strong>Body text – Optional</strong></p>
+<ul>
+<li>Separate from subject line with a blank line</li>
+<li>Wrap text at 72 characters</li>
+<li>Explain what and why, rather than how</li>
+</ul>
+<p>TIP: Use #&lt;number&gt; in message to link to a GitHub Issue</p>
+<h4>Release Management</h4>
+<p>In GitHub, you should create a release on a branch (usually master) when there is a version of the code that’s ready to be distributed for use.
+This helps ensure people use the right versions of the project.</p>
+<p>Use semantic versioning (http://semver.org/) for the release version numbering.
+The release tag should look like: <code>v&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code>  (e.g. v1.15.3)</p>
+<ul>
+<li>Use the 'v' prefix – Makes it clear that it’s a version number</li>
+<li>Increment Major for: Large rebuilds, Changes that break backwards compatibility</li>
+<li>Increment Minor for: New features</li>
+<li>Increment Patch for: Bug fixes</li>
+</ul>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/pandas-columns/" class="u-url">pandas: Columns</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
@@ -3244,83 +3461,6 @@ Divide by zero
 </pre></div>
 
 </div>
-</div>
-</div>
-
-</div>
-    </div>
-  </div>
-
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-print/" class="u-url">Python: Print</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Patrick Ho
-            </span></p>
-            <p class="dateline"><a href="python/python-print/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
-        </div>
-    </header><div class="e-content entry-content">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Print">Print<a class="anchor-link" href="python/python-print/#Print">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">)</span>  <span class="c1"># adds space by default</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>  <span class="c1"># no space between</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">'''Line 1</span>
-<span class="s1">Line 2</span>
-<span class="s1">Line 3'''</span><span class="p">)</span>  <span class="c1"># triple quotes to use multiple lines</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\n \t'</span><span class="p">)</span>  <span class="c1"># raw string, doesn't interpret escape characters</span>
-
-<span class="c1"># Formatting with %</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">%s</span><span class="s1">, Integer is </span><span class="si">%5d</span><span class="s1">, Float is </span><span class="si">%4.2f</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
-
-<span class="c1"># Formatting with format() - {index:format}</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">{0:s}</span><span class="s1">, Integer is </span><span class="si">{1:5d}</span><span class="s1">, Float is </span><span class="si">{2:4.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello world!
-Helloworld!
-Line 1
-Line 2
-Line 3
-\n \t
-String is Test, Integer is   123, Float is 3.14
-String is Test, Integer is   123, Float is 3.14
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 

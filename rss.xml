@@ -1,5 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Sun, 29 Jul 2018 18:58:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>pandas: Columns</title><link>https://psho.github.io/blog/python/pandas-columns/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Mon, 30 Jul 2018 00:16:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Git</title><link>https://psho.github.io/blog/git/git/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;h2&gt;Git Setup&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install using apt-get&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo apt-get install git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Verify successful installation – If successful, this will print out the git version number&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git --version&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure username and email – These details will be used to identify who ‘committed’ the changes.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.name "&amp;lt;your name&amp;gt;"&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.email "&amp;lt;email address&amp;gt;"&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure default text editor – This is used to edit your commit messages&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.editor "&amp;lt;text editor&amp;gt;"&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Git Areas&lt;/h2&gt;
+&lt;p&gt;Working --- Staging --- Local --- Remote&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Working Directory:&lt;/strong&gt; The files you’re editing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Staging Area:&lt;/strong&gt; Where you assign which files you want to commit into the repository&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local Repo:&lt;/strong&gt; The repository on your own machine&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote Repo:&lt;/strong&gt; The repository in the cloud or network (e.g. GitHub), often named as "origin"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Creating Repositories&lt;/h2&gt;
+&lt;h4&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Create a git repository in the current directory.&lt;/p&gt;
+&lt;p&gt;TIP: You can check by seeing if there’s a hidden ".git" directory created.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git clone &amp;lt;remove repo URL&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Create a git repository in the current directory that is a copy of the remote repo with full history of changes.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;--depth=1&lt;/code&gt; if you only want to get the latest version without all the history.&lt;/p&gt;
+&lt;h4&gt;GitHub: Fork&lt;/h4&gt;
+&lt;p&gt;Creates a copy of a GitHub repo and registers it under your username.&lt;/p&gt;
+&lt;p&gt;If you then clone this new repo locally, the original repo is referred to as &lt;em&gt;upstream&lt;/em&gt;.&lt;br&gt;
+Local --- Remote (origin) --- Remote (upstream)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Making Changes&lt;/h2&gt;
+&lt;h4&gt;&lt;code&gt;git add &amp;lt;files&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Add file(s) to staging area so they are ready to be committed.&lt;/p&gt;
+&lt;p&gt;If you want to un-stage a file, use &lt;code&gt;git reset &amp;lt;file&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;TIP: Use a &lt;em&gt;.gitignore&lt;/em&gt; file to ignore tracking specified files/folders.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git commit -m "&amp;lt;message&amp;gt;"&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Commit staged changes into the local repo ("add a dot to the chain").&lt;/p&gt;
+&lt;p&gt;Every commit should have a properly written message, there are two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the &lt;code&gt;-m&lt;/code&gt; flag to write the message on command line&lt;/li&gt;
+&lt;li&gt;If you have &lt;code&gt;core.editor&lt;/code&gt; defined, you can omit the &lt;code&gt;-m&lt;/code&gt; flag and it will load up the text editor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Lists files in staging area that will be committed, AND&lt;br&gt;
+Lists changed files in working directory have not been staged&lt;/p&gt;
+&lt;p&gt;TIP: Always use this before committing to check you are committing exactly what you intended&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git diff&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Compare differences between working directory and staging area:&lt;br&gt;
+Working &amp;lt;-diff-&amp;gt; Staging --- Local --- Remote&lt;/p&gt;
+&lt;p&gt;If file is in staging area, there will be no diff as work and staging are the same.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git diff --staged&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Compare differences between staging area and repository:&lt;br&gt;
+Working --- Staging &amp;lt;-diff-&amp;gt; Local --- Remote&lt;/p&gt;
+&lt;p&gt;View the actual code/text changes that you are about to commit.&lt;/p&gt;
+&lt;h4&gt;Reading Diff Output&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="Reading Diff Output" src="https://psho.github.io/images/git-reading-diff.png"&gt;&lt;/p&gt;
+&lt;h4&gt;HEAD&lt;/h4&gt;
+&lt;p&gt;This is a reference to the last commit in the currently checked out branch (i.e. the tip).&lt;/p&gt;
+&lt;p&gt;If you checkout a specific commit instead of a branch, you will be in a ‘detached HEAD’ state.
+Any new commits while in this state won’t be reachable by any branch – you won’t see the commit in your git log.&lt;/p&gt;
+&lt;p&gt;TIP: If you need to make changes to old versions, create a branch: &lt;code&gt;git checkout -b &amp;lt;branch&amp;gt; &amp;lt;commit&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;TIP: If you need to find "unreachable" commits, you can use &lt;code&gt;git reflog&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Remote Branch&lt;/h4&gt;
+&lt;p&gt;Read-only bookmarks pointing to where the branch was in the remote repo the last time Git checked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They take the form: &lt;code&gt;&amp;lt;remote&amp;gt;/&amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;They are automatically updated when your local repo is in contact with the remote repo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Use &lt;code&gt;git branch -r&lt;/code&gt; to list out the remote branches that the local repo is currently aware of.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Remote Branch" src="https://psho.github.io/images/git-remote-branch.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Inspecting Change History&lt;/h2&gt;
+&lt;h4&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Show the commit history.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;--stat&lt;/code&gt; to show additional information about the committed changes&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;--oneline&lt;/code&gt; to condense each commit to a single line&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TIP: Good commit messages == Better looking and more useful commit history!&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git log --graph --oneline &amp;lt;branch1&amp;gt; &amp;lt;branch2&amp;gt; &amp;lt;etc&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Show the history of commits reachable by the specified branches in a graphical format&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Branching Log" src="https://psho.github.io/images/git-branching-log.png"&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git diff &amp;lt;base commit ID&amp;gt; &amp;lt;compare commit ID&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Compare differences between two commits (typically the base commit is older)
+- The two commits don’t have to be adjacent
+- You can use shortened commit IDs&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git checkout &amp;lt;commit ID&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;View files as at a particular point in history.&lt;/p&gt;
+&lt;p&gt;This moves you "back in time", so you won’t see later commits in the log.
+To get back to the latest version of the branch:&lt;br&gt;
+&lt;code&gt;git checkout &amp;lt;branch, e.g. master&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Syncing Repositories&lt;/h2&gt;
+&lt;h4&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;View remote repositories.&lt;br&gt;
+Use &lt;code&gt;-v&lt;/code&gt; for verbose listing.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git remote add &amp;lt;name of remote, e.g. origin&amp;gt; &amp;lt;address, e.g. GitHub repo&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Create a remote connection.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Push (upload) commits on the branch to the remote repository.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git pull &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Pull (download) commits on the branch from the remote repository.&lt;/p&gt;
+&lt;p&gt;Equivalent to a &lt;code&gt;git fetch&lt;/code&gt; followed by a &lt;code&gt;git merge&lt;/code&gt;.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git fetch &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Download commits from the specified branch on the remote repo to your local repo.
+The resulting commits will appear on a remote branch.&lt;/p&gt;
+&lt;p&gt;This allows you to see what’s been done on the remote repo without impacting your own work.
+If you’re happy to integrate these changes to your local repo, you would then merge it in yourself (&lt;code&gt;git pull&lt;/code&gt; = &lt;code&gt;git fetch&lt;/code&gt; + &lt;code&gt;git merge&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;TIP: It’s generally safer to use &lt;code&gt;git fetch&lt;/code&gt; rather than go straight to &lt;code&gt;git pull&lt;/code&gt;, as it gives you the option to review the changes first&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Branching&lt;/h2&gt;
+&lt;p&gt;Think of branches as a &lt;strong&gt;pointer or a label&lt;/strong&gt; to a specific commit, rather than a container of commits.
+As commits are created, they track along and point to the new commits.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;List branches.&lt;/p&gt;
+&lt;p&gt;The * indicates which branch is currently checked out, the one that will update with changes.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git checkout &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Switch to the specified branch.&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git branch &amp;lt;new branch name&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Create a new branch.&lt;/p&gt;
+&lt;p&gt;Does not immediately checkout the new branch.
+Create and checkout in one command with:&lt;br&gt;
+&lt;code&gt;git checkout -b &amp;lt;new branch name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;code&gt;git merge &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;Merge specified branch into currently checked out branch.&lt;/p&gt;
+&lt;p&gt;E.g. When merging &lt;em&gt;new-feature&lt;/em&gt; branch into &lt;em&gt;master&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only the &lt;em&gt;master&lt;/em&gt; branch moves because that's checked out&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;new-feature&lt;/em&gt; branch stays where it is&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Fast-Forward Merge" src="https://psho.github.io/images/git-ff-merge.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="3-Way Merge" src="https://psho.github.io/images/git-3way-merge.png"&gt;&lt;/p&gt;
+&lt;h4&gt;Resolving merge conflicts&lt;/h4&gt;
+&lt;p&gt;Sometimes Git isn’t sure how to complete the merge, e.g. if there are changes to the same line of code.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use &lt;code&gt;git status&lt;/code&gt; to identify which files need resolving.&lt;/li&gt;
+&lt;li&gt;The attempted merge will be in your working directory. Fix up the file manually then &lt;code&gt;git add/commit&lt;/code&gt; as usual.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Merging and Rebasing&lt;/h4&gt;
+&lt;p&gt;While working on your branch, the &lt;em&gt;master&lt;/em&gt; branch may move on from where you branched from.
+There are two options to bring your branch up to date:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git merge&lt;/code&gt;: Merge master into your branch. Non-destructive.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rebase&lt;/code&gt;: Moves entire branch to tip of master and creates new commits. Cleaner history.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Merge vs Rebase" src="https://psho.github.io/images/git-merge-rebase.png"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Good Practices&lt;/h2&gt;
+&lt;h4&gt;Atomic Commits&lt;/h4&gt;
+&lt;p&gt;After your initial commit of the project, you should only commit atomic changes going forward.&lt;/p&gt;
+&lt;p&gt;Atomic changes are small and only encompass one irreducible task (e.g. feature, fix, or improvement).
+Just large enough to be a completed block of work so the code base is never broken.&lt;/p&gt;
+&lt;p&gt;Benefits include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easier code reviews, as all changes in the commit are for a single task&lt;/li&gt;
+&lt;li&gt;Easier code merging&lt;/li&gt;
+&lt;li&gt;Easier roll back, so if there’s a bug you can exclude one change at a time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TIP: If you make multiple changes at once on different files, you can use the staging process to divide it into multiple commits&lt;/p&gt;
+&lt;h4&gt;Commit Message Format&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Subject line – Required, first line of the message&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Limit to 50 characters&lt;/li&gt;
+&lt;li&gt;Use proper capitalisation&lt;/li&gt;
+&lt;li&gt;Do not end with a period&lt;/li&gt;
+&lt;li&gt;Use the imperative mood, like you’re giving a command (e.g. "Fix" rather than "Fixed")&lt;ul&gt;
+&lt;li&gt;Think of it like this: "Applying this commit will &amp;lt;subject line&amp;gt;"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Body text – Optional&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Separate from subject line with a blank line&lt;/li&gt;
+&lt;li&gt;Wrap text at 72 characters&lt;/li&gt;
+&lt;li&gt;Explain what and why, rather than how&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TIP: Use #&amp;lt;number&amp;gt; in message to link to a GitHub Issue&lt;/p&gt;
+&lt;h4&gt;Release Management&lt;/h4&gt;
+&lt;p&gt;In GitHub, you should create a release on a branch (usually master) when there is a version of the code that’s ready to be distributed for use.
+This helps ensure people use the right versions of the project.&lt;/p&gt;
+&lt;p&gt;Use semantic versioning (http://semver.org/) for the release version numbering.
+The release tag should look like: &lt;code&gt;v&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;.&amp;lt;patch&amp;gt;&lt;/code&gt;  (e.g. v1.15.3)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the 'v' prefix – Makes it clear that it’s a version number&lt;/li&gt;
+&lt;li&gt;Increment Major for: Large rebuilds, Changes that break backwards compatibility&lt;/li&gt;
+&lt;li&gt;Increment Minor for: New features&lt;/li&gt;
+&lt;li&gt;Increment Patch for: Bug fixes&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://psho.github.io/blog/git/git/</guid><pubDate>Sun, 29 Jul 2018 23:48:44 GMT</pubDate></item><item><title>pandas: Columns</title><link>https://psho.github.io/blog/python/pandas-columns/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -3018,69 +3218,4 @@ Divide by zero
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><guid>https://psho.github.io/blog/python/python-os-interaction/</guid><pubDate>Fri, 27 Jul 2018 22:16:00 GMT</pubDate></item><item><title>Python: Print</title><link>https://psho.github.io/blog/python/python-print/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Print"&gt;Print&lt;a class="anchor-link" href="https://psho.github.io/blog/python/python-print/#Print"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Hello'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'world!'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# adds space by default&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Hello'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'world!'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# no space between&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'''Line 1&lt;/span&gt;
-&lt;span class="s1"&gt;Line 2&lt;/span&gt;
-&lt;span class="s1"&gt;Line 3'''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# triple quotes to use multiple lines&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'\n \t'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# raw string, doesn't interpret escape characters&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Formatting with %&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'String is &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;, Integer is &lt;/span&gt;&lt;span class="si"&gt;%5d&lt;/span&gt;&lt;span class="s1"&gt;, Float is &lt;/span&gt;&lt;span class="si"&gt;%4.2f&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Test'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.14159&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Formatting with format() - {index:format}&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'String is &lt;/span&gt;&lt;span class="si"&gt;{0:s}&lt;/span&gt;&lt;span class="s1"&gt;, Integer is &lt;/span&gt;&lt;span class="si"&gt;{1:5d}&lt;/span&gt;&lt;span class="s1"&gt;, Float is &lt;/span&gt;&lt;span class="si"&gt;{2:4.2f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Test'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.14159&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;Hello world!
-Helloworld!
-Line 1
-Line 2
-Line 3
-\n \t
-String is Test, Integer is   123, Float is 3.14
-String is Test, Integer is   123, Float is 3.14
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><guid>https://psho.github.io/blog/python/python-print/</guid><pubDate>Fri, 27 Jul 2018 22:16:00 GMT</pubDate></item></channel></rss>
+</description><guid>https://psho.github.io/blog/python/python-os-interaction/</guid><pubDate>Fri, 27 Jul 2018 22:16:00 GMT</pubDate></item></channel></rss>

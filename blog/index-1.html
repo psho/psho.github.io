@@ -9,7 +9,7 @@
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/custom_ipynb.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
@@ -62,7 +62,84 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-strings/" class="u-url">Python: Strings</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-print/" class="u-url">Python: Print</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-print/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Print">Print<a class="anchor-link" href="python/python-print/#Print">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">)</span>  <span class="c1"># adds space by default</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">,</span> <span class="s1">'world!'</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>  <span class="c1"># no space between</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'''Line 1</span>
+<span class="s1">Line 2</span>
+<span class="s1">Line 3'''</span><span class="p">)</span>  <span class="c1"># triple quotes to use multiple lines</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\n \t'</span><span class="p">)</span>  <span class="c1"># raw string, doesn't interpret escape characters</span>
+
+<span class="c1"># Formatting with %</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">%s</span><span class="s1">, Integer is </span><span class="si">%5d</span><span class="s1">, Float is </span><span class="si">%4.2f</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
+
+<span class="c1"># Formatting with format() - {index:format}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'String is </span><span class="si">{0:s}</span><span class="s1">, Integer is </span><span class="si">{1:5d}</span><span class="s1">, Float is </span><span class="si">{2:4.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">'Test'</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mf">3.14159</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello world!
+Helloworld!
+Line 1
+Line 2
+Line 3
+\n \t
+String is Test, Integer is   123, Float is 3.14
+String is Test, Integer is   123, Float is 3.14
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-strings/" class="u-url">Python: Strings</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
