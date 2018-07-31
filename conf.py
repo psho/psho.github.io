@@ -213,6 +213,7 @@ POSTS = (
     ("posts/*.md", "blog", "post.tmpl"),
     ("posts/python/*.ipynb", "blog/python", "post.tmpl"),
     ("posts/ml/*.ipynb", "blog/ml", "post.tmpl"),
+    ("posts/stats/*.ipynb", "blog/stats", "post.tmpl"),
     ("posts/*.html", "blog", "post.tmpl"),
     # ("posts/*.txt", "blog", "post.tmpl"),
     # ("posts/*.rst", "blog", "post.tmpl"),
