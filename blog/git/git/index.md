@@ -99,7 +99,7 @@ Working --- Staging <-diff-> Local --- Remote
 View the actual code/text changes that you are about to commit.
 
 ### Reading Diff Output
-![Reading Diff Output](/images/git-reading-diff.png)
+![Reading Diff Output](/images/git/git-reading-diff.png)
 
 ### HEAD
 
@@ -121,7 +121,7 @@ Read-only bookmarks pointing to where the branch was in the remote repo the last
 
 Use `git branch -r` to list out the remote branches that the local repo is currently aware of.
 
-![Remote Branch](/images/git-remote-branch.png)
+![Remote Branch](/images/git/git-remote-branch.png)
 
 
 ---
@@ -140,7 +140,7 @@ TIP: Good commit messages == Better looking and more useful commit history!
 
 Show the history of commits reachable by the specified branches in a graphical format
 
-![Branching Log](/images/git-branching-log.png)
+![Branching Log](/images/git/git-branching-log.png)
 
 ### `git diff <base commit ID> <compare commit ID>`
 
@@ -223,9 +223,9 @@ E.g. When merging *new-feature* branch into *master*:
 - Only the *master* branch moves because that's checked out
 - The *new-feature* branch stays where it is
 
-![Fast-Forward Merge](/images/git-ff-merge.png)
+![Fast-Forward Merge](/images/git/git-ff-merge.png)
 
-![3-Way Merge](/images/git-3way-merge.png)
+![3-Way Merge](/images/git/git-3way-merge.png)
 
 ### Resolving merge conflicts
 
@@ -242,7 +242,7 @@ There are two options to bring your branch up to date:
 - `git merge`: Merge master into your branch. Non-destructive.
 - `git rebase`: Moves entire branch to tip of master and creates new commits. Cleaner history.
 
-![Merge vs Rebase](/images/git-merge-rebase.png)
+![Merge vs Rebase](/images/git/git-merge-rebase.png)
 
 
 ---

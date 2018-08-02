@@ -167,7 +167,7 @@ Working &lt;-diff-&gt; Staging --- Local --- Remote</p>
 Working --- Staging &lt;-diff-&gt; Local --- Remote</p>
 <p>View the actual code/text changes that you are about to commit.</p>
 <h4>Reading Diff Output</h4>
-<p><img alt="Reading Diff Output" src="../../../images/git-reading-diff.png"></p>
+<p><img alt="Reading Diff Output" src="../../../images/git/git-reading-diff.png"></p>
 <h4>HEAD</h4>
 <p>This is a reference to the last commit in the currently checked out branch (i.e. the tip).</p>
 <p>If you checkout a specific commit instead of a branch, you will be in a ‘detached HEAD’ state.
@@ -182,7 +182,7 @@ Any new commits while in this state won’t be reachable by any branch – you w
 <li>They are automatically updated when your local repo is in contact with the remote repo.</li>
 </ul>
 <p>Use <code>git branch -r</code> to list out the remote branches that the local repo is currently aware of.</p>
-<p><img alt="Remote Branch" src="../../../images/git-remote-branch.png"></p>
+<p><img alt="Remote Branch" src="../../../images/git/git-remote-branch.png"></p>
 <hr>
 <h2>Inspecting Change History</h2>
 <h4><code>git log</code></h4>
@@ -194,7 +194,7 @@ Any new commits while in this state won’t be reachable by any branch – you w
 <p>TIP: Good commit messages == Better looking and more useful commit history!</p>
 <h4><code>git log --graph --oneline &lt;branch1&gt; &lt;branch2&gt; &lt;etc&gt;</code></h4>
 <p>Show the history of commits reachable by the specified branches in a graphical format</p>
-<p><img alt="Branching Log" src="../../../images/git-branching-log.png"></p>
+<p><img alt="Branching Log" src="../../../images/git/git-branching-log.png"></p>
 <h4><code>git diff &lt;base commit ID&gt; &lt;compare commit ID&gt;</code></h4>
 <p>Compare differences between two commits (typically the base commit is older)
 - The two commits don’t have to be adjacent
@@ -241,8 +241,8 @@ Create and checkout in one command with:<br><code>git checkout -b &lt;new branch
 <li>Only the <em>master</em> branch moves because that's checked out</li>
 <li>The <em>new-feature</em> branch stays where it is</li>
 </ul>
-<p><img alt="Fast-Forward Merge" src="../../../images/git-ff-merge.png"></p>
-<p><img alt="3-Way Merge" src="../../../images/git-3way-merge.png"></p>
+<p><img alt="Fast-Forward Merge" src="../../../images/git/git-ff-merge.png"></p>
+<p><img alt="3-Way Merge" src="../../../images/git/git-3way-merge.png"></p>
 <h4>Resolving merge conflicts</h4>
 <p>Sometimes Git isn’t sure how to complete the merge, e.g. if there are changes to the same line of code.</p>
 <ol>
@@ -258,7 +258,7 @@ There are two options to bring your branch up to date:</p>
 <li>
 <code>git rebase</code>: Moves entire branch to tip of master and creates new commits. Cleaner history.</li>
 </ul>
-<p><img alt="Merge vs Rebase" src="../../../images/git-merge-rebase.png"></p>
+<p><img alt="Merge vs Rebase" src="../../../images/git/git-merge-rebase.png"></p>
 <hr>
 <h2>Good Practices</h2>
 <h4>Atomic Commits</h4>
