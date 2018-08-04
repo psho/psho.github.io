@@ -149,7 +149,6 @@ NAVIGATION_ALT_LINKS = {
 
 # Name of the theme to use.
 THEME = "custom"
-#THEME = "bootstrap4"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.
