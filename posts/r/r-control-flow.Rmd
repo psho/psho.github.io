@@ -1,0 +1,98 @@
+---
+Author: Patrick Ho
+Category: Programming
+Date: 2017-02-12
+Slug: r-control-flow
+Summary:
+Tags: R
+Title: Control Flow
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE)
+```
+
+## If {#if}
+- Be careful of short form (&, |) vs long form (&&, ||) logical operators
+    - Short form does element-wise comparison
+    - Long form evaluates left to right using only first element of each vector
+    - Long form preferred in if clauses, just ensure it's a single element comparison
+
+```{r if, eval=FALSE}
+if (x > 5) {
+  y <- 6
+} else if (x == 5) {
+  y <- 5
+} else {
+  y <- 0
+}
+
+# Short form logical operators
+((-2:2) >= 0) & ((-2:2) <= 0)   # FALSE FALSE  TRUE FALSE FALSE
+
+# Long form logical operators
+((-2:2) >= 0) && ((-2:2) <= 0)  # FALSE  (-2 not >= 0)
+```
+
+## For {#for}
+
+```{r for, eval=FALSE}
+for (i in 1:10) {
+  print(i)
+}
+
+
+# Process a vector - Following loops all have same result
+x <- c('a', 'b', 'c', 'd', 'e')
+
+for (i in 1:5) {
+  print(x[i])
+}
+
+for (i in seq_len(length(x))) {
+  print(x[i])
+}
+
+for (i in seq_along(x)) {
+  print(x[i])
+}
+
+for (letter in x) {
+  print(letter)
+}
+
+
+# Nested loops
+x <- matrix(1:6, 2, 3)
+
+for (i in seq_len(nrow(x))) {
+  for (j in seq_len(ncol(x))) {
+    print(x[i, j])
+  }
+}
+
+
+# Interrupt loop iteration
+for (i in 1:100) {
+  if (i <= 20) {
+    next  # Skip to next iteration
+  }
+
+  print(i)
+
+  if (i == 30) {
+    break  # Break out of loop
+  }
+}
+```
+
+## While {#while}
+- Loops while condition is true
+
+```{r while, eval=FALSE}
+i <- 0
+while (i < 10) {
+  print(i)
+  i <- i + 1
+}
+```

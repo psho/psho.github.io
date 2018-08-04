@@ -11,15 +11,6 @@ Title: Data Types
 knitr::opts_chunk$set(echo=TRUE)
 ```
 
-## Jump to:
-- [Objects](#objects)
-- [Vectors](#vectors)
-- [Matrices and Arrays](#matrices_arrays)
-- [Factors](#factors)
-- [Lists](#lists)
-- [Data Frames](#data_frames)
-- [str](#str)
-
 ## Objects {#objects}
 - Five atomic classes of objects: **Numeric, Integer, Character, Logical, Complex**
 - Numbers are treated as double precision by default
