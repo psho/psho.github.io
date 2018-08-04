@@ -15,11 +15,11 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2018-08-02T23:51:00Z</lastmod>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
-  <lastmod>2018-07-31T23:10:00Z</lastmod>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/git/git/</loc>
@@ -27,11 +27,35 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-1.html</loc>
-  <lastmod>2018-08-02T23:51:00Z</lastmod>
+  <lastmod>2018-08-03T22:43:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/index-2.html</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/index-3.html</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>
   <lastmod>2018-07-31T22:09:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/python/matplotlib-bar-charts/</loc>
+  <lastmod>2018-08-03T22:43:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/python/matplotlib-line-charts/</loc>
+  <lastmod>2018-08-03T22:43:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/python/matplotlib-scatterplots/</loc>
+  <lastmod>2018-08-03T22:43:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/python/matplotlib-styling/</loc>
+  <lastmod>2018-08-03T22:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/pandas-analysis/</loc>
@@ -94,8 +118,40 @@
   <lastmod>2018-07-27T22:19:00Z</lastmod>
  </url>
  <url>
+  <loc>https://psho.github.io/blog/r/r-apply/</loc>
+  <lastmod>2018-08-03T23:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-control-flow/</loc>
+  <lastmod>2018-08-03T23:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://psho.github.io/blog/r/r-data-types/</loc>
   <lastmod>2018-07-31T23:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-dates-times/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-files/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-functions/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-scoping-rules/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-simulation/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/r/r-subsetting/</loc>
+  <lastmod>2018-08-03T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/stats/resamp-perm-test/</loc>
@@ -111,7 +167,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/index.src.html</loc>
-  <lastmod>2018-08-02T23:51:00Z</lastmod>
+  <lastmod>2018-08-04T00:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/listings/</loc>

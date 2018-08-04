@@ -1,21 +1,13 @@
 <!--
 .. title: R: Data Types
 .. slug: r-data-types
-.. date: 2018-08-01 00:10:19 UTC+01:00
+.. date: 2018-08-04 00:14:50 UTC+01:00
 .. tags: 
 .. category: 
 .. link: 
 .. description: 
 .. type: text
 -->
-
-```r
-# Create from vector
-x <- 1:6
-dim(x) <- c(2,3)  # Turn vector into 2x3 matrix - Column-wise by default "top-left then down"
-matrix(1:6, nrow = 2, ncol = 3)  # Same result
-matrix(1:6, c(2,3))  # Same result
-```
 
 Objects
 -------

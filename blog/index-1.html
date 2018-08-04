@@ -14,7 +14,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="https://psho.github.io/blog/index-1.html">
-<link rel="prev" href="." type="text/html">
+<link rel="prev" href="index-2.html" type="text/html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 </head>
 <body>
@@ -62,7 +62,184 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-functions/" class="u-url">Python: Functions</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-files/" class="u-url">Python: Files</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline"><a href="python/python-files/" rel="bookmark"><time class="published dt-published" datetime="2018-07-27T23:16:00+01:00" title="2018-07-27 23:16">2018-07-27 23:16</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reading">Reading<a class="anchor-link" href="python/python-files/#Reading">¶</a>
+</h3>
+<ul>
+<li>'r' reading</li>
+<li>'r+' reading and writing</li>
+<li>'rb' read binary file</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reading line by line</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="n">line1</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>  <span class="c1"># read a line, append \n, move pointer to next line</span>
+<span class="n">line2</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">line3</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Reading lines with for loop</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="c1"># Reading files with set buffer size</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">buf</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># 20 bytes at a time</span>
+    
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Writing">Writing<a class="anchor-link" href="python/python-files/#Writing">¶</a>
+</h3>
+<ul>
+<li>'w' writing, creates/overwrites</li>
+<li>'a' appending, creates/appends</li>
+<li>'wb' write binary file</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Writing line by line</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Line 1</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Line 2</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Deleting">Deleting<a class="anchor-link" href="python/python-files/#Deleting">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">remove</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Renaming">Renaming<a class="anchor-link" href="python/python-files/#Renaming">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rename</span><span class="p">(</span><span class="s1">'old.txt'</span><span class="p">,</span> <span class="s1">'new.txt'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="OS-Commands">OS Commands<a class="anchor-link" href="python/python-files/#OS-Commands">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Check if file already exists</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">'file.txt'</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File exists!'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'File does not exist!'</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="python/python-functions/" class="u-url">Python: Functions</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
@@ -1515,7 +1692,7 @@ o
 </div>
 
         <ul class="pager postindexpager clearfix">
-<li class="previous"><a href="." rel="prev">Newer posts</a></li>
+<li class="previous"><a href="index-2.html" rel="prev">Newer posts</a></li>
         </ul>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c=" crossorigin="anonymous"></script><script>
                 renderMathInElement(document.body,
