@@ -211,6 +211,7 @@ THEME_CONFIG = {
 POSTS = (
     ("posts/*.md", "blog", "post.tmpl"),
     ("posts/python/*.ipynb", "blog/python", "post.tmpl"),
+    ("posts/dl/*.ipynb", "blog/dl", "post.tmpl"),
     ("posts/ml/*.ipynb", "blog/ml", "post.tmpl"),
     ("posts/stats/*.ipynb", "blog/stats", "post.tmpl"),
     ("posts/*.html", "blog", "post.tmpl"),
