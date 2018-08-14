@@ -15,11 +15,15 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2018-08-04T15:28:00Z</lastmod>
+  <lastmod>2018-08-14T22:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2018-08-14T22:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/dl/fastai-image-classification/</loc>
+  <lastmod>2018-08-14T22:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/git/git/</loc>
@@ -35,7 +39,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-3.html</loc>
-  <lastmod>2018-08-04T15:28:00Z</lastmod>
+  <lastmod>2018-08-14T22:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>
