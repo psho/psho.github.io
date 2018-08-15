@@ -6,3 +6,6 @@ pandas: Analysis
 Inspect - list of column names
 Summarise
 
+
+
+scp username@server:~/folder/file /local/directory/
