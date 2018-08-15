@@ -190,11 +190,11 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data">Data<a class="anchor-link" href="dl/fastai-image-classification/#Data">¶</a>
 </h3>
-<p>Images of cats and dogs:</p>
+<p>Images of cats and dogs organised by folders:</p>
 <ul>
-<li>23000 train (11500 cats, 11500 dogs)</li>
-<li>2000 validation (1000 cats, 1000 dogs)</li>
-<li>12500 test</li>
+<li>23000 train (11500 in /train/cats/, 11500 in /train/dogs/)</li>
+<li>2000 validation (1000 in /valid/cats/, 1000 in /valid/dogs/)</li>
+<li>12500 test (in /test1/)</li>
 </ul>
 </div>
 </div>
@@ -372,7 +372,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Initial-Fit-with-Pre-trained-Model">Initial Fit with Pre-trained Model<a class="anchor-link" href="dl/fastai-image-classification/#Initial-Fit-with-Pre-trained-Model">¶</a>
 </h3>
-<p>Use a pre-trained model from a similar problem to get a head start on training by taking advantage of what it has already learned from other images.</p>
+<p>Use a pre-trained model from a similar problem to get a head start on training by taking advantage of what it has already learned from other images. Using different architectures may yield better results, e.g. resnext50 instead of resnet34.</p>
 <h5 id="Pre-Compute">Pre-Compute<a class="anchor-link" href="dl/fastai-image-classification/#Pre-Compute">¶</a>
 </h5>
 <p>The <em>activations</em> at the second last layer (just before classification) of an image recognition model indicate that certain features (e.g. an eye, an ear, a paw) have been detected at various locations in the image with some level of confidence.</p>
@@ -380,7 +380,13 @@
 <p>Precomputed activations are saved in the <code>tmp</code> directory. If there were issues creating these, delete the files to start fresh again.</p>
 <h5 id="Image-Pre-Processing">Image Pre-Processing<a class="anchor-link" href="dl/fastai-image-classification/#Image-Pre-Processing">¶</a>
 </h5>
-<p>Different models require different pre-processing that needs to be applied on the images like normalisation. <code>tfms_from_model()</code> defines the appropriate pre-processing to use for the given model.</p>
+<p>Different models require different pre-processing that needs to be applied on the images like normalisation. <code>tfms_from_model()</code> defines the appropriate pre-processing to use for the given model. If using an ImageNet model (like resnet34), note that most are trained on images that are around 224x224 or 299x299.</p>
+<p>Start with small image sizes for faster training initially for a few epochs. If your images are similar to the pre-trained model images, be careful not to go <em>too</em> small as to destroy the weights. But if images are more different, safer to go smaller.</p>
+<p>Can then use <code>learn.set_data()</code> to switch to larger images and continue training - effective way to avoid overfitting as we're using different images. If your image/batch sizes cause a CUDA out of memory error, then restart kernel and use smaller batch size.</p>
+<h5 id="ImageClassifierData">ImageClassifierData<a class="anchor-link" href="dl/fastai-image-classification/#ImageClassifierData">¶</a>
+</h5>
+<p>Use <code>from_paths()</code> if images are organised into train/valid/test by folder. Use <code>from_csv()</code> if image labels are in a CSV lookup file - need to randomly select indexes for our validation set.</p>
+<p>Access the image file paths for the training and validation sets with <code>data.trn_ds.fnames[index]</code> and <code>data.val_ds.fnames[index]</code></p>
 <h5 id="Learner">Learner<a class="anchor-link" href="dl/fastai-image-classification/#Learner">¶</a>
 </h5>
 <p><code>ConvLearner.pretrained()</code> builds a <em>learner</em> that contains a pre-trained model with the last layer replaced by the right dimensions.</p>
@@ -397,7 +403,7 @@
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use resnet34 which was 2015 winner of ImageNet competition</span>
 <span class="n">arch</span> <span class="o">=</span> <span class="n">resnet34</span>
 
-<span class="c1"># Resize images to this size. Start smaller for faster training initially.</span>
+<span class="c1"># Resize images to this size</span>
 <span class="n">sz</span> <span class="o">=</span> <span class="mi">224</span>
 
 <span class="c1"># Read in images and assign their labels based on folder names</span>
@@ -451,10 +457,10 @@
 
  
  
-<div id="943e9009-83c2-4fe2-bebd-0479a6f40b76"></div>
+<div id="e29a0134-eab2-4daf-8c00-388eaa267007"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#943e9009-83c2-4fe2-bebd-0479a6f40b76');
+var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 </script><script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "359db349b43e4556bfe479b673c02184", "version_major": 2, "version_minor": 0}
 </script>
@@ -594,10 +600,10 @@ var element = $('#943e9009-83c2-4fe2-bebd-0479a6f40b76');
 
  
  
-<div id="55badc3b-99af-4b52-ad21-047957f7d5fb"></div>
+<div id="6b366797-c5e9-4af1-9541-3acd0bd75e08"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#55badc3b-99af-4b52-ad21-047957f7d5fb');
+var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 </script><script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "5c7333d183bd4e88813e07105b297bb0", "version_major": 2, "version_minor": 0}
 </script>
@@ -819,10 +825,10 @@ var element = $('#55badc3b-99af-4b52-ad21-047957f7d5fb');
 
  
  
-<div id="72cabe46-1ed5-4cfc-80ee-784b46005007"></div>
+<div id="1d05547c-19bd-4257-b35e-b999755ae421"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
+var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 </script><script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "cf6aeb30eed14c748413c94bb7064a3d", "version_major": 2, "version_minor": 0}
 </script>
@@ -867,7 +873,8 @@ var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Results show accuracy not getting better but at least we're not overfitting (where training loss would appear much lower than validation loss)</p>
+<p>Results show accuracy not getting better but at least we're not overfitting (where training loss would appear much lower than validation loss).</p>
+<p><code>val_loss</code> is lower than <code>trn_loss</code> though, so might be underfitting. <code>cycle_len</code> might not be long enough for it to find minima, so we can use <code>cycle_mult</code> to give it more time (see below)</p>
 
 </div>
 </div>
@@ -1020,10 +1027,10 @@ var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
 
  
  
-<div id="f0a3c424-df16-4e01-858f-f1ada435232c"></div>
+<div id="32332434-b9bf-473e-9213-4469378830f4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#f0a3c424-df16-4e01-858f-f1ada435232c');
+var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 </script><script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "204e633eb823446687d0366f1b1cc75e", "version_major": 2, "version_minor": 0}
 </script>
@@ -1072,7 +1079,7 @@ var element = $('#f0a3c424-df16-4e01-858f-f1ada435232c');
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Results show better accuracy than before</p>
+<p>Results show better accuracy than before. <code>trn_loss</code> and <code>val_loss</code> end up similar so we're not over/underfitting.</p>
 
 </div>
 </div>

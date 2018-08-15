@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Tue, 14 Aug 2018 22:40:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fastai: Image Classification</title><link>https://psho.github.io/blog/dl/fastai-image-classification/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Aug 2018 22:33:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fastai: Image Classification</title><link>https://psho.github.io/blog/dl/fastai-image-classification/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -109,11 +109,11 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Data"&gt;Data&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Images of cats and dogs:&lt;/p&gt;
+&lt;h3 id="Data"&gt;Data&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Images of cats and dogs organised by folders:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;23000 train (11500 cats, 11500 dogs)&lt;/li&gt;
-&lt;li&gt;2000 validation (1000 cats, 1000 dogs)&lt;/li&gt;
-&lt;li&gt;12500 test&lt;/li&gt;
+&lt;li&gt;23000 train (11500 in /train/cats/, 11500 in /train/dogs/)&lt;/li&gt;
+&lt;li&gt;2000 validation (1000 in /valid/cats/, 1000 in /valid/dogs/)&lt;/li&gt;
+&lt;li&gt;12500 test (in /test1/)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
@@ -289,11 +289,15 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Initial-Fit-with-Pre-trained-Model"&gt;Initial Fit with Pre-trained Model&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Initial-Fit-with-Pre-trained-Model"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Use a pre-trained model from a similar problem to get a head start on training by taking advantage of what it has already learned from other images.&lt;/p&gt;
+&lt;h3 id="Initial-Fit-with-Pre-trained-Model"&gt;Initial Fit with Pre-trained Model&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Initial-Fit-with-Pre-trained-Model"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Use a pre-trained model from a similar problem to get a head start on training by taking advantage of what it has already learned from other images. Using different architectures may yield better results, e.g. resnext50 instead of resnet34.&lt;/p&gt;
 &lt;h5 id="Pre-Compute"&gt;Pre-Compute&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Pre-Compute"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;The &lt;em&gt;activations&lt;/em&gt; at the second last layer (just before classification) of an image recognition model indicate that certain features (e.g. an eye, an ear, a paw) have been detected at various locations in the image with some level of confidence.&lt;/p&gt;
 &lt;p&gt;Setting &lt;code&gt;precompute = True&lt;/code&gt; will save the activations of every image so they don't need to be computed every time. This makes subsequent fitting runs faster.&lt;/p&gt;
 &lt;p&gt;Precomputed activations are saved in the &lt;code&gt;tmp&lt;/code&gt; directory. If there were issues creating these, delete the files to start fresh again.&lt;/p&gt;
-&lt;h5 id="Image-Pre-Processing"&gt;Image Pre-Processing&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Image-Pre-Processing"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;Different models require different pre-processing that needs to be applied on the images like normalisation. &lt;code&gt;tfms_from_model()&lt;/code&gt; defines the appropriate pre-processing to use for the given model.&lt;/p&gt;
+&lt;h5 id="Image-Pre-Processing"&gt;Image Pre-Processing&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Image-Pre-Processing"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;Different models require different pre-processing that needs to be applied on the images like normalisation. &lt;code&gt;tfms_from_model()&lt;/code&gt; defines the appropriate pre-processing to use for the given model. If using an ImageNet model (like resnet34), note that most are trained on images that are around 224x224 or 299x299.&lt;/p&gt;
+&lt;p&gt;Start with small image sizes for faster training initially for a few epochs. If your images are similar to the pre-trained model images, be careful not to go &lt;em&gt;too&lt;/em&gt; small as to destroy the weights. But if images are more different, safer to go smaller.&lt;/p&gt;
+&lt;p&gt;Can then use &lt;code&gt;learn.set_data()&lt;/code&gt; to switch to larger images and continue training - effective way to avoid overfitting as we're using different images. If your image/batch sizes cause a CUDA out of memory error, then restart kernel and use smaller batch size.&lt;/p&gt;
+&lt;h5 id="ImageClassifierData"&gt;ImageClassifierData&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#ImageClassifierData"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;Use &lt;code&gt;from_paths()&lt;/code&gt; if images are organised into train/valid/test by folder. Use &lt;code&gt;from_csv()&lt;/code&gt; if image labels are in a CSV lookup file - need to randomly select indexes for our validation set.&lt;/p&gt;
+&lt;p&gt;Access the image file paths for the training and validation sets with &lt;code&gt;data.trn_ds.fnames[index]&lt;/code&gt; and &lt;code&gt;data.val_ds.fnames[index]&lt;/code&gt;&lt;/p&gt;
 &lt;h5 id="Learner"&gt;Learner&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Learner"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;&lt;code&gt;ConvLearner.pretrained()&lt;/code&gt; builds a &lt;em&gt;learner&lt;/em&gt; that contains a pre-trained model with the last layer replaced by the right dimensions.&lt;/p&gt;
 &lt;p&gt;E.g. ImageNet models predict 1000 classes, so the final layer has 1000 neurons outputting probabilities for each class. In this case, that is replaced by just 2 neurons for Cats and Dogs.&lt;/p&gt;
 
@@ -308,7 +312,7 @@
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Use resnet34 which was 2015 winner of ImageNet competition&lt;/span&gt;
 &lt;span class="n"&gt;arch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;resnet34&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Resize images to this size. Start smaller for faster training initially.&lt;/span&gt;
+&lt;span class="c1"&gt;# Resize images to this size&lt;/span&gt;
 &lt;span class="n"&gt;sz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;224&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Read in images and assign their labels based on folder names&lt;/span&gt;
@@ -359,10 +363,10 @@
 
  
  
-&lt;div id="943e9009-83c2-4fe2-bebd-0479a6f40b76"&gt;&lt;/div&gt;
+&lt;div id="e29a0134-eab2-4daf-8c00-388eaa267007"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#943e9009-83c2-4fe2-bebd-0479a6f40b76');
+var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "359db349b43e4556bfe479b673c02184", "version_major": 2, "version_minor": 0}
@@ -499,10 +503,10 @@ var element = $('#943e9009-83c2-4fe2-bebd-0479a6f40b76');
 
  
  
-&lt;div id="55badc3b-99af-4b52-ad21-047957f7d5fb"&gt;&lt;/div&gt;
+&lt;div id="6b366797-c5e9-4af1-9541-3acd0bd75e08"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#55badc3b-99af-4b52-ad21-047957f7d5fb');
+var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "5c7333d183bd4e88813e07105b297bb0", "version_major": 2, "version_minor": 0}
@@ -713,10 +717,10 @@ var element = $('#55badc3b-99af-4b52-ad21-047957f7d5fb');
 
  
  
-&lt;div id="72cabe46-1ed5-4cfc-80ee-784b46005007"&gt;&lt;/div&gt;
+&lt;div id="1d05547c-19bd-4257-b35e-b999755ae421"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
+var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "cf6aeb30eed14c748413c94bb7064a3d", "version_major": 2, "version_minor": 0}
@@ -761,7 +765,8 @@ var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Results show accuracy not getting better but at least we're not overfitting (where training loss would appear much lower than validation loss)&lt;/p&gt;
+&lt;p&gt;Results show accuracy not getting better but at least we're not overfitting (where training loss would appear much lower than validation loss).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;val_loss&lt;/code&gt; is lower than &lt;code&gt;trn_loss&lt;/code&gt; though, so might be underfitting. &lt;code&gt;cycle_len&lt;/code&gt; might not be long enough for it to find minima, so we can use &lt;code&gt;cycle_mult&lt;/code&gt; to give it more time (see below)&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -906,10 +911,10 @@ var element = $('#72cabe46-1ed5-4cfc-80ee-784b46005007');
 
  
  
-&lt;div id="f0a3c424-df16-4e01-858f-f1ada435232c"&gt;&lt;/div&gt;
+&lt;div id="32332434-b9bf-473e-9213-4469378830f4"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#f0a3c424-df16-4e01-858f-f1ada435232c');
+var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "204e633eb823446687d0366f1b1cc75e", "version_major": 2, "version_minor": 0}
@@ -958,7 +963,7 @@ var element = $('#f0a3c424-df16-4e01-858f-f1ada435232c');
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Results show better accuracy than before&lt;/p&gt;
+&lt;p&gt;Results show better accuracy than before. &lt;code&gt;trn_loss&lt;/code&gt; and &lt;code&gt;val_loss&lt;/code&gt; end up similar so we're not over/underfitting.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
