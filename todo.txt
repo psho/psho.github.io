@@ -1,16 +1,31 @@
 === Python ===
-checking data types
 
+pandas: Columns
+  Convert to numeric/number/string
+  Fix where df is done in-place vs copy
 
 pandas: Analysis
-Inspect - list of column names
-Summarise
+  Inspect: list of column names
+
+matplotlib
+  Styles
+  fill_between
 
 
+=== R ===
 
-=== Unix ===
+ggplot
 
-scp username@server:~/folder/file /local/directory/
-symlink
-how many files in folder?
-grepping
+
+=== Statistics ===
+
+bsts
+
+
+=== Environment ===
+
+Unix
+  scp username@server:~/folder/file /local/directory/
+  symlink
+  how many files in folder?
+  grepping
