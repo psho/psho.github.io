@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2019-03-24T21:21:00Z</lastmod>
+  <lastmod>2019-03-27T23:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
@@ -43,7 +43,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-3.html</loc>
-  <lastmod>2019-03-24T21:21:00Z</lastmod>
+  <lastmod>2019-03-27T23:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>
@@ -172,6 +172,10 @@
  <url>
   <loc>https://psho.github.io/blog/stats/resamp-perm-test/</loc>
   <lastmod>2018-07-31T22:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/stats/simplified-mcmc/</loc>
+  <lastmod>2019-03-27T23:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/categories/</loc>
