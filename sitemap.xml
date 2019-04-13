@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2019-03-27T23:08:00Z</lastmod>
+  <lastmod>2019-04-13T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
@@ -28,6 +28,10 @@
  <url>
   <loc>https://psho.github.io/blog/dl/fastai-image-classification/</loc>
   <lastmod>2018-08-14T22:40:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/dl/pytorch-dl-tabular-template/</loc>
+  <lastmod>2019-04-13T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/git/git/</loc>
@@ -43,7 +47,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-3.html</loc>
-  <lastmod>2019-03-27T23:08:00Z</lastmod>
+  <lastmod>2019-04-13T18:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>
