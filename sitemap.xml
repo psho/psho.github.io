@@ -19,11 +19,15 @@
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2019-04-13T18:39:00Z</lastmod>
+  <lastmod>2019-05-26T18:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
   <lastmod>2018-08-14T22:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://psho.github.io/blog/dl/adaptive-learning-rate-optimisation/</loc>
+  <lastmod>2019-05-26T18:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/dl/fastai-image-classification/</loc>
@@ -47,7 +51,7 @@
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-3.html</loc>
-  <lastmod>2019-04-13T18:39:00Z</lastmod>
+  <lastmod>2019-05-26T18:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>

@@ -62,7 +62,559 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="dl/pytorch-dl-tabular-template/" class="u-url">PyTorch: Deep Learning on Tabular Data - Template</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="dl/adaptive-learning-rate-optimisation/" class="u-url">Adaptive Learning Rate Optimisation</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Patrick Ho
+            </span></p>
+            <p class="dateline">
+            <a href="dl/adaptive-learning-rate-optimisation/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-05-26T19:46:00+01:00" itemprop="datePublished" title="2019-05-26 19:46">2019-05-26 19:46</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generate-data">Generate data<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#Generate-data">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">14</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span>
+              <span class="mi">42</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">47</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span>
+              <span class="mi">28</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">W</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">B</span> <span class="o">+</span> <span class="n">W</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stochastic-Gradient-Descent">Stochastic Gradient Descent<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#Stochastic-Gradient-Descent">¶</a>
+</h2>
+<p>Loss function is square error:</p>
+$$loss=(b+wx-y)^2$$<p>Gradients by chain rule:</p>
+$$F'(g(x)) = f’(g(x))g’(x)$$$$\frac{dl}{db} = 2(b+wx-y)$$$$\frac{dl}{dw} = 2(b+wx-y)*x$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="mf">0.0001</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Initial values</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        
+        <span class="c1"># Gradient wrt to each parameter</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dl_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">dl_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="c1"># Update parameters</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dl_db</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dl_dw</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>After 50 epochs:
+b = 3.73 (actual 30.00)
+w = 2.56 (actual 2.00)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Momentum">Momentum<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#Momentum">¶</a>
+</h2>
+<ul>
+<li>Parameter update is 90% the same direction as the previous step and 10% current gradient</li>
+<li>Note that previous step includes effect of all prior steps where the most recent ones are exponentially weighted (exponential average)</li>
+<li>Dampens oscillations by maintaining momentum from previous direction so steps don't zig zag as much, which should help get to minima faster</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.0001</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Initial values</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        
+        <span class="c1"># Gradient wrt to each parameter</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dl_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">dl_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Step size for each parameter</span>
+        <span class="n">b_step</span> <span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">b_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">dl_db</span>
+        <span class="n">w_step</span> <span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">w_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">dl_dw</span>
+        <span class="n">b_step_prev</span> <span class="o">=</span> <span class="n">b_step</span>
+        <span class="n">w_step_prev</span> <span class="o">=</span> <span class="n">w_step</span>
+        
+        <span class="c1"># Update parameters</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">b_step</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">w_step</span>
+
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>After 50 epochs:
+b = 3.46 (actual 30.00)
+w = 2.31 (actual 2.00)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="RMSprop">RMSprop<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#RMSprop">¶</a>
+</h2>
+<ul>
+<li>Root Mean Square Propogation</li>
+<li>Dampens oscillations by taking smaller steps when previous steps have been large, and larger steps when previous steps have been small<ul>
+<li>Reduce step component perpendicular to direction of minima and increase step component directly towards it</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Initial values</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        
+        <span class="c1"># Gradient wrt to each parameter</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dl_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">dl_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Step size for each parameter</span>
+        <span class="n">b_step</span> <span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">b_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">dl_db</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">w_step</span> <span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">w_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">dl_dw</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">b_step_prev</span> <span class="o">=</span> <span class="n">b_step</span>
+        <span class="n">w_step_prev</span> <span class="o">=</span> <span class="n">w_step</span>
+                
+        <span class="c1"># Update parameters</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">dl_db</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">dl_dw</span>
+        
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>After 50 epochs:
+b = 15.78 (actual 30.00)
+w = 2.24 (actual 2.00)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adam">Adam<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#Adam">¶</a>
+</h2>
+<ul>
+<li>Adaptive Moment</li>
+<li>Combination of both Momentum and RMSProp</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta_m</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">beta_r</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Initial values</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+
+        <span class="c1"># Gradient wrt to each parameter</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">dl_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">dl_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Momentum step size for each parameter</span>
+        <span class="n">b_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">b_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">dl_db</span>
+        <span class="n">w_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">w_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">dl_dw</span>
+        <span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="n">b_m_step</span>
+        <span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="n">w_m_step</span>
+
+        <span class="c1"># RMSProp step size for each parameter</span>
+        <span class="n">b_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">b_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">dl_db</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">w_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">w_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">dl_dw</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="n">b_r_step</span>
+        <span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="n">w_r_step</span>
+
+        <span class="c1"># Update parameters</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">b_m_step</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_m_step</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>After 50 epochs:
+b = 29.06 (actual 30.00)
+w = 1.39 (actual 2.00)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Approaches the true values a lot faster than either Momentum or RMSprop alone</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Adam-with-Annealing">Adam with Annealing<a class="anchor-link" href="dl/adaptive-learning-rate-optimisation/#Adam-with-Annealing">¶</a>
+</h2>
+<p>Although Adam does scale the step size, we can also apply learning rate annealing to help fine tune the result as it gets closer to the minima.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta_m</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">beta_r</span> <span class="o">=</span> <span class="mf">0.95</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1"># Initial values</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">avg_grad_prev</span> <span class="o">=</span> <span class="mi">5500</span>  <span class="c1"># Init as value of avg_grad after 1 epoch</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+
+        <span class="c1"># Gradient wrt to each parameter</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">de_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">de_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Momentum step size for each parameter</span>
+        <span class="n">b_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">b_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">de_db</span>
+        <span class="n">w_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">w_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">de_dw</span>
+        <span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="n">b_m_step</span>
+        <span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="n">w_m_step</span>
+
+        <span class="c1"># RMSProp step size for each parameter</span>
+        <span class="n">b_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">b_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">de_db</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">w_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">w_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">de_dw</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="n">b_r_step</span>
+        <span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="n">w_r_step</span>
+
+        <span class="c1"># Update parameters</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">b_m_step</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_m_step</span>
+        
+    <span class="n">avg_grad</span> <span class="o">=</span> <span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span>
+    
+    <span class="k">if</span> <span class="n">avg_grad</span><span class="o">/</span><span class="n">avg_grad_prev</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">/</span><span class="mi">4</span>
+    
+    <span class="k">if</span> <span class="n">avg_grad</span> <span class="o">&lt;</span> <span class="n">avg_grad_prev</span><span class="p">:</span>
+        <span class="n">avg_grad_prev</span> <span class="o">=</span> <span class="n">avg_grad</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"lr = </span><span class="si">%.8f</span><span class="s2">"</span> <span class="o">%</span> <span class="n">lr</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>After 50 epochs:
+b = 30.00 (actual 30.00)
+w = 2.00 (actual 2.00)
+lr = 0.00024414
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Smaller learning rates closer to the minima allows convergence to the true values</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Reference:
+<a href="https://course.fast.ai/videos/?lesson=5">https://course.fast.ai/videos/?lesson=5</a></p>
+
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="dl/pytorch-dl-tabular-template/" class="u-url">PyTorch: Deep Learning on Tabular Data - Template</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Patrick Ho
@@ -4868,108 +5420,6 @@ f(b = 2, d = 'a', c = FALSE, a = 1)
 <span class="p">}</span>
 
 <span class="kp">args</span><span class="p">(</span><span class="kp">paste</span><span class="p">)</span>  <span class="c1"># function (..., sep = " ", collapse = NULL)</span>
-</pre>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="r/r-files/" class="u-url">R: Files</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                Patrick Ho
-            </span></p>
-            <p class="dateline">
-            <a href="r/r-files/" rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:34:07+01:00" itemprop="datePublished" title="2018-08-04 00:34">2018-08-04 00:34</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <div>
-<h3>Tabular Data</h3>
-<pre class="code literal-block"><span></span><span class="c1"># Read</span>
-infile <span class="o">&lt;-</span> <span class="s">'input.csv'</span>
-df <span class="o">&lt;-</span> read.table<span class="p">(</span>file <span class="o">=</span> infile<span class="p">,</span>
-                 header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>  <span class="c1"># Has header line?</span>
-                 sep <span class="o">=</span> <span class="s">','</span><span class="p">,</span>  <span class="c1"># Separator character</span>
-                 nrows <span class="o">=</span> <span class="m">100</span><span class="p">,</span>  <span class="c1"># Number of rows to read</span>
-                 comment.char <span class="o">=</span> <span class="s">'#'</span><span class="p">,</span>  <span class="c1"># Skip rows starting with this character</span>
-                 skip <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="c1"># Skip this many rows from start</span>
-                 stringsAsFactors <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>  <span class="c1"># Encode chars as factors</span>
-df <span class="o">&lt;-</span> read.csv<span class="p">(</span>infile<span class="p">)</span>  <span class="c1"># Same as read.table() with comma as default separator</span>
-
-
-<span class="c1"># Read large files</span>
-sample <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span> nrows <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
-classes <span class="o">&lt;-</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">sample</span><span class="p">,</span> <span class="kp">class</span><span class="p">)</span>
-df <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span>
-                 colClasses <span class="o">=</span> classes<span class="p">,</span>  <span class="c1"># Pre-defining column classes is much faster</span>
-                 nrows <span class="o">=</span> <span class="m">50000</span><span class="p">)</span>  <span class="c1"># Pre-defining rows (Unix wc) can help with memory usage</span>
-
-
-<span class="c1"># Write</span>
-outfile <span class="o">&lt;-</span> <span class="s">'output.csv'</span>
-write.table<span class="p">(</span>df<span class="p">,</span>
-            file <span class="o">=</span> outfile<span class="p">,</span>
-            append <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>  <span class="c1"># FALSE will overwrite</span>
-write.csv<span class="p">(</span>df<span class="p">,</span> outfile<span class="p">)</span>
-</pre>
-
-
-<h3>R Objects</h3>
-<ul>
-<li>Text format and includes meta-data</li>
-<li>Easy to edit but less space efficient</li>
-<li>Works nicely with version control programs like git</li>
-<li>
-<strong>dget</strong> pairs with <strong>dput</strong>
-</li>
-<li>
-<strong>source</strong> pairs with <strong>dump</strong>
-</li>
-</ul>
-<!-- --><pre class="code literal-block"><span></span><span class="c1"># Read</span>
-<span class="kp">dget</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
-
-<span class="kn">source</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
-
-<span class="c1"># Write</span>
-df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>a <span class="o">=</span> <span class="m">1</span><span class="p">,</span> b <span class="o">=</span> <span class="s">'b'</span><span class="p">)</span>
-<span class="kp">dput</span><span class="p">(</span>df<span class="p">)</span>  <span class="c1"># Prints out structure</span>
-<span class="kp">dput</span><span class="p">(</span>df<span class="p">,</span> <span class="s">'data.R'</span><span class="p">)</span>
-
-x <span class="o">&lt;-</span> <span class="m">5</span>
-y <span class="o">&lt;-</span> <span class="s">'abc'</span>
-<span class="kp">dump</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span><span class="s">'y'</span><span class="p">,</span><span class="s">'df'</span><span class="p">),</span> file <span class="o">=</span> <span class="s">'data.R'</span><span class="p">)</span>
-</pre>
-
-
-<h3>Connections</h3>
-<h5>Interfaces</h5>
-<ul>
-<li>file()</li>
-<li>gzfile() = connection to gzip compressed file</li>
-<li>url() = connection to webpage</li>
-</ul>
-<h5>Modes</h5>
-<ul>
-<li>'r' = read only</li>
-<li>'w' = writing/creating</li>
-<li>'a' = appending</li>
-<li>'rb', 'wb', 'ab' = read/write/append in binary mode (Windows)</li>
-</ul>
-<!-- --><pre class="code literal-block"><span></span><span class="c1"># Read</span>
-con <span class="o">&lt;-</span> <span class="kp">file</span><span class="p">(</span><span class="s">'input.csv'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-con <span class="o">&lt;-</span> <span class="kp">gzfile</span><span class="p">(</span><span class="s">'input.gz'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-con <span class="o">&lt;-</span> <span class="kp">url</span><span class="p">(</span><span class="s">'http://cran.r-project.org/'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-x <span class="o">&lt;-</span> <span class="kp">readLines</span><span class="p">(</span>con<span class="p">,</span> <span class="m">10</span><span class="p">)</span>  <span class="c1"># Read in first 10 lines</span>
-<span class="kp">close</span><span class="p">(</span>con<span class="p">)</span>
-</pre>
-
-
-<h3>Workspace</h3>
-<pre class="code literal-block"><span></span># Read
-load('mydata.RData')
-
-# Write
-save.image(file = 'mydata.Rdata')  # Defaults to '.Rdata' if not specified
 </pre>
 </div>
     </div>
