@@ -30,9 +30,16 @@ matplotlib
 ggplot
 
 
+=== Machine Learning ===
+
+Gradient Boosting from Scratch
+
+
 === Statistics ===
 
 bsts
+Tests as linear models
+Bayesian A/B Testing for average revenue per user
 
 
 === Environment ===
