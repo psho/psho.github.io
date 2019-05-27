@@ -38,14 +38,14 @@ Generate data¶
 
 
 
-In [2]:
+In [20]:
 
     
 x = np.array([14,86,28,51,28,29,72,62,84,15,
               42,62,47,35,9,38,44,99,13,21,
-              28,20,8,64,99,70">
+              28,20,8,64,99,7">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2019-05-26T19:46:00+01:00">
+<meta property="article:published_time" content="2019-05-27T11:08:00+01:00">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
 </head>
 <body>
@@ -102,7 +102,7 @@ x = np.array([14,86,28,51,28,29,72,62,84,15,
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2019-05-26T19:46:00+01:00" itemprop="datePublished" title="2019-05-26 19:46">2019-05-26 19:46</time></a>
+            <time class="published dt-published" datetime="2019-05-27T11:08:00+01:00" itemprop="datePublished" title="2019-05-27 11:08">2019-05-27 11:08</time></a>
             </p>
             
         <p class="sourceline"><a href="index.ipynb" class="sourcelink">Source</a></p>
@@ -137,7 +137,7 @@ x = np.array([14,86,28,51,28,29,72,62,84,15,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">14</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span>
@@ -170,15 +170,15 @@ $$F'(g(x)) = f’(g(x))g’(x)$$$$\frac{dl}{db} = 2(b+wx-y)$$$$\frac{dl}{dw} = 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [116]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lr</span> <span class="o">=</span> <span class="mf">0.0001</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="c1"># Initial values</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -188,7 +188,7 @@ $$F'(g(x)) = f’(g(x))g’(x)$$$$\frac{dl}{db} = 2(b+wx-y)$$$$\frac{dl}{dw} = 2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [117]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
@@ -223,8 +223,8 @@ $$F'(g(x)) = f’(g(x))g’(x)$$$$\frac{dl}{db} = 2(b+wx-y)$$$$\frac{dl}{dw} = 2
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>After 50 epochs:
-b = 3.73 (actual 30.00)
-w = 2.56 (actual 2.00)
+b = 2.83 (actual 30.00)
+w = 2.58 (actual 2.00)
 </pre>
 </div>
 </div>
@@ -241,16 +241,16 @@ w = 2.56 (actual 2.00)
 <h2 id="Momentum">Momentum<a class="anchor-link" href="#Momentum">¶</a>
 </h2>
 <ul>
-<li>Parameter update is 90% the same direction as the previous step and 10% current gradient</li>
-<li>Note that previous step includes effect of all prior steps where the most recent ones are exponentially weighted (exponential average)</li>
 <li>Dampens oscillations by maintaining momentum from previous direction so steps don't zig zag as much, which should help get to minima faster</li>
+<li>Beta is commonly set to 0.9, so the parameter update is 90% same direction as previous step and 10% current gradient</li>
+<li>Note that previous step includes effect of all prior steps where the most recent ones are exponentially weighted (exponential average)</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [122]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.9</span>
@@ -258,10 +258,10 @@ w = 2.56 (actual 2.00)
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="c1"># Initial values</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -271,7 +271,7 @@ w = 2.56 (actual 2.00)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [123]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
@@ -313,8 +313,8 @@ w = 2.56 (actual 2.00)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>After 50 epochs:
-b = 3.46 (actual 30.00)
-w = 2.31 (actual 2.00)
+b = 2.55 (actual 30.00)
+w = 2.32 (actual 2.00)
 </pre>
 </div>
 </div>
@@ -342,18 +342,18 @@ w = 2.31 (actual 2.00)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [144]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.9</span>
-<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="c1"># Initial values</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -363,7 +363,7 @@ w = 2.31 (actual 2.00)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
@@ -381,8 +381,8 @@ w = 2.31 (actual 2.00)
         <span class="n">w_step_prev</span> <span class="o">=</span> <span class="n">w_step</span>
                 
         <span class="c1"># Update parameters</span>
-        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">dl_db</span>
-        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">dl_dw</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dl_db</span><span class="o">/</span><span class="p">(</span><span class="n">b_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">dl_dw</span><span class="o">/</span><span class="p">(</span><span class="n">w_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
         
         
 <span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
@@ -405,8 +405,8 @@ w = 2.31 (actual 2.00)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>After 50 epochs:
-b = 15.78 (actual 30.00)
-w = 2.24 (actual 2.00)
+b = 8.53 (actual 30.00)
+w = 2.37 (actual 2.00)
 </pre>
 </div>
 </div>
@@ -431,21 +431,21 @@ w = 2.24 (actual 2.00)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta_m</span> <span class="o">=</span> <span class="mf">0.9</span>
-<span class="n">beta_r</span> <span class="o">=</span> <span class="mf">0.9</span>
+<span class="n">beta_r</span> <span class="o">=</span> <span class="mf">0.999</span>
 <span class="n">lr</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
 
 <span class="c1"># Initial values</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
 
     </div>
@@ -455,7 +455,7 @@ w = 2.24 (actual 2.00)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [14]:</div>
+<div class="prompt input_prompt">In [161]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
@@ -479,12 +479,12 @@ w = 2.24 (actual 2.00)
         <span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="n">w_r_step</span>
 
         <span class="c1"># Update parameters</span>
-        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">b_m_step</span>
-        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_m_step</span>
+        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">b_m_step</span><span class="o">/</span><span class="p">(</span><span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">w_m_step</span><span class="o">/</span><span class="p">(</span><span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
         
 <span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.5f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.5f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -502,8 +502,8 @@ w = 2.24 (actual 2.00)
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>After 50 epochs:
-b = 29.06 (actual 30.00)
-w = 1.39 (actual 2.00)
+b = 29.97153 (actual 30.00)
+w = 2.04442 (actual 2.00)
 </pre>
 </div>
 </div>
@@ -517,7 +517,21 @@ w = 1.39 (actual 2.00)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Approaches the true values a lot faster than either Momentum or RMSprop alone</p>
+<h5 id="Learning-rate-annealing">Learning rate annealing<a class="anchor-link" href="#Learning-rate-annealing">¶</a>
+</h5>
+<p>If we train for additional epochs, the parameters values will bounce around the true values. So even though Adam adjusts the step size, applying learning rate annealing (reducing) can help convergence.</p>
+<h5 id="Epsilon">Epsilon<a class="anchor-link" href="#Epsilon">¶</a>
+</h5>
+<p>Above implementation is missing the $\epsilon$ term in the parameter update:</p>
+$$w := w - \alpha \frac{\theta}{\sqrt{s}+\epsilon}$$<ul>
+<li>$\alpha$ is the learning rate</li>
+<li>$\theta$ is the gradient</li>
+</ul>
+<p>$\epsilon$ is suggested to be 1e-8 and doesn't usually require tuning</p>
+<h5 id="Bias-correction">Bias correction<a class="anchor-link" href="#Bias-correction">¶</a>
+</h5>
+<p>For exponentially weighted averages, the first few values won't have much history. So the This can be corrected by:</p>
+$$s_t = \beta s_{t-1} + (1-\beta) \theta_t$$$$s_t^{corrected} = \frac{s_t}{1-\beta^t}$$<p>Practically speaking, because we usually train for many iterations, there probably isn't a need to apply this correction since it only really affects the first few steps.</p>
 
 </div>
 </div>
@@ -527,126 +541,12 @@ w = 1.39 (actual 2.00)
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Adam-with-Annealing">Adam with Annealing<a class="anchor-link" href="#Adam-with-Annealing">¶</a>
-</h2>
-<p>Although Adam does scale the step size, we can also apply learning rate annealing to help fine tune the result as it gets closer to the minima.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">beta_m</span> <span class="o">=</span> <span class="mf">0.9</span>
-<span class="n">beta_r</span> <span class="o">=</span> <span class="mf">0.95</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">50</span>
-
-<span class="c1"># Initial values</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">lr</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">avg_grad_prev</span> <span class="o">=</span> <span class="mi">5500</span>  <span class="c1"># Init as value of avg_grad after 1 epoch</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-
-        <span class="c1"># Gradient wrt to each parameter</span>
-        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">de_db</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">de_dw</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">y_pred</span><span class="o">-</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-        <span class="c1"># Momentum step size for each parameter</span>
-        <span class="n">b_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">b_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">de_db</span>
-        <span class="n">w_m_step</span> <span class="o">=</span> <span class="n">beta_m</span><span class="o">*</span><span class="n">w_m_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_m</span><span class="p">)</span><span class="o">*</span><span class="n">de_dw</span>
-        <span class="n">b_m_step_prev</span> <span class="o">=</span> <span class="n">b_m_step</span>
-        <span class="n">w_m_step_prev</span> <span class="o">=</span> <span class="n">w_m_step</span>
-
-        <span class="c1"># RMSProp step size for each parameter</span>
-        <span class="n">b_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">b_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">de_db</span><span class="o">**</span><span class="mi">2</span>
-        <span class="n">w_r_step</span> <span class="o">=</span> <span class="n">beta_r</span><span class="o">*</span><span class="n">w_r_step_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta_r</span><span class="p">)</span><span class="o">*</span><span class="n">de_dw</span><span class="o">**</span><span class="mi">2</span>
-        <span class="n">b_r_step_prev</span> <span class="o">=</span> <span class="n">b_r_step</span>
-        <span class="n">w_r_step_prev</span> <span class="o">=</span> <span class="n">w_r_step</span>
-
-        <span class="c1"># Update parameters</span>
-        <span class="n">b</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">b_m_step</span>
-        <span class="n">w</span> <span class="o">-=</span> <span class="n">lr</span><span class="o">/</span><span class="p">(</span><span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_m_step</span>
-        
-    <span class="n">avg_grad</span> <span class="o">=</span> <span class="n">b_r_step</span><span class="o">**</span><span class="mf">0.5</span> <span class="o">+</span> <span class="n">w_r_step</span><span class="o">**</span><span class="mf">0.5</span>
-    
-    <span class="k">if</span> <span class="n">avg_grad</span><span class="o">/</span><span class="n">avg_grad_prev</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span><span class="o">/</span><span class="mi">4</span>
-    
-    <span class="k">if</span> <span class="n">avg_grad</span> <span class="o">&lt;</span> <span class="n">avg_grad_prev</span><span class="p">:</span>
-        <span class="n">avg_grad_prev</span> <span class="o">=</span> <span class="n">avg_grad</span>
-        
-<span class="nb">print</span><span class="p">(</span><span class="s2">"After </span><span class="si">%d</span><span class="s2"> epochs:"</span> <span class="o">%</span> <span class="n">epochs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"b = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">B</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"w = </span><span class="si">%.2f</span><span class="s2"> (actual </span><span class="si">%.2f</span><span class="s2">)"</span> <span class="o">%</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">W</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"lr = </span><span class="si">%.8f</span><span class="s2">"</span> <span class="o">%</span> <span class="n">lr</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>After 50 epochs:
-b = 30.00 (actual 30.00)
-w = 2.00 (actual 2.00)
-lr = 0.00024414
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Smaller learning rates closer to the minima allows convergence to the true values</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Reference:
-<a href="https://course.fast.ai/videos/?lesson=5">https://course.fast.ai/videos/?lesson=5</a></p>
-
+<p>Reference:</p>
+<ul>
+<li><a href="https://course.fast.ai/videos/?lesson=5">fast.ai Lesson 5</a></li>
+<li><a href="https://www.youtube.com/watch?v=_e-LFe_igno">Deeplearning.ai RMSprop</a></li>
+<li><a href="https://www.youtube.com/watch?v=lWzo8CajF5s">Deeplearning.ai Bias correction in exponentially weighted average</a></li>
+</ul>
 </div>
 </div>
 </div>
