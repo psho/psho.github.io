@@ -92,7 +92,7 @@ x &lt;- as.Date(&quot;2016-0">
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:33:56+01:00" itemprop="datePublished" title="2018-08-04 00:33">2018-08-04 00:33</time></a>
+            <time class="published dt-published" datetime="2018-08-04T00:33:56+01:00" itemprop="datePublished" title="2018-08-04">2018-08-04</time></a>
             </p>
             
         <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
@@ -107,17 +107,17 @@ x &lt;- as.Date(&quot;2016-0">
 <li>Dates represented by <strong>Date</strong> class</li>
 <li>Stored as days since 1970-01-01</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span>x <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">'1970-01-01'</span><span class="p">)</span>
-<span class="kp">unclass</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># 0</span>
+<!-- --><pre class="code literal-block"><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">'1970-01-01'</span><span class="p">)</span>
+<span class="nf">unclass</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 0</span>
 
-x <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">'2017-01-01'</span><span class="p">)</span>
-<span class="kp">unclass</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># 17167</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">'2017-01-01'</span><span class="p">)</span>
+<span class="nf">unclass</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 17167</span>
 
 
 <span class="c1"># Operations</span>
-x <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">"2016-03-01"</span><span class="p">)</span>
-y <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">"2016-02-28"</span><span class="p">)</span>
-x<span class="o">-</span>y  <span class="c1"># Time difference of 2 days  (keeps track of leap years)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">"2016-03-01"</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">"2016-02-28"</span><span class="p">)</span>
+<span class="n">x</span><span class="o">-</span><span class="n">y</span>  <span class="c1"># Time difference of 2 days  (keeps track of leap years)</span>
 </pre>
 
 
@@ -132,27 +132,27 @@ x<span class="o">-</span>y  <span class="c1"># Time difference of 2 days  (keeps
 </li>
 <li>Stored as seconds since 1970-01-01</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span>x <span class="o">&lt;-</span> <span class="kp">Sys.time</span><span class="p">()</span>  <span class="c1"># "2017-02-12 19:54:32 GMT"</span>
-<span class="kp">class</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># "POSIXct" "POSIXt"</span>
-<span class="kp">unclass</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># 1486929273 seconds</span>
+<!-- --><pre class="code literal-block"><span></span><span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">Sys.time</span><span class="p">()</span>  <span class="c1"># "2017-02-12 19:54:32 GMT"</span>
+<span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># "POSIXct" "POSIXt"</span>
+<span class="nf">unclass</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 1486929273 seconds</span>
 
-p <span class="o">&lt;-</span> <span class="kp">as.POSIXlt</span><span class="p">(</span>x<span class="p">)</span>
-<span class="kp">names</span><span class="p">(</span><span class="kp">unclass</span><span class="p">(</span>p<span class="p">))</span>  <span class="c1"># "sec"    "min"    "hour"   "mday" etc.</span>
-p<span class="o">$</span>sec  <span class="c1"># 32.98549</span>
-p<span class="o">$</span>min  <span class="c1"># 54</span>
+<span class="n">p</span> <span class="o">&lt;-</span> <span class="nf">as.POSIXlt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="nf">unclass</span><span class="p">(</span><span class="n">p</span><span class="p">))</span>  <span class="c1"># "sec"    "min"    "hour"   "mday" etc.</span>
+<span class="n">p</span><span class="o">$</span><span class="n">sec</span>  <span class="c1"># 32.98549</span>
+<span class="n">p</span><span class="o">$</span><span class="n">min</span>  <span class="c1"># 54</span>
 
 
 <span class="c1"># Convert string to time</span>
-date_strings <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">"10 February, 2017 9:40"</span><span class="p">,</span> <span class="s">"15 March, 2017 18:10"</span><span class="p">)</span>
-x <span class="o">&lt;-</span> <span class="kp">strptime</span><span class="p">(</span>date_strings<span class="p">,</span> <span class="s">"%d %B, %Y %H:%M"</span><span class="p">)</span>  <span class="c1"># "2017-02-10 09:40:00 GMT" "2017-03-15 18:10:00 GMT"</span>
-<span class="kp">class</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># "POSIXlt" "POSIXt"</span>
+<span class="n">date_strings</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">"10 February, 2017 9:40"</span><span class="p">,</span> <span class="s">"15 March, 2017 18:10"</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">strptime</span><span class="p">(</span><span class="n">date_strings</span><span class="p">,</span> <span class="s">"%d %B, %Y %H:%M"</span><span class="p">)</span>  <span class="c1"># "2017-02-10 09:40:00 GMT" "2017-03-15 18:10:00 GMT"</span>
+<span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># "POSIXlt" "POSIXt"</span>
 
 
 <span class="c1"># Operations</span>
-x <span class="o">&lt;-</span> <span class="kp">strptime</span><span class="p">(</span><span class="s">"1 Feb 2017 12:34:56"</span><span class="p">,</span> <span class="s">"%d %b %Y %H:%M:%S"</span><span class="p">)</span>
-y <span class="o">&lt;-</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">"2017-01-10"</span><span class="p">)</span>
-y <span class="o">&lt;-</span> <span class="kp">as.POSIXlt</span><span class="p">(</span>y<span class="p">)</span>  <span class="c1"># Convert from Date to POSIXlt to match x</span>
-x<span class="o">-</span>y  <span class="c1"># Time difference of 22.52426</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">strptime</span><span class="p">(</span><span class="s">"1 Feb 2017 12:34:56"</span><span class="p">,</span> <span class="s">"%d %b %Y %H:%M:%S"</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">"2017-01-10"</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">as.POSIXlt</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># Convert from Date to POSIXlt to match x</span>
+<span class="n">x</span><span class="o">-</span><span class="n">y</span>  <span class="c1"># Time difference of 22.52426</span>
 </pre>
 </div>
     </div>

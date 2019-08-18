@@ -85,7 +85,7 @@ Ordering ma">
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:34:56+01:00" itemprop="datePublished" title="2018-08-04 00:34">2018-08-04 00:34</time></a>
+            <time class="published dt-published" datetime="2018-08-04T00:34:56+01:00" itemprop="datePublished" title="2018-08-04">2018-08-04</time></a>
             </p>
             
         <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
@@ -112,13 +112,13 @@ Ordering ma">
 </ol>
 <p>Separate namespaces for functions and non-functions, e.g. can have both
 'x' function and 'x' object.</p>
-<pre class="code literal-block"><span></span># Search list
-search()
+<pre class="code literal-block"><span></span><span class="o">#</span> <span class="k">Search</span> <span class="n">list</span>
+<span class="k">search</span><span class="p">()</span>
 
-##  [1] ".GlobalEnv"        "package:rmarkdown" "tools:rstudio"    
-##  [4] "package:stats"     "package:graphics"  "package:grDevices"
-##  [7] "package:utils"     "package:datasets"  "package:methods"  
-## [10] "Autoloads"         "package:base"
+<span class="o">##</span>  <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ss">".GlobalEnv"</span>        <span class="ss">"package:rmarkdown"</span> <span class="ss">"tools:rstudio"</span>    
+<span class="o">##</span>  <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="ss">"package:stats"</span>     <span class="ss">"package:graphics"</span>  <span class="ss">"package:grDevices"</span>
+<span class="o">##</span>  <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="ss">"package:utils"</span>     <span class="ss">"package:datasets"</span>  <span class="ss">"package:methods"</span>  
+<span class="o">##</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="ss">"Autoloads"</span>         <span class="ss">"package:base"</span>
 </pre>
 
 
@@ -145,44 +145,44 @@ search()
 </li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Function below has formal arguments x/y, and free variable z</span>
-f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span> <span class="p">{</span>
-  x <span class="o">+</span> y <span class="o">-</span> z
+<span class="n">f</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
 <span class="p">}</span>
 
 
 <span class="c1"># Example: Function generator - Value of free variable n taken from function definition environment</span>
-make_power_fn <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>n<span class="p">)</span> <span class="p">{</span>
-  pow <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
-    x<span class="o">^</span>n
+<span class="n">make_power_fn</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">pow</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">x^n</span>
   <span class="p">}</span>
-  pow
+  <span class="n">pow</span>
 <span class="p">}</span>
 
-cube_fn <span class="o">&lt;-</span> make_power_fn<span class="p">(</span><span class="m">3</span><span class="p">)</span>
-cube_fn<span class="p">(</span><span class="m">3</span><span class="p">)</span>                      <span class="c1"># 27</span>
-square_fn <span class="o">&lt;-</span> make_power_fn<span class="p">(</span><span class="m">2</span><span class="p">)</span>
-square_fn<span class="p">(</span><span class="m">3</span><span class="p">)</span>                    <span class="c1"># 9</span>
+<span class="n">cube_fn</span> <span class="o">&lt;-</span> <span class="nf">make_power_fn</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+<span class="nf">cube_fn</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>                      <span class="c1"># 27</span>
+<span class="n">square_fn</span> <span class="o">&lt;-</span> <span class="nf">make_power_fn</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+<span class="nf">square_fn</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>                    <span class="c1"># 9</span>
 
 <span class="c1"># Explore function environment</span>
-<span class="kp">ls</span><span class="p">(</span><span class="kp">environment</span><span class="p">(</span>cube_fn<span class="p">))</span>        <span class="c1"># "n"   "pow"</span>
-<span class="kp">get</span><span class="p">(</span><span class="s">'n'</span><span class="p">,</span> <span class="kp">environment</span><span class="p">(</span>cube_fn<span class="p">))</span>  <span class="c1"># 3</span>
-<span class="kp">ls</span><span class="p">(</span><span class="kp">environment</span><span class="p">(</span>square_fn<span class="p">))</span>      <span class="c1"># "n"   "pow"</span>
-<span class="kp">get</span><span class="p">(</span><span class="s">'n'</span><span class="p">,</span> <span class="kp">environment</span><span class="p">(</span>square_fn<span class="p">))</span>  <span class="c1"># 2</span>
+<span class="nf">ls</span><span class="p">(</span><span class="nf">environment</span><span class="p">(</span><span class="n">cube_fn</span><span class="p">))</span>        <span class="c1"># "n"   "pow"</span>
+<span class="nf">get</span><span class="p">(</span><span class="s">'n'</span><span class="p">,</span> <span class="nf">environment</span><span class="p">(</span><span class="n">cube_fn</span><span class="p">))</span>  <span class="c1"># 3</span>
+<span class="nf">ls</span><span class="p">(</span><span class="nf">environment</span><span class="p">(</span><span class="n">square_fn</span><span class="p">))</span>      <span class="c1"># "n"   "pow"</span>
+<span class="nf">get</span><span class="p">(</span><span class="s">'n'</span><span class="p">,</span> <span class="nf">environment</span><span class="p">(</span><span class="n">square_fn</span><span class="p">))</span>  <span class="c1"># 2</span>
 
 
 <span class="c1"># Example: Lexical (value from definition env) vs Dynamic Scoping (value from calling env)</span>
-y <span class="o">&lt;-</span> <span class="m">10</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="m">10</span>
 
-f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
-  y <span class="o">&lt;-</span> <span class="m">2</span>
-  y<span class="o">^</span><span class="m">2</span> <span class="o">+</span> g<span class="p">(</span>x<span class="p">)</span>
+<span class="n">f</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">y</span> <span class="o">&lt;-</span> <span class="m">2</span>
+  <span class="n">y^2</span> <span class="o">+</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="p">}</span>
 
-g <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="p">{</span>
-  x<span class="o">*</span>y
+<span class="n">g</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">x</span><span class="o">*</span><span class="n">y</span>
 <span class="p">}</span>
 
-f<span class="p">(</span><span class="m">3</span><span class="p">)</span>  <span class="c1"># 34 because y=10 in environment where g() is defined, so (2^2 + 3*10)</span>
+<span class="nf">f</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>  <span class="c1"># 34 because y=10 in environment where g() is defined, so (2^2 + 3*10)</span>
 </pre>
 </div>
     </div>

@@ -83,7 +83,7 @@ df &lt;- read.table(file = infile,
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:34:07+01:00" itemprop="datePublished" title="2018-08-04 00:34">2018-08-04 00:34</time></a>
+            <time class="published dt-published" datetime="2018-08-04T00:34:07+01:00" itemprop="datePublished" title="2018-08-04">2018-08-04</time></a>
             </p>
             
         <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
@@ -95,31 +95,31 @@ df &lt;- read.table(file = infile,
     <div>
 <h3>Tabular Data</h3>
 <pre class="code literal-block"><span></span><span class="c1"># Read</span>
-infile <span class="o">&lt;-</span> <span class="s">'input.csv'</span>
-df <span class="o">&lt;-</span> read.table<span class="p">(</span>file <span class="o">=</span> infile<span class="p">,</span>
-                 header <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>  <span class="c1"># Has header line?</span>
-                 sep <span class="o">=</span> <span class="s">','</span><span class="p">,</span>  <span class="c1"># Separator character</span>
-                 nrows <span class="o">=</span> <span class="m">100</span><span class="p">,</span>  <span class="c1"># Number of rows to read</span>
-                 comment.char <span class="o">=</span> <span class="s">'#'</span><span class="p">,</span>  <span class="c1"># Skip rows starting with this character</span>
-                 skip <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="c1"># Skip this many rows from start</span>
-                 stringsAsFactors <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>  <span class="c1"># Encode chars as factors</span>
-df <span class="o">&lt;-</span> read.csv<span class="p">(</span>infile<span class="p">)</span>  <span class="c1"># Same as read.table() with comma as default separator</span>
+<span class="n">infile</span> <span class="o">&lt;-</span> <span class="s">'input.csv'</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">infile</span><span class="p">,</span>
+                 <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>  <span class="c1"># Has header line?</span>
+                 <span class="n">sep</span> <span class="o">=</span> <span class="s">','</span><span class="p">,</span>  <span class="c1"># Separator character</span>
+                 <span class="n">nrows</span> <span class="o">=</span> <span class="m">100</span><span class="p">,</span>  <span class="c1"># Number of rows to read</span>
+                 <span class="n">comment.char</span> <span class="o">=</span> <span class="s">'#'</span><span class="p">,</span>  <span class="c1"># Skip rows starting with this character</span>
+                 <span class="n">skip</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="c1"># Skip this many rows from start</span>
+                 <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>  <span class="c1"># Encode chars as factors</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>  <span class="c1"># Same as read.table() with comma as default separator</span>
 
 
 <span class="c1"># Read large files</span>
-sample <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span> nrows <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
-classes <span class="o">&lt;-</span> <span class="kp">sapply</span><span class="p">(</span><span class="kp">sample</span><span class="p">,</span> <span class="kp">class</span><span class="p">)</span>
-df <span class="o">&lt;-</span> read.table<span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span>
-                 colClasses <span class="o">=</span> classes<span class="p">,</span>  <span class="c1"># Pre-defining column classes is much faster</span>
-                 nrows <span class="o">=</span> <span class="m">50000</span><span class="p">)</span>  <span class="c1"># Pre-defining rows (Unix wc) can help with memory usage</span>
+<span class="n">sample</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span> <span class="n">nrows</span> <span class="o">=</span> <span class="m">100</span><span class="p">)</span>
+<span class="n">classes</span> <span class="o">&lt;-</span> <span class="nf">sapply</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="s">'large_file.csv'</span><span class="p">,</span>
+                 <span class="n">colClasses</span> <span class="o">=</span> <span class="n">classes</span><span class="p">,</span>  <span class="c1"># Pre-defining column classes is much faster</span>
+                 <span class="n">nrows</span> <span class="o">=</span> <span class="m">50000</span><span class="p">)</span>  <span class="c1"># Pre-defining rows (Unix wc) can help with memory usage</span>
 
 
 <span class="c1"># Write</span>
-outfile <span class="o">&lt;-</span> <span class="s">'output.csv'</span>
-write.table<span class="p">(</span>df<span class="p">,</span>
-            file <span class="o">=</span> outfile<span class="p">,</span>
-            append <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>  <span class="c1"># FALSE will overwrite</span>
-write.csv<span class="p">(</span>df<span class="p">,</span> outfile<span class="p">)</span>
+<span class="n">outfile</span> <span class="o">&lt;-</span> <span class="s">'output.csv'</span>
+<span class="nf">write.table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+            <span class="n">file</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">,</span>
+            <span class="n">append</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>  <span class="c1"># FALSE will overwrite</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">outfile</span><span class="p">)</span>
 </pre>
 
 
@@ -136,18 +136,18 @@ write.csv<span class="p">(</span>df<span class="p">,</span> outfile<span class="
 </li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Read</span>
-<span class="kp">dget</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
+<span class="nf">dget</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
 
-<span class="kn">source</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">'data.R'</span><span class="p">)</span>
 
 <span class="c1"># Write</span>
-df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>a <span class="o">=</span> <span class="m">1</span><span class="p">,</span> b <span class="o">=</span> <span class="s">'b'</span><span class="p">)</span>
-<span class="kp">dput</span><span class="p">(</span>df<span class="p">)</span>  <span class="c1"># Prints out structure</span>
-<span class="kp">dput</span><span class="p">(</span>df<span class="p">,</span> <span class="s">'data.R'</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s">'b'</span><span class="p">)</span>
+<span class="nf">dput</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>  <span class="c1"># Prints out structure</span>
+<span class="nf">dput</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s">'data.R'</span><span class="p">)</span>
 
-x <span class="o">&lt;-</span> <span class="m">5</span>
-y <span class="o">&lt;-</span> <span class="s">'abc'</span>
-<span class="kp">dump</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span><span class="s">'y'</span><span class="p">,</span><span class="s">'df'</span><span class="p">),</span> file <span class="o">=</span> <span class="s">'data.R'</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="m">5</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="s">'abc'</span>
+<span class="nf">dump</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span><span class="s">'y'</span><span class="p">,</span><span class="s">'df'</span><span class="p">),</span> <span class="n">file</span> <span class="o">=</span> <span class="s">'data.R'</span><span class="p">)</span>
 </pre>
 
 
@@ -166,20 +166,20 @@ y <span class="o">&lt;-</span> <span class="s">'abc'</span>
 <li>'rb', 'wb', 'ab' = read/write/append in binary mode (Windows)</li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Read</span>
-con <span class="o">&lt;-</span> <span class="kp">file</span><span class="p">(</span><span class="s">'input.csv'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-con <span class="o">&lt;-</span> <span class="kp">gzfile</span><span class="p">(</span><span class="s">'input.gz'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-con <span class="o">&lt;-</span> <span class="kp">url</span><span class="p">(</span><span class="s">'http://cran.r-project.org/'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
-x <span class="o">&lt;-</span> <span class="kp">readLines</span><span class="p">(</span>con<span class="p">,</span> <span class="m">10</span><span class="p">)</span>  <span class="c1"># Read in first 10 lines</span>
-<span class="kp">close</span><span class="p">(</span>con<span class="p">)</span>
+<span class="n">con</span> <span class="o">&lt;-</span> <span class="nf">file</span><span class="p">(</span><span class="s">'input.csv'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">&lt;-</span> <span class="nf">gzfile</span><span class="p">(</span><span class="s">'input.gz'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">&lt;-</span> <span class="nf">url</span><span class="p">(</span><span class="s">'http://cran.r-project.org/'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">readLines</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>  <span class="c1"># Read in first 10 lines</span>
+<span class="nf">close</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
 </pre>
 
 
 <h3>Workspace</h3>
-<pre class="code literal-block"><span></span># Read
-load('mydata.RData')
+<pre class="code literal-block"><span></span># <span class="nv">Read</span>
+<span class="nv">load</span><span class="ss">(</span><span class="s1">'</span><span class="s">mydata.RData</span><span class="s1">'</span><span class="ss">)</span>
 
-# Write
-save.image(file = 'mydata.Rdata')  # Defaults to '.Rdata' if not specified
+# <span class="nv">Write</span>
+<span class="nv">save</span>.<span class="nv">image</span><span class="ss">(</span><span class="nv">file</span> <span class="o">=</span> <span class="s1">'</span><span class="s">mydata.Rdata</span><span class="s1">'</span><span class="ss">)</span>  # <span class="nv">Defaults</span> <span class="nv">to</span> <span class="s1">'</span><span class="s">.Rdata</span><span class="s1">'</span> <span class="k">if</span> <span class="nv">not</span> <span class="nv">specified</span>
 </pre>
 </div>
     </div>

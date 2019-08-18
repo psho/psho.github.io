@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 May 2019 10:10:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Adaptive Learning Rate Optimisation</title><link>https://psho.github.io/blog/dl/adaptive-learning-rate-optimisation/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>psho</title><link>https://psho.github.io/</link><description>Personal Blog and Reference</description><atom:link href="https://psho.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:patrick.s.ho@gmail.com"&gt;Patrick Ho&lt;/a&gt; </copyright><lastBuildDate>Sun, 18 Aug 2019 10:29:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Adaptive Learning Rate Optimisation</title><link>https://psho.github.io/blog/dl/adaptive-learning-rate-optimisation/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -3057,8 +3057,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;/div&gt;
 
 &lt;/div&gt;&lt;/div&gt;</description><guid>https://psho.github.io/blog/stats/bayesian-ab-testing/</guid><pubDate>Sun, 24 Mar 2019 10:34:44 GMT</pubDate></item><item><title>fastai: Image Classification</title><link>https://psho.github.io/blog/dl/fastai-image-classification/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="Image-Classification:-Cats-and-Dogs"&gt;Image Classification: Cats and Dogs&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Image-Classification:-Cats-and-Dogs"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Load up a pre-trained model and set &lt;code&gt;precompute=True&lt;/code&gt;&lt;/li&gt;
@@ -3089,7 +3088,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fastai.plots&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3103,7 +3102,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cuda&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;is_available&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3113,7 +3112,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
 
 
 
@@ -3137,7 +3136,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;backends&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cudnn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;enabled&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3147,7 +3146,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
 
 
 
@@ -3163,8 +3162,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Data"&gt;Data&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Images of cats and dogs organised by folders:&lt;/p&gt;
 &lt;ul&gt;
@@ -3185,7 +3183,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"./data/dogscats"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3200,7 +3198,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;files&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3210,7 +3208,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
 
 
 
@@ -3239,7 +3237,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;imshow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3249,7 +3247,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3273,7 +3271,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3283,7 +3281,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
 
 
 
@@ -3307,7 +3305,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;img&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3317,7 +3315,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
 
 
 
@@ -3343,8 +3341,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Initial-Fit-with-Pre-trained-Model"&gt;Initial Fit with Pre-trained Model&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Initial-Fit-with-Pre-trained-Model"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Use a pre-trained model from a similar problem to get a head start on training by taking advantage of what it has already learned from other images. Using different architectures may yield better results, e.g. resnext50 instead of resnet34.&lt;/p&gt;
 &lt;h5 id="Pre-Compute"&gt;Pre-Compute&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Pre-Compute"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;The &lt;em&gt;activations&lt;/em&gt; at the second last layer (just before classification) of an image recognition model indicate that certain features (e.g. an eye, an ear, a paw) have been detected at various locations in the image with some level of confidence.&lt;/p&gt;
@@ -3379,14 +3376,13 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;span class="n"&gt;learn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ConvLearner&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;precompute&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Choose-Learning-Rate"&gt;Choose Learning Rate&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Choose-Learning-Rate"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Find learning rate using technique from &lt;a href="http://arxiv.org/abs/1506.01186"&gt;Cyclical Learning Rates for Training Neural Networks&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Note that different optimiser algorithms will require different learning rates, so need to &lt;code&gt;lr_find()&lt;/code&gt; again if changing optimiser.&lt;/p&gt;
@@ -3402,7 +3398,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;lrf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lr_find&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3412,7 +3408,7 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3420,10 +3416,10 @@ The estimated number of effective samples is smaller than 200 for some parameter
 
  
  
-&lt;div id="e29a0134-eab2-4daf-8c00-388eaa267007"&gt;&lt;/div&gt;
+&lt;div id="4cd0835a-5d7d-47bc-9b51-c76e5f77052a"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
+var element = $('#4cd0835a-5d7d-47bc-9b51-c76e5f77052a');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "359db349b43e4556bfe479b673c02184", "version_major": 2, "version_minor": 0}
@@ -3434,7 +3430,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -3457,7 +3453,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sched&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot_lr&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3467,7 +3463,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3491,7 +3487,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sched&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3501,7 +3497,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3517,8 +3513,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Pick highest learning rate where loss is still decreasing, e.g. find point that's lowest (1e-1) and go back an order of magnitude (1e-2).&lt;/p&gt;
 
@@ -3526,8 +3521,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Initial-Fit"&gt;Initial Fit&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Initial-Fit"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Use the learning rate that we've just found to train the last layer from precomputed activations.&lt;/p&gt;
 
@@ -3542,7 +3536,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.01&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3552,7 +3546,7 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3560,10 +3554,10 @@ var element = $('#e29a0134-eab2-4daf-8c00-388eaa267007');
 
  
  
-&lt;div id="6b366797-c5e9-4af1-9541-3acd0bd75e08"&gt;&lt;/div&gt;
+&lt;div id="2edd7aa3-71be-42be-a2b8-341aa97f87e4"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
+var element = $('#2edd7aa3-71be-42be-a2b8-341aa97f87e4');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "5c7333d183bd4e88813e07105b297bb0", "version_major": 2, "version_minor": 0}
@@ -3574,7 +3568,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -3588,7 +3582,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[13]:&lt;/div&gt;
 
 
 
@@ -3604,8 +3598,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Fit-Model-with-Data-Augmentations-and-SGDR"&gt;Fit Model with Data Augmentations and SGDR&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Fit-Model-with-Data-Augmentations-and-SGDR"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="Define-Data-Augmentations"&gt;Define Data Augmentations&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Define-Data-Augmentations"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;To reduce overfitting, create more data through &lt;em&gt;data augmentation&lt;/em&gt; - randomly change the images in ways that don't change their interpretation like flipping, zooming, and rotating.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;aug_tfms&lt;/code&gt; is the list of augmentation transforms. For side-on images (as opposed to top-down) we can use the pre-defined &lt;code&gt;transforms_side_on&lt;/code&gt; list.&lt;/p&gt;
@@ -3623,7 +3616,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;transforms_side_on&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3633,7 +3626,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[14]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[14]:&lt;/div&gt;
 
 
 
@@ -3659,14 +3652,13 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;span class="n"&gt;tfms&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tfms_from_model&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sz&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;aug_tfms&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;transforms_side_on&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_zoom&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h5 id="Example:-Show-Augmented-Images"&gt;Example: Show Augmented Images&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Example:-Show-Augmented-Images"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
@@ -3683,7 +3675,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;trn_ds&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;denorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3697,7 +3689,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;span class="n"&gt;plots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ims&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rows&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3707,7 +3699,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3723,8 +3715,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Fit-Model"&gt;Fit Model&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Fit-Model"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;We can't use &lt;code&gt;precompute=True&lt;/code&gt; as we need new activations calculated for the augmented images. Each epoch, we use a slightly different version of the images for training.&lt;/p&gt;
 &lt;h5 id="Stochastic-Gradient-Descent-with-Restarts-(SGDR)"&gt;Stochastic Gradient Descent with Restarts (SGDR)&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Stochastic-Gradient-Descent-with-Restarts-(SGDR)"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;This is a variant of &lt;em&gt;learning rate annealing&lt;/em&gt; which decreases the learning rate as training progresses so we take smaller steps closer to the minima. One approach for reducing the step size is &lt;em&gt;cosine annealing&lt;/em&gt; named after the first part of the cosine curve.&lt;/p&gt;
@@ -3743,7 +3734,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;span class="n"&gt;learn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ConvLearner&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;precompute&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3756,7 +3747,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1e-2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cycle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle_len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3766,7 +3757,7 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3774,10 +3765,10 @@ var element = $('#6b366797-c5e9-4af1-9541-3acd0bd75e08');
 
  
  
-&lt;div id="1d05547c-19bd-4257-b35e-b999755ae421"&gt;&lt;/div&gt;
+&lt;div id="852b59d1-d6aa-4dd4-8be5-d91808bd5837"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
+var element = $('#852b59d1-d6aa-4dd4-8be5-d91808bd5837');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "cf6aeb30eed14c748413c94bb7064a3d", "version_major": 2, "version_minor": 0}
@@ -3788,7 +3779,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -3803,7 +3794,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[19]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[19]:&lt;/div&gt;
 
 
 
@@ -3819,8 +3810,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Results show accuracy not getting better but at least we're not overfitting (where training loss would appear much lower than validation loss).&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;val_loss&lt;/code&gt; is lower than &lt;code&gt;trn_loss&lt;/code&gt; though, so might be underfitting. &lt;code&gt;cycle_len&lt;/code&gt; might not be long enough for it to find minima, so we can use &lt;code&gt;cycle_mult&lt;/code&gt; to give it more time (see below)&lt;/p&gt;
@@ -3839,7 +3829,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;span class="c1"&gt;# Notice 3 cycles of cosine annealing with cycle reset occurring after 1 epoch&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3849,7 +3839,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3865,8 +3855,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Possible to generalise even better through &lt;em&gt;Snapshot Ensembling&lt;/em&gt; by saving weights at end of each cycle and taking average of predictions. Can set &lt;code&gt;cycle_save_name&lt;/code&gt; to save these sets of weights.&lt;/p&gt;
 
@@ -3882,7 +3871,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'224_lastlayer'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3896,14 +3885,13 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'224_lastlayer'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Fine-Tune-Other-Layers-with-Differential-Learning-Rates-and-Cycle-Length-Multipying"&gt;Fine Tune Other Layers with Differential Learning Rates and Cycle Length Multipying&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Fine-Tune-Other-Layers-with-Differential-Learning-Rates-and-Cycle-Length-Multipying"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Up to this point, we have only trained the final layer. Now we can &lt;code&gt;unfreeze()&lt;/code&gt; and try to fine tune the other layers for better performance.&lt;/p&gt;
 &lt;h5 id="Differential-Learning-Rates"&gt;Differential Learning Rates&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Differential-Learning-Rates"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;The other layers contain carefully tuned weights trained on ImageNet that we don't want to completely wipe away. Earlier layers generally pick up more general-purpose features, so we shouldn't need to alter them as much. We can use &lt;em&gt;differential learning rates&lt;/em&gt; to account for this - smaller learning rates for earlier layers and larger rates for later layers.&lt;/p&gt;
@@ -3923,7 +3911,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unfreeze&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3937,7 +3925,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;span class="n"&gt;diff_lrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;1e-4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1e-3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1e-2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3950,7 +3938,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;diff_lrs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cycle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle_len&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cycle_mult&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3960,7 +3948,7 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -3968,10 +3956,10 @@ var element = $('#1d05547c-19bd-4257-b35e-b999755ae421');
 
  
  
-&lt;div id="32332434-b9bf-473e-9213-4469378830f4"&gt;&lt;/div&gt;
+&lt;div id="fac9098c-e03a-47b0-b097-e5d5c5b7b297"&gt;&lt;/div&gt;
 &lt;div class="output_subarea output_widget_view "&gt;
 &lt;script type="text/javascript"&gt;
-var element = $('#32332434-b9bf-473e-9213-4469378830f4');
+var element = $('#fac9098c-e03a-47b0-b097-e5d5c5b7b297');
 &lt;/script&gt;
 &lt;script type="application/vnd.jupyter.widget-view+json"&gt;
 {"model_id": "204e633eb823446687d0366f1b1cc75e", "version_major": 2, "version_minor": 0}
@@ -3982,7 +3970,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -4001,7 +3989,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[25]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[25]:&lt;/div&gt;
 
 
 
@@ -4017,8 +4005,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Results show better accuracy than before. &lt;code&gt;trn_loss&lt;/code&gt; and &lt;code&gt;val_loss&lt;/code&gt; end up similar so we're not over/underfitting.&lt;/p&gt;
 
@@ -4036,7 +4023,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="c1"&gt;# Notice 3 cycles of 1, 2, then 4 epochs = Total 7 epochs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4046,7 +4033,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -4070,7 +4057,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'224_all'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4084,14 +4071,13 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'224_all'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Test-Time-Augmentation-(Validation-Set)"&gt;Test Time Augmentation (Validation Set)&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Test-Time-Augmentation-(Validation-Set)"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;For efficient GPU usage, images tend to be cropped square before use. This cropping process generally takes the middle but it might chop out useful parts of the image towards the edge. To help with this, we can generate several augmentations of each test image and hope one of them captures useful details within the centre crop.&lt;/p&gt;
 &lt;p&gt;By default, generate 4 randomly augmented version of each test image. Make predictions on all 5 variants (original + 4 augmented) then average prediction.&lt;/p&gt;
@@ -4112,7 +4098,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;probs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log_preds&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4122,7 +4108,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -4143,7 +4129,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;accuracy_np&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;probs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4153,7 +4139,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[30]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[30]:&lt;/div&gt;
 
 
 
@@ -4169,8 +4155,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Analyse-Results-(Validation-Set)"&gt;Analyse Results (Validation Set)&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Analyse-Results-(Validation-Set)"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;h4 id="Confusion-Matrix"&gt;Confusion Matrix&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Confusion-Matrix"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
@@ -4184,7 +4169,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;probs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4194,7 +4179,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[31]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[31]:&lt;/div&gt;
 
 
 
@@ -4225,7 +4210,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;preds&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4235,7 +4220,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[32]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[32]:&lt;/div&gt;
 
 
 
@@ -4260,7 +4245,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;plot_confusion_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4270,7 +4255,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
@@ -4282,7 +4267,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt"&gt;&lt;/div&gt;
+    &lt;div class="prompt"&gt;&lt;/div&gt;
 
 
 
@@ -4298,8 +4283,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h4 id="Most-Incorrect-Predictions"&gt;Most Incorrect Predictions&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Most-Incorrect-Predictions"&gt;¶&lt;/a&gt;&lt;/h4&gt;
 &lt;/div&gt;
@@ -4316,7 +4300,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="c1"&gt;# index=0 is cats, index=1 is dogs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4326,7 +4310,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[34]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[34]:&lt;/div&gt;
 
 
 
@@ -4342,8 +4326,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h5 id="Most-incorrect-dogs"&gt;Most incorrect dogs&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Most-incorrect-dogs"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
@@ -4359,7 +4342,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;idxs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4369,7 +4352,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[35]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[35]:&lt;/div&gt;
 
 
 
@@ -4393,7 +4376,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;probs&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;idxs&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4403,7 +4386,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[36]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[36]:&lt;/div&gt;
 
 
 
@@ -4427,7 +4410,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argsort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;probs&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;idxs&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4437,7 +4420,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[37]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[37]:&lt;/div&gt;
 
 
 
@@ -4463,7 +4446,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="c1"&gt;# image at index=1633 in validation set has lowest probability&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4473,7 +4456,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[38]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[38]:&lt;/div&gt;
 
 
 
@@ -4497,7 +4480,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;PIL&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/'&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val_ds&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fnames&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1672&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4507,7 +4490,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[39]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[39]:&lt;/div&gt;
 
 
 
@@ -4523,8 +4506,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h5 id="Most-incorrect-cats"&gt;Most incorrect cats&lt;a class="anchor-link" href="https://psho.github.io/blog/dl/fastai-image-classification/#Most-incorrect-cats"&gt;¶&lt;/a&gt;&lt;/h5&gt;
 &lt;/div&gt;
@@ -4542,7 +4524,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;idxs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argsort&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;probs&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;idxs&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4552,7 +4534,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[40]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[40]:&lt;/div&gt;
 
 
 
@@ -4576,7 +4558,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;span class="n"&gt;PIL&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PATH&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/'&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;val_ds&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fnames&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;879&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
-&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4586,7 +4568,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;div class="output_area"&gt;
 
-&lt;div class="prompt output_prompt"&gt;Out[49]:&lt;/div&gt;
+    &lt;div class="prompt output_prompt"&gt;Out[49]:&lt;/div&gt;
 
 
 
@@ -4602,8 +4584,7 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Reference: fast.ai Deep Learning Course 1&lt;/p&gt;
 
@@ -4622,81 +4603,81 @@ var element = $('#32332434-b9bf-473e-9213-4469378830f4');
 &lt;/ul&gt;
 &lt;!-- --&gt;
 
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;        &lt;span class="c1"&gt;# a&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;        &lt;span class="c1"&gt;# b&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;      &lt;span class="c1"&gt;# a b c&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;x &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# c d e&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;1:3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x &amp;gt; 'b'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-mask &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; x &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;'b'&lt;/span&gt;  &lt;span class="c1"&gt;# FALSE FALSE  TRUE  TRUE  TRUE&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;mask&lt;span class="p"&gt;]&lt;/span&gt;     &lt;span class="c1"&gt;# c d e&lt;/span&gt;
+&lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'b'&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Lists&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;a &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; b &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;TRUE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;       &lt;span class="c1"&gt;# List 1 2 3&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;     &lt;span class="c1"&gt;# Same as above&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;'a'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;above&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;  &lt;span class="c1"&gt;# List with first and third elements&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;c(1,3)&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;first&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;third&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-x&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;     &lt;span class="c1"&gt;# Vector 1 2 3&lt;/span&gt;
-x&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;   &lt;span class="c1"&gt;# Same as above&lt;/span&gt;
-x&lt;span class="o"&gt;$&lt;/span&gt;a        &lt;span class="c1"&gt;# Same as above&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Vector&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;['a'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;above&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;above&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-name &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="s"&gt;'b'&lt;/span&gt;
-x&lt;span class="p"&gt;[[&lt;/span&gt;name&lt;span class="p"&gt;]]&lt;/span&gt;  &lt;span class="c1"&gt;# Vector 'a', same as x[['b']]&lt;/span&gt;
-x&lt;span class="o"&gt;$&lt;/span&gt;name     &lt;span class="c1"&gt;# NULL - $ only works with literal names&lt;/span&gt;
+&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'b'&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[name&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Vector&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;['b'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;NULL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;only&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;works&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;literal&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;names&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
 
-&lt;span class="c1"&gt;# Nested lists&lt;/span&gt;
-y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;a &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; b &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Nested&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;lists&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-y&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]][[&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;   &lt;span class="c1"&gt;# 6 - list 1, element 3&lt;/span&gt;
-y&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]][[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;   &lt;span class="c1"&gt;# 5 - list 2, element 2&lt;/span&gt;
-y&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)]]&lt;/span&gt;  &lt;span class="c1"&gt;# 5 - same as above&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;element&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;element&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;[c(2, 2)&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="err"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;same&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;above&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Matrix&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 3 - row 1, col 2&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 2 - row 2, col 1&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; drop &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Don't drop dimension to vector, keep as 1x1 matrix&lt;/span&gt;
+&lt;span class="n"&gt;x[1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="n"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 3 - row 1, col 2&lt;/span&gt;
+&lt;span class="n"&gt;x[2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="n"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 2 - row 2, col 1&lt;/span&gt;
+&lt;span class="n"&gt;x[2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;drop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="n"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Don't drop dimension to vector, keep as 1x1 matrix&lt;/span&gt;
 
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# 1 3 5 - row 1, all cols&lt;/span&gt;
-x&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# 3 4 - all rows, col 2&lt;/span&gt;
-x&lt;span class="p"&gt;[,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; drop &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# Don't drop dimension to vector, keep as 2x1 matrix&lt;/span&gt;
+&lt;span class="n"&gt;x[1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# 1 3 5 - row 1, all cols&lt;/span&gt;
+&lt;span class="n"&gt;x[&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="n"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# 3 4 - all rows, col 2&lt;/span&gt;
+&lt;span class="n"&gt;x[&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;drop&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="n"&gt;]&lt;/span&gt;   &lt;span class="c1"&gt;# Don't drop dimension to vector, keep as 2x1 matrix&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Partial Matching&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;long_col_name &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;long_col_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-x&lt;span class="o"&gt;$&lt;/span&gt;long  &lt;span class="c1"&gt;# 1 2 3 4 5, successfully matched on first part of name&lt;/span&gt;
-x&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s"&gt;'long'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; exact &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;  &lt;span class="c1"&gt;# Same as above&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;$&lt;/span&gt;&lt;span class="n"&gt;long&lt;/span&gt;  &lt;span class="c1"&gt;# 1 2 3 4 5, successfully matched on first part of name&lt;/span&gt;
+&lt;span class="n"&gt;x[[&lt;/span&gt;&lt;span class="s"&gt;'long'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;exact&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="n"&gt;]]&lt;/span&gt;  &lt;span class="c1"&gt;# Same as above&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Remove NAs&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-miss &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kp"&gt;is.na&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# FALSE FALSE  TRUE  TRUE FALSE&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;miss&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 1 2 5, choose all non-missings&lt;/span&gt;
+&lt;span class="n"&gt;miss&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;na&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="k"&gt;TRUE&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;!miss&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;choose&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;non&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;missings&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
 
-&lt;span class="c1"&gt;# Complete cases - No missings across all values&lt;/span&gt;
-y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Complete&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;cases&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;No&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;missings&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;across&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;all&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;values&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NA&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'e'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-comp &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; complete.cases&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
-x&lt;span class="p"&gt;[&lt;/span&gt;comp&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 1, 5&lt;/span&gt;
-y&lt;span class="p"&gt;[&lt;/span&gt;comp&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# a, e&lt;/span&gt;
+&lt;span class="n"&gt;comp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complete&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cases&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;comp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;comp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
-airquality&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Rows 5, 6 have NAs&lt;/span&gt;
-comp &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; complete.cases&lt;span class="p"&gt;(&lt;/span&gt;airquality&lt;span class="p"&gt;)&lt;/span&gt;
-airquality&lt;span class="p"&gt;[&lt;/span&gt;comp&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Rows 5, 6 dropped&lt;/span&gt;
+&lt;span class="n"&gt;airquality&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;1:9, &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Rows&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NAs&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;comp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complete&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cases&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;airquality&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;airquality&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;comp, &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;1:9, &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;Rows&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;dropped&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</description><guid>https://psho.github.io/blog/r/r-subsetting/</guid><pubDate>Fri, 03 Aug 2018 23:35:36 GMT</pubDate></item><item><title>R: Simulation</title><link>https://psho.github.io/blog/r/r-simulation/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;h3&gt;Distributions&lt;/h3&gt;
 &lt;p&gt;Probability distributions are already built in:&lt;/p&gt;
 &lt;ul&gt;
@@ -4713,52 +4694,52 @@ airquality&lt;span class="p"&gt;[&lt;/span&gt;comp&lt;span class="p"&gt;,&lt;/sp
 &lt;li&gt;&lt;strong&gt;q&lt;/strong&gt; for quantile, inverse CDF&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Normal&lt;/span&gt;
-rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# 1.51178117  0.38984324 -0.62124058 -2.21469989 ...&lt;/span&gt;
-pnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.6914625  &amp;lt;- 69% prob that value is &amp;lt;=0.5&lt;/span&gt;
-qnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.6914625&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.5  &amp;lt;- Inverse of above&lt;/span&gt;
+&lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# 1.51178117  0.38984324 -0.62124058 -2.21469989 ...&lt;/span&gt;
+&lt;span class="nf"&gt;pnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.6914625  &amp;lt;- 69% prob that value is &amp;lt;=0.5&lt;/span&gt;
+&lt;span class="nf"&gt;qnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;0.6914625&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.5  &amp;lt;- Inverse of above&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Binomial&lt;/span&gt;
-rbinom&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 5 3 2 2 1 0 3 1 2 3  &amp;lt;- 10 obs, 5 trials each, 50% prob per trial&lt;/span&gt;
-dbinom&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.3125  &amp;lt;- 31.25% prob of getting exactly 3 success in 5 trials at 50% prob&lt;/span&gt;
+&lt;span class="nf"&gt;rbinom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 5 3 2 2 1 0 3 1 2 3  &amp;lt;- 10 obs, 5 trials each, 50% prob per trial&lt;/span&gt;
+&lt;span class="nf"&gt;dbinom&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 0.3125  &amp;lt;- 31.25% prob of getting exactly 3 success in 5 trials at 50% prob&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Seed&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078&lt;/span&gt;
-rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.8204684  0.4874291  0.7383247  0.5757814 -0.3053884&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nf"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078&lt;/span&gt;
+&lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.8204684  0.4874291  0.7383247  0.5757814 -0.3053884&lt;/span&gt;
 
-&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078  &amp;lt;- Same as first&lt;/span&gt;
+&lt;span class="nf"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [1] -0.6264538  0.1836433 -0.8356286  1.5952808  0.3295078  &amp;lt;- Same as first&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Sampling&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;set&lt;/span&gt;.&lt;span class="nv"&gt;seed&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Random sample&lt;/span&gt;
-x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;9&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 3 9 5&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 9 2 7  &amp;lt;- New sample with each call&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;letters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# y" "q" "p" "b" "e"&lt;/span&gt;
+# &lt;span class="k"&gt;Random&lt;/span&gt; &lt;span class="nv"&gt;sample&lt;/span&gt;
+&lt;span class="nv"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;:&lt;span class="mi"&gt;9&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;x&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;x&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;  &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nv"&gt;New&lt;/span&gt; &lt;span class="nv"&gt;sample&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;call&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;letters&lt;/span&gt;, &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="nv"&gt;y&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;q&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;e&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Random sample with replacement&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; replace &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;TRUE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 2 7 4 7 5&lt;/span&gt;
+# &lt;span class="k"&gt;Random&lt;/span&gt; &lt;span class="nv"&gt;sample&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;replacement&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;x&lt;/span&gt;, &lt;span class="mi"&gt;5&lt;/span&gt;, &lt;span class="nv"&gt;replace&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;TRUE&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 
-&lt;span class="c1"&gt;# Permutations&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 7 8 3 5 6 1 2 4 9&lt;/span&gt;
-&lt;span class="kp"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 4 1 3 6 2 5 9 8 7  &amp;lt;- New permutation with each call&lt;/span&gt;
+# &lt;span class="nv"&gt;Permutations&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;x&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="mi"&gt;7&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;
+&lt;span class="nv"&gt;sample&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;x&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;  &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nv"&gt;New&lt;/span&gt; &lt;span class="nv"&gt;permutation&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;each&lt;/span&gt; &lt;span class="nv"&gt;call&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Linear Model&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kp"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nf"&gt;set.seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-x &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-e &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; rnorm&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Add noise with mean 0, sd 0.5&lt;/span&gt;
-y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; x &lt;span class="o"&gt;+&lt;/span&gt; e
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;rnorm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Add noise with mean 0, sd 0.5&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;
 
-plot&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -4779,13 +4760,13 @@ plot&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&
 &lt;/ol&gt;
 &lt;p&gt;Separate namespaces for functions and non-functions, e.g. can have both
 'x' function and 'x' object.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# Search list
-search()
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="k"&gt;Search&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+&lt;span class="k"&gt;search&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
-##  [1] ".GlobalEnv"        "package:rmarkdown" "tools:rstudio"    
-##  [4] "package:stats"     "package:graphics"  "package:grDevices"
-##  [7] "package:utils"     "package:datasets"  "package:methods"  
-## [10] "Autoloads"         "package:base"
+&lt;span class="o"&gt;##&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ss"&gt;".GlobalEnv"&lt;/span&gt;        &lt;span class="ss"&gt;"package:rmarkdown"&lt;/span&gt; &lt;span class="ss"&gt;"tools:rstudio"&lt;/span&gt;    
+&lt;span class="o"&gt;##&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ss"&gt;"package:stats"&lt;/span&gt;     &lt;span class="ss"&gt;"package:graphics"&lt;/span&gt;  &lt;span class="ss"&gt;"package:grDevices"&lt;/span&gt;
+&lt;span class="o"&gt;##&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ss"&gt;"package:utils"&lt;/span&gt;     &lt;span class="ss"&gt;"package:datasets"&lt;/span&gt;  &lt;span class="ss"&gt;"package:methods"&lt;/span&gt;  
+&lt;span class="o"&gt;##&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ss"&gt;"Autoloads"&lt;/span&gt;         &lt;span class="ss"&gt;"package:base"&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -4810,44 +4791,44 @@ search()
 &lt;!-- --&gt;
 
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Function below has formal arguments x/y, and free variable z&lt;/span&gt;
-f &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  x &lt;span class="o"&gt;+&lt;/span&gt; y &lt;span class="o"&gt;-&lt;/span&gt; z
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
 
 &lt;span class="c1"&gt;# Example: Function generator - Value of free variable n taken from function definition environment&lt;/span&gt;
-make_power_fn &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;n&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  pow &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    x&lt;span class="o"&gt;^&lt;/span&gt;n
+&lt;span class="n"&gt;make_power_fn&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;pow&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;x^n&lt;/span&gt;
   &lt;span class="p"&gt;}&lt;/span&gt;
-  pow
+  &lt;span class="n"&gt;pow&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-cube_fn &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; make_power_fn&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-cube_fn&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                      &lt;span class="c1"&gt;# 27&lt;/span&gt;
-square_fn &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; make_power_fn&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-square_fn&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                    &lt;span class="c1"&gt;# 9&lt;/span&gt;
+&lt;span class="n"&gt;cube_fn&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;make_power_fn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;cube_fn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                      &lt;span class="c1"&gt;# 27&lt;/span&gt;
+&lt;span class="n"&gt;square_fn&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;make_power_fn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nf"&gt;square_fn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                    &lt;span class="c1"&gt;# 9&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Explore function environment&lt;/span&gt;
-&lt;span class="kp"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;cube_fn&lt;span class="p"&gt;))&lt;/span&gt;        &lt;span class="c1"&gt;# "n"   "pow"&lt;/span&gt;
-&lt;span class="kp"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'n'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;cube_fn&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 3&lt;/span&gt;
-&lt;span class="kp"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;square_fn&lt;span class="p"&gt;))&lt;/span&gt;      &lt;span class="c1"&gt;# "n"   "pow"&lt;/span&gt;
-&lt;span class="kp"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'n'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;square_fn&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 2&lt;/span&gt;
+&lt;span class="nf"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cube_fn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;        &lt;span class="c1"&gt;# "n"   "pow"&lt;/span&gt;
+&lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'n'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cube_fn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 3&lt;/span&gt;
+&lt;span class="nf"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;square_fn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;      &lt;span class="c1"&gt;# "n"   "pow"&lt;/span&gt;
+&lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'n'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;square_fn&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 2&lt;/span&gt;
 
 
 &lt;span class="c1"&gt;# Example: Lexical (value from definition env) vs Dynamic Scoping (value from calling env)&lt;/span&gt;
-y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;10&lt;/span&gt;
 
-f &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  y &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;
-  y&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; g&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;
+  &lt;span class="n"&gt;y^2&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nf"&gt;g&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-g &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  x&lt;span class="o"&gt;*&lt;/span&gt;y
+&lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-f&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 34 because y=10 in environment where g() is defined, so (2^2 + 3*10)&lt;/span&gt;
+&lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 34 because y=10 in environment where g() is defined, so (2^2 + 3*10)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</description><guid>https://psho.github.io/blog/r/r-scoping-rules/</guid><pubDate>Fri, 03 Aug 2018 23:34:56 GMT</pubDate></item><item><title>R: Functions</title><link>https://psho.github.io/blog/r/r-functions/</link><dc:creator>Patrick Ho</dc:creator><description>&lt;div&gt;&lt;h3&gt;Define&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;R objects of class "function"&lt;/li&gt;
@@ -4861,23 +4842,23 @@ f&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;spa
 &lt;/ul&gt;
 &lt;!-- --&gt;
 
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Named arguments with some default values&lt;/span&gt;
-f &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;a&lt;span class="p"&gt;,&lt;/span&gt; b &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;TRUE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; d &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="kp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;a&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="kp"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;b&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# &lt;span class="nv"&gt;Named&lt;/span&gt; &lt;span class="nv"&gt;arguments&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;some&lt;/span&gt; &lt;span class="nv"&gt;default&lt;/span&gt; &lt;span class="nv"&gt;values&lt;/span&gt;
+&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nv"&gt;function&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;a&lt;/span&gt;, &lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;, &lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;TRUE&lt;/span&gt;, &lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;NULL&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
+  &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;a&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+  &lt;span class="nv"&gt;print&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-  &lt;span class="kr"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;d &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kr"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;d&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Can return early&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; {
+    &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;d&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;  # &lt;span class="nv"&gt;Can&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;early&lt;/span&gt;
+  }
 
-  &lt;span class="kt"&gt;c&lt;/span&gt;  &lt;span class="c1"&gt;# Last expression, so this is the return value&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="nv"&gt;c&lt;/span&gt;  # &lt;span class="nv"&gt;Last&lt;/span&gt; &lt;span class="nv"&gt;expression&lt;/span&gt;, &lt;span class="nv"&gt;so&lt;/span&gt; &lt;span class="nv"&gt;this&lt;/span&gt; &lt;span class="nv"&gt;is&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nv"&gt;value&lt;/span&gt;
+}
 
-&lt;span class="c1"&gt;# Print arguments&lt;/span&gt;
-&lt;span class="kp"&gt;args&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;f&lt;span class="p"&gt;)&lt;/span&gt;
+# &lt;span class="nv"&gt;Print&lt;/span&gt; &lt;span class="nv"&gt;arguments&lt;/span&gt;
+&lt;span class="nv"&gt;args&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 
-&lt;span class="c1"&gt;# List of formal arguments&lt;/span&gt;
-&lt;span class="kp"&gt;formals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;f&lt;span class="p"&gt;)&lt;/span&gt;
+# &lt;span class="nv"&gt;List&lt;/span&gt; &lt;span class="nv"&gt;of&lt;/span&gt; &lt;span class="nv"&gt;formal&lt;/span&gt; &lt;span class="nv"&gt;arguments&lt;/span&gt;
+&lt;span class="nv"&gt;formals&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -4888,9 +4869,9 @@ f &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&l
 &lt;/ul&gt;
 &lt;!-- --&gt;
 
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# These function calls are the same
-f(1, 2, FALSE, 'a')
-f(b = 2, d = 'a', c = FALSE, a = 1)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;#&lt;/span&gt; &lt;span class="n"&gt;These&lt;/span&gt; &lt;span class="k"&gt;function&lt;/span&gt; &lt;span class="n"&gt;calls&lt;/span&gt; &lt;span class="k"&gt;are&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;same&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -4902,9 +4883,9 @@ f(b = 2, d = 'a', c = FALSE, a = 1)
 &lt;/ul&gt;
 &lt;!-- --&gt;
 
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;new_plot &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"l"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  plot&lt;span class="p"&gt;(&lt;/span&gt;x&lt;span class="p"&gt;,&lt;/span&gt; y&lt;span class="p"&gt;,&lt;/span&gt; type &lt;span class="o"&gt;=&lt;/span&gt; type&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;new_plot&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="nf"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;"l"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nf"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;...&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="kp"&gt;args&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;paste&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# function (..., sep = " ", collapse = NULL)&lt;/span&gt;
+&lt;span class="nf"&gt;args&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paste&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# function (..., sep = " ", collapse = NULL)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</description><guid>https://psho.github.io/blog/r/r-functions/</guid><pubDate>Fri, 03 Aug 2018 23:34:23 GMT</pubDate></item></channel></rss>

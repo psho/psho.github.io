@@ -83,7 +83,7 @@ Return value is last expression to'>
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:34:23+01:00" itemprop="datePublished" title="2018-08-04 00:34">2018-08-04 00:34</time></a>
+            <time class="published dt-published" datetime="2018-08-04T00:34:23+01:00" itemprop="datePublished" title="2018-08-04">2018-08-04</time></a>
             </p>
             
         <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
@@ -105,23 +105,23 @@ Return value is last expression to'>
 </ul>
 </li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span><span class="c1"># Named arguments with some default values</span>
-f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>a<span class="p">,</span> b <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="kt">c</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> d <span class="o">=</span> <span class="kc">NULL</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kp">print</span><span class="p">(</span>a<span class="p">)</span>
-  <span class="kp">print</span><span class="p">(</span>b<span class="p">)</span>
+<!-- --><pre class="code literal-block"><span></span># <span class="nv">Named</span> <span class="nv">arguments</span> <span class="nv">with</span> <span class="nv">some</span> <span class="nv">default</span> <span class="nv">values</span>
+<span class="nv">f</span> <span class="o">&lt;-</span> <span class="nv">function</span><span class="ss">(</span><span class="nv">a</span>, <span class="nv">b</span> <span class="o">=</span> <span class="mi">1</span>, <span class="nv">c</span> <span class="o">=</span> <span class="nv">TRUE</span>, <span class="nv">d</span> <span class="o">=</span> <span class="nv">NULL</span><span class="ss">)</span> {
+  <span class="nv">print</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span>
+  <span class="nv">print</span><span class="ss">(</span><span class="nv">b</span><span class="ss">)</span>
 
-  <span class="kr">if</span> <span class="p">(</span>d <span class="o">==</span> <span class="m">3</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">return</span><span class="p">(</span>d<span class="p">)</span>  <span class="c1"># Can return early</span>
-  <span class="p">}</span>
+  <span class="k">if</span> <span class="ss">(</span><span class="nv">d</span> <span class="o">==</span> <span class="mi">3</span><span class="ss">)</span> {
+    <span class="k">return</span><span class="ss">(</span><span class="nv">d</span><span class="ss">)</span>  # <span class="nv">Can</span> <span class="k">return</span> <span class="nv">early</span>
+  }
 
-  <span class="kt">c</span>  <span class="c1"># Last expression, so this is the return value</span>
-<span class="p">}</span>
+  <span class="nv">c</span>  # <span class="nv">Last</span> <span class="nv">expression</span>, <span class="nv">so</span> <span class="nv">this</span> <span class="nv">is</span> <span class="nv">the</span> <span class="k">return</span> <span class="nv">value</span>
+}
 
-<span class="c1"># Print arguments</span>
-<span class="kp">args</span><span class="p">(</span>f<span class="p">)</span>
+# <span class="nv">Print</span> <span class="nv">arguments</span>
+<span class="nv">args</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
 
-<span class="c1"># List of formal arguments</span>
-<span class="kp">formals</span><span class="p">(</span>f<span class="p">)</span>
+# <span class="nv">List</span> <span class="nv">of</span> <span class="nv">formal</span> <span class="nv">arguments</span>
+<span class="nv">formals</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span>
 </pre>
 
 
@@ -130,9 +130,9 @@ f <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(
 <li>Arguments can be matched by position or name</li>
 <li>Arguments are <em>lazy</em> evaluated, only evaluated when needed</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span># These function calls are the same
-f(1, 2, FALSE, 'a')
-f(b = 2, d = 'a', c = FALSE, a = 1)
+<!-- --><pre class="code literal-block"><span></span><span class="o">#</span> <span class="n">These</span> <span class="k">function</span> <span class="n">calls</span> <span class="k">are</span> <span class="n">the</span> <span class="n">same</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="k">FALSE</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="s1">'a'</span><span class="p">,</span> <span class="k">c</span> <span class="o">=</span> <span class="k">FALSE</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre>
 
 
@@ -142,11 +142,11 @@ f(b = 2, d = 'a', c = FALSE, a = 1)
     list of original function</li>
 <li>Also useful when number of arguments to be passed is unknown</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span>new_plot <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">,</span> type <span class="o">=</span> <span class="s">"l"</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-  plot<span class="p">(</span>x<span class="p">,</span> y<span class="p">,</span> type <span class="o">=</span> type<span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<!-- --><pre class="code literal-block"><span></span><span class="n">new_plot</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="s">"l"</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kp">args</span><span class="p">(</span><span class="kp">paste</span><span class="p">)</span>  <span class="c1"># function (..., sep = " ", collapse = NULL)</span>
+<span class="nf">args</span><span class="p">(</span><span class="n">paste</span><span class="p">)</span>  <span class="c1"># function (..., sep = " ", collapse = NULL)</span>
 </pre>
 </div>
     </div>

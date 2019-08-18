@@ -83,7 +83,7 @@ NaN is not a number (undefined),">
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2018-08-04T00:14:50+01:00" itemprop="datePublished" title="2018-08-04 00:14">2018-08-04 00:14</time></a>
+            <time class="published dt-published" datetime="2018-08-04T00:14:50+01:00" itemprop="datePublished" title="2018-08-04">2018-08-04</time></a>
             </p>
             
         <p class="sourceline"><a href="index.md" class="sourcelink">Source</a></p>
@@ -115,52 +115,52 @@ NaN is not a number (undefined),">
 <ul>
 <li>All elements must be same type</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span><span class="c1"># Create</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">5.5</span><span class="p">,</span> <span class="m">2.7</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>     <span class="c1"># Numeric - Defaults to double</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">3L</span><span class="p">,</span> <span class="m">8L</span><span class="p">,</span> <span class="m">22L</span><span class="p">,</span> <span class="m">2L</span><span class="p">)</span>    <span class="c1"># Integer - Use L suffix</span>
-x <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">4</span>                   <span class="c1"># Integer - Range defaults to integer</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">)</span>  <span class="c1"># Logical</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">)</span>      <span class="c1"># Character</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1+0i</span><span class="p">,</span> <span class="m">2+4i</span><span class="p">)</span>         <span class="c1"># Complex</span>
-x <span class="o">&lt;-</span> <span class="kt">vector</span><span class="p">(</span><span class="s">'numeric'</span><span class="p">,</span> length <span class="o">=</span> <span class="m">5</span><span class="p">)</span>  <span class="c1"># Numeric - Default values of 0</span>
+<!-- --><pre class="code literal-block"><span></span># <span class="nv">Create</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">5</span>.<span class="mi">5</span>, <span class="mi">2</span>.<span class="mi">7</span>, <span class="mi">3</span><span class="ss">)</span>     # <span class="nv">Numeric</span> <span class="o">-</span> <span class="nv">Defaults</span> <span class="nv">to</span> <span class="nv">double</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">3</span><span class="nv">L</span>, <span class="mi">8</span><span class="nv">L</span>, <span class="mi">22</span><span class="nv">L</span>, <span class="mi">2</span><span class="nv">L</span><span class="ss">)</span>    # <span class="nv">Integer</span> <span class="o">-</span> <span class="nv">Use</span> <span class="nv">L</span> <span class="nv">suffix</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="mi">1</span>:<span class="mi">4</span>                   # <span class="nv">Integer</span> <span class="o">-</span> <span class="nv">Range</span> <span class="nv">defaults</span> <span class="nv">to</span> <span class="nv">integer</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="nv">TRUE</span>, <span class="nv">FALSE</span>, <span class="nv">T</span>, <span class="nv">F</span><span class="ss">)</span>  # <span class="nv">Logical</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">a</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">b</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">c</span><span class="s1">'</span><span class="ss">)</span>      # <span class="nv">Character</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="nv">i</span>, <span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="nv">i</span><span class="ss">)</span>         # <span class="nv">Complex</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">vector</span><span class="ss">(</span><span class="s1">'</span><span class="s">numeric</span><span class="s1">'</span>, <span class="nv">length</span> <span class="o">=</span> <span class="mi">5</span><span class="ss">)</span>  # <span class="nv">Numeric</span> <span class="o">-</span> <span class="nv">Default</span> <span class="nv">values</span> <span class="nv">of</span> <span class="mi">0</span>
 
-<span class="c1"># Inspect</span>
-<span class="kp">typeof</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># E.g. "character"</span>
-<span class="kp">is.integer</span><span class="p">(</span>x<span class="p">)</span>
-<span class="kp">is.double</span><span class="p">(</span>x<span class="p">)</span>
-<span class="kp">is.numeric</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># TRUE if either integer or numeric</span>
-<span class="kp">is.logical</span><span class="p">(</span>x<span class="p">)</span>
-<span class="kp">is.character</span><span class="p">(</span>x<span class="p">)</span>
+# <span class="nv">Inspect</span>
+<span class="nv">typeof</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">E</span>.<span class="nv">g</span>. <span class="s2">"</span><span class="s">character</span><span class="s2">"</span>
+<span class="nv">is</span>.<span class="nv">integer</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="nv">is</span>.<span class="nv">double</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="nv">is</span>.<span class="nv">numeric</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">TRUE</span> <span class="k">if</span> <span class="nv">either</span> <span class="nv">integer</span> <span class="nv">or</span> <span class="nv">numeric</span>
+<span class="nv">is</span>.<span class="nv">logical</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="nv">is</span>.<span class="nv">character</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
 
-<span class="c1"># Check missing</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kc">NaN</span><span class="p">,</span> <span class="kc">NA</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
-<span class="kp">is.na</span><span class="p">(</span>x<span class="p">)</span>   <span class="c1"># FALSE FALSE  TRUE  TRUE FALSE - NaN is also NA</span>
-<span class="kp">is.nan</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># FALSE FALSE  TRUE FALSE FALSE</span>
+# <span class="nv">Check</span> <span class="nv">missing</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span>, <span class="nv">NaN</span>, <span class="nv">NA</span>, <span class="mi">4</span><span class="ss">)</span>
+<span class="nv">is</span>.<span class="nv">na</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>   # <span class="nv">FALSE</span> <span class="nv">FALSE</span>  <span class="nv">TRUE</span>  <span class="nv">TRUE</span> <span class="nv">FALSE</span> <span class="o">-</span> <span class="nv">NaN</span> <span class="nv">is</span> <span class="nv">also</span> <span class="nv">NA</span>
+<span class="nv">is</span>.<span class="nv">nan</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">FALSE</span> <span class="nv">FALSE</span>  <span class="nv">TRUE</span> <span class="nv">FALSE</span> <span class="nv">FALSE</span>
 
-<span class="c1"># Coercion</span>
-x <span class="o">&lt;-</span> <span class="m">0</span><span class="o">:</span><span class="m">3</span>
-<span class="kp">as.numeric</span><span class="p">(</span>x<span class="p">)</span>    <span class="c1"># 0 1 2 3</span>
-<span class="kp">as.character</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># "0" "1" "2" "3"</span>
-<span class="kp">as.logical</span><span class="p">(</span>x<span class="p">)</span>    <span class="c1"># FALSE TRUE TRUE TRUE - FALSE if value is 0, TRUE otherwise</span>
+# <span class="nv">Coercion</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="mi">0</span>:<span class="mi">3</span>
+<span class="nv">as</span>.<span class="nv">numeric</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>    # <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
+<span class="nv">as</span>.<span class="nv">character</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="s2">"</span><span class="s">0</span><span class="s2">"</span> <span class="s2">"</span><span class="s">1</span><span class="s2">"</span> <span class="s2">"</span><span class="s">2</span><span class="s2">"</span> <span class="s2">"</span><span class="s">3</span><span class="s2">"</span>
+<span class="nv">as</span>.<span class="nv">logical</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>    # <span class="nv">FALSE</span> <span class="nv">TRUE</span> <span class="nv">TRUE</span> <span class="nv">TRUE</span> <span class="o">-</span> <span class="nv">FALSE</span> <span class="k">if</span> <span class="nv">value</span> <span class="nv">is</span> <span class="mi">0</span>, <span class="nv">TRUE</span> <span class="nv">otherwise</span>
 
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'abc'</span><span class="p">,</span> <span class="m">123</span><span class="p">)</span>  <span class="c1"># c('abc', '123') - coerced so all elements are same type</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">abc</span><span class="s1">'</span>, <span class="mi">123</span><span class="ss">)</span>  # <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">abc</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">123</span><span class="s1">'</span><span class="ss">)</span> <span class="o">-</span> <span class="nv">coerced</span> <span class="nv">so</span> <span class="nv">all</span> <span class="nv">elements</span> <span class="nv">are</span> <span class="nv">same</span> <span class="nv">type</span>
 
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span><span class="s">'b'</span><span class="p">)</span>
-<span class="kp">as.numeric</span><span class="p">(</span>x<span class="p">)</span>    <span class="c1"># NA NA - NAs introduced by coercion due to invalid conversion</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">a</span><span class="s1">'</span>,<span class="s1">'</span><span class="s">b</span><span class="s1">'</span><span class="ss">)</span>
+<span class="nv">as</span>.<span class="nv">numeric</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>    # <span class="nv">NA</span> <span class="nv">NA</span> <span class="o">-</span> <span class="nv">NAs</span> <span class="nv">introduced</span> <span class="nv">by</span> <span class="nv">coercion</span> <span class="nv">due</span> <span class="nv">to</span> <span class="nv">invalid</span> <span class="nv">conversion</span>
 
-<span class="c1"># Vectorized operations</span>
-x <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">;</span> y <span class="o">&lt;-</span> <span class="m">4</span><span class="o">:</span><span class="m">6</span>
-x <span class="o">+</span> y   <span class="c1"># 5 7 9</span>
-x <span class="o">&gt;=</span> <span class="m">2</span>  <span class="c1"># F T T</span>
-x <span class="o">==</span> <span class="m">3</span>  <span class="c1"># F F T</span>
-x <span class="o">*</span> y   <span class="c1"># 4 10 18</span>
-x <span class="o">/</span> y   <span class="c1"># 0.25 0.40 0.50</span>
+# <span class="nv">Vectorized</span> <span class="nv">operations</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="mi">1</span>:<span class="mi">3</span><span class="c1">; y &lt;- 4:6</span>
+<span class="nv">x</span> <span class="o">+</span> <span class="nv">y</span>   # <span class="mi">5</span> <span class="mi">7</span> <span class="mi">9</span>
+<span class="nv">x</span> <span class="o">&gt;=</span> <span class="mi">2</span>  # <span class="nv">F</span> <span class="nv">T</span> <span class="nv">T</span>
+<span class="nv">x</span> <span class="o">==</span> <span class="mi">3</span>  # <span class="nv">F</span> <span class="nv">F</span> <span class="nv">T</span>
+<span class="nv">x</span> <span class="o">*</span> <span class="nv">y</span>   # <span class="mi">4</span> <span class="mi">10</span> <span class="mi">18</span>
+<span class="nv">x</span> <span class="o">/</span> <span class="nv">y</span>   # <span class="mi">0</span>.<span class="mi">25</span> <span class="mi">0</span>.<span class="mi">40</span> <span class="mi">0</span>.<span class="mi">50</span>
 
-<span class="c1"># Summarise</span>
-x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
-<span class="kp">length</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># 3</span>
-<span class="kp">sum</span><span class="p">(</span>x<span class="p">)</span>     <span class="c1"># 6</span>
-<span class="kp">mean</span><span class="p">(</span>x<span class="p">)</span>    <span class="c1"># 2</span>
+# <span class="nv">Summarise</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span><span class="ss">)</span>
+<span class="nv">length</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="mi">3</span>
+<span class="nv">sum</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>     # <span class="mi">6</span>
+<span class="nv">mean</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>    # <span class="mi">2</span>
 </pre>
 
 
@@ -173,36 +173,36 @@ x <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span>
 </li>
 <li>Can also apply dimensions to a list</li>
 </ul>
-<!-- --><pre class="code literal-block"><span></span><span class="c1"># Create from vector</span>
-x <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span>
-<span class="kp">dim</span><span class="p">(</span>x<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>  <span class="c1"># Turn vector into 2x3 matrix - Column-wise by default "top-left then down"</span>
-<span class="kt">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span> nrow <span class="o">=</span> <span class="m">2</span><span class="p">,</span> ncol <span class="o">=</span> <span class="m">3</span><span class="p">)</span>  <span class="c1"># Same result</span>
-<span class="kt">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>  <span class="c1"># Same result</span>
+<!-- --><pre class="code literal-block"><span></span># <span class="nv">Create</span> <span class="nv">from</span> <span class="nv">vector</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="mi">1</span>:<span class="mi">6</span>
+<span class="nv">dim</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="mi">2</span>,<span class="mi">3</span><span class="ss">)</span>  # <span class="nv">Turn</span> <span class="nv">vector</span> <span class="nv">into</span> <span class="mi">2</span><span class="nv">x3</span> <span class="nv">matrix</span> <span class="o">-</span> <span class="nv">Column</span><span class="o">-</span><span class="nv">wise</span> <span class="nv">by</span> <span class="nv">default</span> <span class="s2">"</span><span class="s">top-left then down</span><span class="s2">"</span>
+<span class="nv">matrix</span><span class="ss">(</span><span class="mi">1</span>:<span class="mi">6</span>, <span class="nv">nrow</span> <span class="o">=</span> <span class="mi">2</span>, <span class="nv">ncol</span> <span class="o">=</span> <span class="mi">3</span><span class="ss">)</span>  # <span class="nv">Same</span> <span class="nb">result</span>
+<span class="nv">matrix</span><span class="ss">(</span><span class="mi">1</span>:<span class="mi">6</span>, <span class="nv">c</span><span class="ss">(</span><span class="mi">2</span>,<span class="mi">3</span><span class="ss">))</span>  # <span class="nv">Same</span> <span class="nb">result</span>
 
-<span class="c1"># Create using cbind/rbind</span>
-x <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span>
-y <span class="o">&lt;-</span> <span class="m">4</span><span class="o">:</span><span class="m">6</span>
-<span class="kp">cbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>  <span class="c1"># 3x2 matrix - bind vectors as columns</span>
-<span class="kp">rbind</span><span class="p">(</span>x<span class="p">,</span> y<span class="p">)</span>  <span class="c1"># 2x3 matrix - bind vectors as rows</span>
+# <span class="nv">Create</span> <span class="nv">using</span> <span class="nv">cbind</span><span class="o">/</span><span class="nv">rbind</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="mi">1</span>:<span class="mi">3</span>
+<span class="nv">y</span> <span class="o">&lt;-</span> <span class="mi">4</span>:<span class="mi">6</span>
+<span class="nv">cbind</span><span class="ss">(</span><span class="nv">x</span>, <span class="nv">y</span><span class="ss">)</span>  # <span class="mi">3</span><span class="nv">x2</span> <span class="nv">matrix</span> <span class="o">-</span> <span class="nv">bind</span> <span class="nv">vectors</span> <span class="nv">as</span> <span class="nv">columns</span>
+<span class="nv">rbind</span><span class="ss">(</span><span class="nv">x</span>, <span class="nv">y</span><span class="ss">)</span>  # <span class="mi">2</span><span class="nv">x3</span> <span class="nv">matrix</span> <span class="o">-</span> <span class="nv">bind</span> <span class="nv">vectors</span> <span class="nv">as</span> <span class="nv">rows</span>
 
-<span class="c1"># Inspect</span>
-<span class="kp">ncol</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Number of columns</span>
-<span class="kp">nrow</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Number of rows</span>
+# <span class="nv">Inspect</span>
+<span class="nv">ncol</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">columns</span>
+<span class="nv">nrow</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">rows</span>
 
-<span class="c1"># Manipulate</span>
-<span class="kp">rownames</span><span class="p">(</span>x<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'r1'</span><span class="p">,</span> <span class="s">'r2'</span><span class="p">)</span>  <span class="c1"># Set matrix row names</span>
-<span class="kp">colnames</span><span class="p">(</span>x<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'c1'</span><span class="p">,</span> <span class="s">'c2'</span><span class="p">,</span> <span class="s">'c3'</span><span class="p">)</span>  <span class="c1"># Set matrix col names</span>
-<span class="kp">t</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Transpose matrix</span>
+# <span class="nv">Manipulate</span>
+<span class="nv">rownames</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">r1</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">r2</span><span class="s1">'</span><span class="ss">)</span>  # <span class="nv">Set</span> <span class="nv">matrix</span> <span class="nv">row</span> <span class="nv">names</span>
+<span class="nv">colnames</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span> <span class="o">&lt;-</span> <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">c1</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">c2</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">c3</span><span class="s1">'</span><span class="ss">)</span>  # <span class="nv">Set</span> <span class="nv">matrix</span> <span class="nv">col</span> <span class="nv">names</span>
+<span class="nv">t</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>  # <span class="nv">Transpose</span> <span class="nv">matrix</span>
 
-<span class="c1"># Vectorized operations</span>
-x <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">);</span> y <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">5</span><span class="o">:</span><span class="m">8</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
-x <span class="o">*</span> y    <span class="c1"># element-wise multiplication</span>
-x <span class="o">/</span> y    <span class="c1"># element-wise division</span>
-x <span class="o">%*%</span> y  <span class="c1"># matrix multiplication</span>
+# <span class="nv">Vectorized</span> <span class="nv">operations</span>
+<span class="nv">x</span> <span class="o">&lt;-</span> <span class="nv">matrix</span><span class="ss">(</span><span class="mi">1</span>:<span class="mi">4</span>, <span class="mi">2</span>, <span class="mi">2</span><span class="ss">)</span><span class="c1">; y &lt;- matrix(5:8, 2, 2)</span>
+<span class="nv">x</span> <span class="o">*</span> <span class="nv">y</span>    # <span class="nv">element</span><span class="o">-</span><span class="nv">wise</span> <span class="nv">multiplication</span>
+<span class="nv">x</span> <span class="o">/</span> <span class="nv">y</span>    # <span class="nv">element</span><span class="o">-</span><span class="nv">wise</span> <span class="nv">division</span>
+<span class="nv">x</span> <span class="o">%*%</span> <span class="nv">y</span>  # <span class="nv">matrix</span> <span class="nv">multiplication</span>
 
-<span class="c1"># Array</span>
-y <span class="o">&lt;-</span> <span class="kt">array</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">12</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>  <span class="c1"># 3-dimensional array</span>
-<span class="kp">dimnames</span><span class="p">(</span>y<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">'a1'</span><span class="p">,</span> <span class="s">'a2'</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">'b1'</span><span class="p">,</span> <span class="s">'b2'</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">'c1'</span><span class="p">,</span> <span class="s">'c2'</span><span class="p">,</span> <span class="s">'c3'</span><span class="p">))</span>  <span class="c1"># Set array dimension names</span>
+# <span class="nv">Array</span>
+<span class="nv">y</span> <span class="o">&lt;-</span> <span class="nv">array</span><span class="ss">(</span><span class="mi">1</span>:<span class="mi">12</span>, <span class="nv">c</span><span class="ss">(</span><span class="mi">2</span>,<span class="mi">2</span>,<span class="mi">3</span><span class="ss">))</span>  # <span class="mi">3</span><span class="o">-</span><span class="nv">dimensional</span> <span class="nv">array</span>
+<span class="nv">dimnames</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span> <span class="o">&lt;-</span> <span class="nv">list</span><span class="ss">(</span><span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">a1</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">a2</span><span class="s1">'</span><span class="ss">)</span>, <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">b1</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">b2</span><span class="s1">'</span><span class="ss">)</span>, <span class="nv">c</span><span class="ss">(</span><span class="s1">'</span><span class="s">c1</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">c2</span><span class="s1">'</span>, <span class="s1">'</span><span class="s">c3</span><span class="s1">'</span><span class="ss">))</span>  # <span class="nv">Set</span> <span class="nv">array</span> <span class="nv">dimension</span> <span class="nv">names</span>
 </pre>
 
 
@@ -212,17 +212,17 @@ y <span class="o">&lt;-</span> <span class="kt">array</span><span class="p">(</s
 <li>Use for categorical data</li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Create</span>
-x <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">'m'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'m'</span><span class="p">,</span> <span class="s">'m'</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">'m'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'m'</span><span class="p">,</span> <span class="s">'m'</span><span class="p">))</span>
 
 <span class="c1"># Inspect</span>
-<span class="kp">is.factor</span><span class="p">(</span>x<span class="p">)</span>
-<span class="kp">levels</span><span class="p">(</span>x<span class="p">)</span>   <span class="c1"># "f" "m" are the only valid values</span>
-<span class="kp">table</span><span class="p">(</span>x<span class="p">)</span>    <span class="c1"># 2 f, 3 m</span>
+<span class="nf">is.factor</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   <span class="c1"># "f" "m" are the only valid values</span>
+<span class="nf">table</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>    <span class="c1"># 2 f, 3 m</span>
 
 <span class="c1"># Define levels</span>
-x<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">'a'</span>  <span class="c1"># Invalid factor level, NA generated</span>
-x <span class="o">&lt;-</span> <span class="kp">factor</span><span class="p">(</span>x<span class="p">,</span> levels <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">'m'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">))</span>  <span class="c1"># Define levels, m=1 f=2 a=3</span>
-x<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="s">'a'</span>  <span class="c1"># Will now work as 'a' is a valid factor level</span>
+<span class="n">x[1]</span> <span class="o">&lt;-</span> <span class="s">'a'</span>  <span class="c1"># Invalid factor level, NA generated</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">'m'</span><span class="p">,</span> <span class="s">'f'</span><span class="p">,</span> <span class="s">'a'</span><span class="p">))</span>  <span class="c1"># Define levels, m=1 f=2 a=3</span>
+<span class="n">x[1]</span> <span class="o">&lt;-</span> <span class="s">'a'</span>  <span class="c1"># Will now work as 'a' is a valid factor level</span>
 </pre>
 
 
@@ -231,17 +231,17 @@ x<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span 
 <li>Elements can be any type, even nested lists</li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Create</span>
-x <span class="o">&lt;-</span> <span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">5.5</span><span class="p">,</span> <span class="m">2.7</span><span class="p">),</span> <span class="m">3L</span><span class="o">:</span><span class="m">8L</span><span class="p">,</span> <span class="kt">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">),</span> <span class="kt">c</span><span class="p">(</span><span class="s">'abc'</span><span class="p">,</span> <span class="s">'def'</span><span class="p">),</span> <span class="kt">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="bp">F</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5.5</span><span class="p">,</span> <span class="m">2.7</span><span class="p">),</span> <span class="m">3L</span><span class="o">:</span><span class="m">8L</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="s">'abc'</span><span class="p">,</span> <span class="s">'def'</span><span class="p">),</span> <span class="nf">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="bp">F</span><span class="p">))</span>
 
 <span class="c1"># Inspect</span>
-<span class="kp">is.list</span><span class="p">(</span>x<span class="p">)</span>
+<span class="nf">is.list</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Coercion</span>
-<span class="kp">as.list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>    <span class="c1"># list(1, 2, 3)</span>
-<span class="kp">unlist</span><span class="p">(</span><span class="kt">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>  <span class="c1"># c(1, 2, 3), coerce to atomic vector</span>
+<span class="nf">as.list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>    <span class="c1"># list(1, 2, 3)</span>
+<span class="nf">unlist</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>  <span class="c1"># c(1, 2, 3), coerce to atomic vector</span>
 
 <span class="c1"># Manipulate</span>
-<span class="kp">names</span><span class="p">(</span>x<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'num'</span><span class="p">,</span> <span class="s">'int'</span><span class="p">,</span> <span class="s">'logi'</span><span class="p">,</span> <span class="s">'char'</span><span class="p">,</span> <span class="s">'list'</span><span class="p">)</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'num'</span><span class="p">,</span> <span class="s">'int'</span><span class="p">,</span> <span class="s">'logi'</span><span class="p">,</span> <span class="s">'char'</span><span class="p">,</span> <span class="s">'list'</span><span class="p">)</span>
 </pre>
 
 
@@ -251,19 +251,19 @@ x <span class="o">&lt;-</span> <span class="kt">list</span><span class="p">(</sp
 <li>Shares same properties as matrix and list</li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Create</span>
-df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>col1 <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> col2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">))</span>
-df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>col1 <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span>col2 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">),</span>
-                 stringsAsFactors <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>  <span class="c1"># Leave col2 as chr</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">col1</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">col1</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="n">col2</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">),</span>
+                 <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>  <span class="c1"># Leave col2 as chr</span>
 
 <span class="c1"># Inspect</span>
-<span class="kp">is.data.frame</span><span class="p">(</span>df<span class="p">)</span>
-<span class="kp">ncol</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Number of columns</span>
-<span class="kp">nrow</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Number of rows</span>
+<span class="nf">is.data.frame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nf">ncol</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Number of columns</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Number of rows</span>
 
 <span class="c1"># Manipulate</span>
-<span class="kp">cbind</span><span class="p">(</span>df<span class="p">,</span> <span class="kt">data.frame</span><span class="p">(</span>col3 <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">)))</span>  <span class="c1"># Add column</span>
-<span class="kp">rbind</span><span class="p">(</span>df<span class="p">,</span> <span class="kt">data.frame</span><span class="p">(</span>col1 <span class="o">=</span> <span class="m">4</span><span class="p">,</span> col2 <span class="o">=</span> <span class="s">'d'</span><span class="p">))</span>  <span class="c1"># Add row</span>
-<span class="kp">names</span><span class="p">(</span>df<span class="p">)</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">'col_a'</span><span class="p">,</span> <span class="s">'col_b'</span><span class="p">)</span>   <span class="c1"># Set names of columns</span>
+<span class="nf">cbind</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">col3</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="bp">T</span><span class="p">,</span> <span class="bp">F</span><span class="p">,</span> <span class="bp">T</span><span class="p">)))</span>  <span class="c1"># Add column</span>
+<span class="nf">rbind</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">col1</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">col2</span> <span class="o">=</span> <span class="s">'d'</span><span class="p">))</span>  <span class="c1"># Add row</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'col_a'</span><span class="p">,</span> <span class="s">'col_b'</span><span class="p">)</span>   <span class="c1"># Set names of columns</span>
 </pre>
 
 
@@ -272,23 +272,23 @@ df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p
 <li>Display internal structure of an R object in a compact way</li>
 </ul>
 <!-- --><pre class="code literal-block"><span></span><span class="c1"># Vectors</span>
-x <span class="o">&lt;-</span> runif<span class="p">(</span><span class="m">100</span><span class="p">)</span>
-<span class="kp">summary</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Quartiles</span>
-str<span class="p">(</span>x<span class="p">)</span>  <span class="c1"># num [1:100] 0.3257 0.3514 0.0628 0.2261 0.0838 ...</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">runif</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Quartiles</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># num [1:100] 0.3257 0.3514 0.0628 0.2261 0.0838 ...</span>
 
 <span class="c1"># Matrix</span>
-x <span class="o">&lt;-</span> <span class="kt">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
-x<span class="p">[,</span> <span class="m">1</span><span class="p">]</span>  <span class="c1"># [1]  1  2  3  4  5  6  7  8  9 10</span>
-str<span class="p">(</span>x<span class="p">)</span>  <span class="c1"># int [1:10, 1:10] 1 2 3 4 5 6 7 8 9 10 ...</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
+<span class="n">x[</span><span class="p">,</span> <span class="m">1</span><span class="n">]</span>  <span class="c1"># [1]  1  2  3  4  5  6  7  8  9 10</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># int [1:10, 1:10] 1 2 3 4 5 6 7 8 9 10 ...</span>
 
 <span class="c1"># Factors</span>
-x <span class="o">&lt;-</span> <span class="kp">gl</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
-<span class="kp">summary</span><span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Frequency counts</span>
-str<span class="p">(</span>x<span class="p">)</span>  <span class="c1"># Factor w/ 3 levels "1","2","3": 1 1 1 1 1 2 2 2 2 2 ...</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">gl</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Frequency counts</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Factor w/ 3 levels "1","2","3": 1 1 1 1 1 2 2 2 2 2 ...</span>
 
 <span class="c1"># Lists</span>
-x <span class="o">&lt;-</span> <span class="kt">list</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">5.5</span><span class="p">,</span> <span class="m">2.7</span><span class="p">),</span> <span class="kt">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="bp">F</span><span class="p">))</span>
-str<span class="p">(</span>x<span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">5.5</span><span class="p">,</span> <span class="m">2.7</span><span class="p">),</span> <span class="nf">list</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">,</span> <span class="bp">F</span><span class="p">))</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="c1"># List of 2</span>
 <span class="c1">#  $ : num [1:2] 5.5 2.7</span>
 <span class="c1">#  $ :List of 3</span>
@@ -297,7 +297,7 @@ str<span class="p">(</span>x<span class="p">)</span>
 <span class="c1">#   ..$ : logi FALSE</span>
 
 <span class="c1"># Data Frames</span>
-str<span class="p">(</span>airquality<span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
 <span class="c1"># 'data.frame': 153 obs. of  6 variables:</span>
 <span class="c1">#  $ Ozone  : int  41 36 12 18 NA 28 23 19 8 NA ...</span>
 <span class="c1">#  $ Solar.R: int  190 118 149 313 NA NA 299 99 19 194 ...</span>

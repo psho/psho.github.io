@@ -7,198 +7,182 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://psho.github.io/</loc>
-  <lastmod>2019-03-24T10:37:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/2018/</loc>
-  <lastmod>2018-07-23T23:03:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/2019/</loc>
-  <lastmod>2019-03-24T10:37:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/archive.html</loc>
-  <lastmod>2019-05-26T18:48:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/</loc>
-  <lastmod>2018-08-14T22:39:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/dl/adaptive-learning-rate-optimisation/</loc>
-  <lastmod>2019-05-26T18:48:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/dl/fastai-image-classification/</loc>
-  <lastmod>2018-08-14T22:40:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/dl/pytorch-dl-tabular-template/</loc>
-  <lastmod>2019-04-13T18:39:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/git/git/</loc>
-  <lastmod>2018-07-29T23:50:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-1.html</loc>
-  <lastmod>2019-03-24T10:37:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-2.html</loc>
-  <lastmod>2019-03-24T10:37:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/index-3.html</loc>
-  <lastmod>2019-05-26T18:48:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/ml/batch-grad-desc/</loc>
-  <lastmod>2018-07-31T22:09:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/matplotlib-bar-charts/</loc>
-  <lastmod>2018-08-03T22:43:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/matplotlib-line-charts/</loc>
-  <lastmod>2018-08-03T22:43:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/matplotlib-scatterplots/</loc>
-  <lastmod>2018-08-03T22:43:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/matplotlib-styling/</loc>
-  <lastmod>2018-08-03T22:43:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/pandas-analysis/</loc>
-  <lastmod>2018-08-02T23:51:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/pandas-columns/</loc>
-  <lastmod>2018-07-29T18:10:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/pandas-dataframes/</loc>
-  <lastmod>2018-07-28T15:25:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-control-flow/</loc>
-  <lastmod>2018-07-25T23:06:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-data-types/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-dictionaries/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-error-handling/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-files/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-functions/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-lists/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-modules/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-os-interaction/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-print/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-strings/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/python/python-user-input/</loc>
-  <lastmod>2018-07-27T22:19:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-apply/</loc>
-  <lastmod>2018-08-03T23:16:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-control-flow/</loc>
-  <lastmod>2018-08-03T23:18:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-data-types/</loc>
-  <lastmod>2018-07-31T23:10:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-dates-times/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-files/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-functions/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-scoping-rules/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-simulation/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/r/r-subsetting/</loc>
-  <lastmod>2018-08-03T23:36:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/stats/bayesian-ab-testing/</loc>
-  <lastmod>2019-03-24T10:37:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/stats/pymc3-challenger-disaster/</loc>
-  <lastmod>2019-03-24T21:21:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/stats/resamp-perm-test/</loc>
-  <lastmod>2018-07-31T22:04:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/blog/stats/simplified-mcmc/</loc>
-  <lastmod>2019-03-27T23:08:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/categories/</loc>
-  <lastmod>2018-07-23T23:01:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/galleries/</loc>
-  <lastmod>2018-07-23T23:01:00Z</lastmod>
+  <lastmod>2019-08-18T10:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://psho.github.io/index.src.html</loc>
-  <lastmod>2018-08-04T00:19:00Z</lastmod>
- </url>
- <url>
-  <loc>https://psho.github.io/listings/</loc>
-  <lastmod>2018-07-23T23:01:00Z</lastmod>
+  <lastmod>2019-08-18T10:26:00Z</lastmod>
  </url>
 </urlset>
